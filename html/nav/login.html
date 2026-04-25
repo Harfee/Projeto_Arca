@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="icon" href="../../img/logo-arca.png" type="image/x-icon">
+    <title>Arca - Login</title>
+</head>
+
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg color-nav">
+        <div class="container-fluid d-flex align-items-center">
+
+        <!-- LOGO ARCA  -->
+        <a class="navbar-brand" href="../../index.html"><img class="foto-arca" src="../../img/painel-arca.png"></a>
+
+        <!-- MENU CENTRAL -->
+        <div class="menu-central">
+        <ul class="navbar-nav d-flex flex-row gap-4">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="./somos.html">Quem somos</a></li>
+
+        <!-- SERVIÇOS -->
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Serviços</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./serviços/adocao.html">Adoção</a></li>
+            <li><a class="dropdown-item" href="./serviços/resgate.html">Solicitação de Resgate</a></li>
+            <li><a class="dropdown-item" href="./serviços/tratos.html">Denunciar Maus-Tratos</a></li>
+            <li><a class="dropdown-item" href="./serviços/castrar.html">Agendamento de Castração</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item"><a class="nav-link" href="./parceiro.html">Seja nosso parceiro</a></li>
+
+        <!-- SUPORTE -->
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Suporte</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./suporte/suporte.html">Suporte</a></li>
+            <li><a class="dropdown-item" href="./suporte/suporte.html">Suporte</a></li>
+            <li><a class="dropdown-item" href="./suporte/suporte.html">Suporte</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+
+        <!-- BOTÕES CADASTRO E LOGIN -->
+        <div class="d-flex gap-2 ms-auto me-4">
+          <a class="btn btn-outline-secondary btn-sm" href="./cadastro.html">Cadastro</a>
+          <a class="btn btn-outline-secondary btn-sm" href="./login.html">Login</a>
+        </div>
+
+      </div>
+    </nav>
+</header>
+
+<br>
+
+<main class="login-container">
+    <div class="login-header">
+        <i class="user-icon">👤</i> <h3>Login - ARCA</h3>
+    </div>
+
+    <div class="toggle-buttons">
+        <button class="btn-toggle active">Cidadão</button>
+        <button class="btn-toggle">ONG / Clínica Veterinária</button>
+    </div>
+
+
+    <div class="login-box">
+        <h4>LOGIN CIDADÃO</h4>
+
+        <form>
+            <div class="input-group">
+                <label>CPF:</label>
+                <input type="text" maxlength="11" placeholder="Informe apenas números">
+            </div>
+
+            <div class="input-group">
+                <label>Senha:</label>
+                <input type="password" placeholder="Digite sua senha">
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+            </div>
+
+            <div class="input-group">
+                <label>Data de nascimento:</label>
+                <input type="text" maxlength="8" placeholder="00/00/0000">
+            </div>
+
+            <button type="submit" class="btn-continue">Continuar</button>
+        </form>
+    </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
+</body>
+</html>
