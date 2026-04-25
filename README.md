@@ -15,14 +15,21 @@ Prioridade de atendimento:
 </ul>
 
 Público predominante:
-Pessoas de baixa renda e dependentes de serviços públicos
-Moradores de áreas com alta vulnerabilidade social
-Tutores e cuidadores de animais abandonados
-Uso do sistema para: castração, adoção, resgate e denúncias
+<ul>
+<li>Pessoas de baixa renda e dependentes de serviços públicos</li>
+<li>Moradores de áreas com alta vulnerabilidade social</li>
+<li>Tutores e cuidadores de animais abandonados</li>
+
+<li>Uso do sistema para: castração, adoção, resgate e denúncias</li>
+</ul>
+
 Desafios:
-Site muito limitado;
-Poucas pessoas conhecem o projeto.
+<ul>
+<li>Site muito limitado.</li>
+<li>Poucas pessoas conhecem o projeto.</li>
+</ul>
+
 Conclusão:
-Os usuários precisam de um sistema simples, acessível e eficiente,
-que considere suas limitações tecnológicas e a urgência das
-demandas relacionadas ao bem-estar animal.
+<ul>
+<li>Os usuários precisam de um sistema simples, acessível e eficiente, que considere suas limitações tecnológicas e a urgência das demandas relacionadas ao bem-estar animal.</li>
+</ul>
