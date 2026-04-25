@@ -1,13 +1,12 @@
 # ENTENDENDO O PROJETO ARCA
-O Projeto ARCA, criado em janeiro de 2022, promove bem-estar animal
-com foco em castração, resgate, atendimento veterinário e adoção.
-Alta demanda por serviços gratuitos → mais de 2.100 vagas de
-castração esgotadas rapidamente.
-Em jan–fev/2026:
-428 castrações
-198 atendimentos veterinários
-Realização de 114 eventos de adoção, incentivando a redução do
-abandono.
+O Projeto ARCA, criado em janeiro de 2022, promove bem-estar animal com foco em castração, resgate, atendimento veterinário e adoção.
+
+<ol>
+<li>Alta demanda por serviços gratuitos → mais de 2.100 vagas de castração esgotadas rapidamente.</li>
+<li>Em jan–fev/2026: 428 castrações e 198 atendimentos veterinários</li>
+<li>Realização de 114 eventos de adoção, incentivando a redução do abandono.</li>
+</ol>
+
 Prioridade de atendimento:
 Pessoas de baixa renda (CadÚnico)
 ONGs e protetores independentes
