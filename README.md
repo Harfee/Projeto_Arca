@@ -1,27 +1,35 @@
 # ENTENDENDO O PROJETO ARCA
-O Projeto ARCA, criado em janeiro de 2022, promove bem-estar animal
-com foco em castração, resgate, atendimento veterinário e adoção.
-Alta demanda por serviços gratuitos → mais de 2.100 vagas de
-castração esgotadas rapidamente.
-Em jan–fev/2026:
-428 castrações
-198 atendimentos veterinários
-Realização de 114 eventos de adoção, incentivando a redução do
-abandono.
+O Projeto ARCA, criado em janeiro de 2022, promove bem-estar animal com foco em castração, resgate, atendimento veterinário e adoção.
+
+<ul>
+<li>Alta demanda por serviços gratuitos → mais de 2.100 vagas de castração esgotadas rapidamente.</li>
+<li>Em jan–fev/2026: 428 castrações e 198 atendimentos veterinários</li>
+<li>Realização de 114 eventos de adoção, incentivando a redução do abandono.</li>
+</ul>
+
 Prioridade de atendimento:
-Pessoas de baixa renda (CadÚnico)
-ONGs e protetores independentes
-Regiões com maior vulnerabilidade
+<ul>
+<li>Pessoas de baixa renda (CadÚnico)</li>
+<li>ONGs e protetores independentes</li>
+<li>Regiões com maior vulnerabilidade</li>
+</ul>
 
 Público predominante:
-Pessoas de baixa renda e dependentes de serviços públicos
-Moradores de áreas com alta vulnerabilidade social
-Tutores e cuidadores de animais abandonados
-Uso do sistema para: castração, adoção, resgate e denúncias
+<ul>
+<li>Pessoas de baixa renda e dependentes de serviços públicos</li>
+<li>Moradores de áreas com alta vulnerabilidade social</li>
+<li>Tutores e cuidadores de animais abandonados</li>
+
+<li>Uso do sistema para: castração, adoção, resgate e denúncias</li>
+</ul>
+
 Desafios:
-Site muito limitado;
-Poucas pessoas conhecem o projeto.
+<ul>
+<li>Site muito limitado.</li>
+<li>Poucas pessoas conhecem o projeto.</li>
+</ul>
+
 Conclusão:
-Os usuários precisam de um sistema simples, acessível e eficiente,
-que considere suas limitações tecnológicas e a urgência das
-demandas relacionadas ao bem-estar animal.
+<ul>
+<li>Os usuários precisam de um sistema simples, acessível e eficiente, que considere suas limitações tecnológicas e a urgência das demandas relacionadas ao bem-estar animal.</li>
+</ul>
