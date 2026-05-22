@@ -23,7 +23,7 @@ const navbar = `
         <li class="nav-item"><a class="nav-link ${currentPage === 'quem_somos' ? 'active fw-bold' : ''}"href="/html/navbar/quem_somos.html">Quem somos</a></li>
         <li class="nav-item dropdown"><a class="nav-link ${currentPage === 'serviços' ? 'active fw-bold' : ''} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Informações sobre</a></li>
+            <li><a class="dropdown-item" href="/html/navbar/servicos/sobre.html">Informações sobre</a></li>
             <li><a class="dropdown-item" href="/html/navbar/servicos/adocao.html">Adoção</a></li>
             <li><a class="dropdown-item" href="/html/navbar/servicos/castrar.html">Agendamento de castração</a></li>
             <li><a class="dropdown-item" href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
@@ -32,9 +32,9 @@ const navbar = `
         </li>
         <li class="nav-item"><a class="nav-link ${currentPage === 'seja_parceiro' ? 'active fw-bold' : ''}" href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Suporte</a>
+          <a class="nav-link ${currentPage === 'suporte' ? 'active fw-bold' : ''} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Suporte</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Teste 1</a></li>
+            <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Ajuda</a></li>
             <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Teste 2</a></li>
             <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Teste 3</a></li>
           </ul>
@@ -42,8 +42,8 @@ const navbar = `
       </ul>
 
         <div class="d-flex align-items-center gap-3 ms-auto mt-3 mt-lg-0">
-          <a class="button_navbar" href="/html/account/cadastro.html">Cadastro</a>
-          <a class="button_navbar" href="/html/account/login.html">Login</a>
+          <a class="button_navbar ${currentPage === 'cadastro' ? 'active fw-bold' : ''}" href="/html/account/cadastro.html">Cadastro</a>
+          <a class="button_navbar ${currentPage === 'login' ? 'active fw-bold' : ''}" href="/html/account/login.html">Login</a>
         </div>
 
     </div>

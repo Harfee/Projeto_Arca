@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Poppins';
-    background-color: var(--cor-texto_black);
+    background-color: var(--cor-secundaria);
 }
 
 html{
