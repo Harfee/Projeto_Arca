@@ -1,0 +1,203 @@
+/* GERAIS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins_Regular.ttf');
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins';
+    background-color: var(--cor-texto_black);
+}
+
+html{
+    scrollbar-color: var(--cor-secundaria) var(--cor_texto_gray);
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+:root{
+    /* CORES PRIMÁRIAS */
+    --cor-primaria: #36ABD9;
+    --cor-secundaria: #F7F8FA;
+
+    /* CORES SECUNDÁRIAS (BOTÕES) */
+    --cor-botao_roxo: #7A378C;
+    --cor-botao_roxo-hover: #562762;
+    --cor-botao_laranja: #F28705;
+    --cor-botao_laranja-hover: #F27405;
+    --cor-botao_white: #FFFFFF;
+
+    /* CORES TERCIÁRIAS */
+
+    --cor-texto_black: #150E0E;
+    --cor_texto_gray: #334155;
+    --cor-texto_cinza-claro: #E5E7EB;
+    --cor-texto_4: #F6F9FF;
+
+    /* CORES DE ESTADO */
+    --cor-azul: #2F80ED;
+    --cor-verde: #27AE60;
+    --cor-amarelo: #E2B93B;
+    --cor-vermelho: #EB5757;
+}
+
+/* MENU DE NAVEGAÇÃO */
+
+.navbar-cor, .nav-link{
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto_black);
+}
+
+.arca_logo{
+    display: block;
+    width: 185px;
+    height: 78px;
+}
+
+/* ANIMAÇÃO DO HOVER NAVBAR */
+
+.navbar-cor .nav-link{
+    position: relative;
+    width: max-content;
+}
+
+.navbar-cor .nav-link::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-texto_black);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-cor .nav-link:hover::before,
+.navbar-cor .nav-link.show::before{
+    width: 100%; 
+}
+
+/* BOTÕES NAVBAR */
+
+.button_navbar{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cor-botao_roxo);
+    color: var(--cor-botao_white);
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.button_navbar:hover{
+    background-color: var(--cor-botao_roxo-hover);
+    
+}
+
+/* RODAPÉ */
+
+.footer_arca{
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto_4);
+    padding: 20px 20px;
+}
+
+.footer_arca .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_img-arca, .footer_img-serra{
+    width: 170px;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.footer_links, .footer_contato{
+    flex: 1;
+}
+
+.footer_links h5, .footer_contato h5{ 
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer_nav{
+    display: flex;
+    gap: 20px;
+}
+
+.footer_links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links li{
+    margin-bottom: 8px;
+}
+
+.footer_links a{
+    color: var(--cor-botao_white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer_links a:hover{
+    text-decoration: underline;
+}
+
+.footer_contato p{ 
+    margin-bottom: 10px; 
+    font-size: 0.9rem; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.footer_contato a{
+    color: var(--cor-botao_white);
+    text-decoration: none;
+}
+
+
+/* Responsividade do Rodapé (Celular) */
+@media (max-width: 992px){
+    .footer_arca .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer_nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer_contato p {
+        justify-content: center;
+    }
+}

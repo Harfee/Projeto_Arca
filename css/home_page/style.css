@@ -1,0 +1,41 @@
+/* GERAIS */
+
+html{
+    scrollbar-color: var(--cor-secundaria) var(--cor_texto_gray);
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* CORES PRIMÁRIAS */
+    --cor-primaria: #36ABD9;
+    --cor-secundaria: #F7F8FA;
+
+    /* CORES SECUNDÁRIAS (BOTÕES) */
+    --cor-botao_roxo: #7A378C;
+    --cor-botao_roxo-hover: #562762;
+    --cor-botao_laranja: #F28705;
+    --cor-botao_laranja-hover: #F27405;
+    --cor-botao_white: #FFFFFF;
+
+    /* CORES TERCIÁRIAS */
+
+    --cor-texto_black: #150E0E;
+    --cor_texto_gray: #334155;
+    --cor-texto_cinza-claro: #E5E7EB;
+    --cor-texto_4: #F6F9FF;
+
+    /* CORES DE ESTADO */
+    --cor-azul: #2F80ED;
+    --cor-verde: #27AE60;
+    --cor-amarelo: #E2B93B;
+    --cor-vermelho: #EB5757;
+}
+
+
+
+/* Limita a altura do carrossel para ficar mais compacto */
+.carousel-item img {
+    height: 400px; /* Ajuste este valor conforme o seu gosto (300px, 400px, etc) */
+    object-fit: cover; /* Isso é o segredo: faz a imagem preencher o espaço sem distorcer */
+    width: 100%;
+}
