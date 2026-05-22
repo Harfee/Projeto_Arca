@@ -2,6 +2,11 @@ const currentPage = document.body.dataset.page;
 
 const projeto_arca = 'Projeto Arca';
 
+// CARDS 
+
+const card_castrados = '+2100';
+
+
 // RODAPÉ
 const local_prefeitura =  'https://maps.app.goo.gl/WcnqMqxQRmW5wk4r5';
 const instagram_link = 'https://www.instagram.com/prefeituraserra/';
@@ -99,6 +104,12 @@ document.getElementById('footer').innerHTML = footer;
 
 document.querySelectorAll('.projeto_arca').forEach(element => {
     element.innerHTML = projeto_arca;
+});
+
+// CARDS HOME 
+
+document.querySelectorAll('.card_castrados').forEach(element => {
+    element.innerHTML = card_castrados;
 });
 
 document.querySelectorAll('.local_prefeitura').forEach(element => {

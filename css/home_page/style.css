@@ -31,6 +31,14 @@ html{
     --cor-vermelho: #EB5757;
 }
 
+.question_all{
+    display: flex;
+    justify-content: end;
+    margin-right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--cor-texto_black);
+}
 
 
 /* --- ESTILO GERAL (Desktop / Notebook) --- */
@@ -66,3 +74,47 @@ html{
 .carousel-control-next-icon {
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(261deg) brightness(103%) contrast(101%);
 }
+
+
+.button_noticia{
+    display: flex;
+    justify-content: center;
+}
+
+.cards_h3{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.cards_body{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.cards{
+    width: 250px;
+    padding: 10px;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    border: 1px groove;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.cards:hover{
+    background-color: var(--cor-texto_cinza-claro);
+    transform: scale(1.02);
+}
+
+.p_cards-bold{
+    font-size: 17px;
+}
+
+.p_cards-regular{
+    font-size: 13px;
+    color: gray;
+}
+
+
