@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arca - Cadastro</title>
+    <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+
+<body data-page="cadastro">
+<header id="navbar"></header>
+
+
+<main>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="text-center mb-4">CADASTRO ARCA</h3>
+
+            <!-- Navegação das Abas (Os seletores de perfil) -->
+            <ul class="nav nav-pills nav-justified mb-4" id="loginTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="cidadao-tab" data-bs-toggle="pill" data-bs-target="#cidadao" type="button" role="tab" aria-controls="cidadao" aria-selected="true">Cidadão</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ong-tab" data-bs-toggle="pill" data-bs-target="#ong" type="button" role="tab" aria-controls="ong" aria-selected="false">ONG / Clínica</button>
+              </li>
+            </ul>
+
+            <!-- Conteúdo das Abas (Os Formulários) -->
+            <div class="tab-content" id="loginTabsContent">
+              
+              <!-- Formulário 1: Cidadão -->
+              <div class="tab-pane fade show active" id="cidadao" role="tabpanel" aria-labelledby="cidadao-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="emailCidadao" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="emailCidadao" placeholder="seu@email.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="senhaCidadao" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senhaCidadao" placeholder="Sua senha" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
+              </div>
+
+              <!-- Formulário 2: ONG / Clínica Veterinária -->
+              <div class="tab-pane fade" id="ong" role="tabpanel" aria-labelledby="ong-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="cnpjOng" class="form-label">CNPJ</label>
+                    <input type="text" class="form-control" id="cnpjOng" placeholder="00.000.000/0000-00" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="senhaOng" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senhaOng" placeholder="Sua senha" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>   
+</body>
+</html>

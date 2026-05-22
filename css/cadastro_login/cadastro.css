@@ -1,0 +1,29 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.foto-arca{
+    width: 150px;
+}
+
+.color-nav{
+    background-color: gray;
+}
+
+.menu-central{
+    margin: auto;
+}
+
+
+/* BOTÕES */
+
+.btn-outline-secondary{
+    color: #ffffff;
+    border-color: #070707;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #504c4cbe;
+    color: white;
+    border-color: #504c4cbe;
+}
