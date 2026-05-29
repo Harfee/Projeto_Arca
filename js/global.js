@@ -1,16 +1,19 @@
 const currentPage = document.body.dataset.page;
 
 const projeto_arca = 'Projeto Arca';
+const programa_arca = 'Programa Arca';
 
 // CARDS 
 
 const card_castrados = '+2100';
+const card_adoção = '+144';
+const card_atendimento = '+340';
 
 
 // RODAPÉ
 const local_prefeitura =  'https://maps.app.goo.gl/WcnqMqxQRmW5wk4r5';
 const instagram_link = 'https://www.instagram.com/prefeituraserra/';
-const footer_tel = 'tel:+52732912005';
+const footer_tel = 'tel:+552732912005';
 const site_prefeitura = 'https://www.serra.es.gov.br';
 
 // MENU DE NAVEGAÇÃO E RODAPÉ (GLOBAL)
@@ -106,11 +109,25 @@ document.querySelectorAll('.projeto_arca').forEach(element => {
     element.innerHTML = projeto_arca;
 });
 
+document.querySelectorAll('.programa_arca').forEach(element => {
+  element.innerHTML = programa_arca;
+});
+
 // CARDS HOME 
 
 document.querySelectorAll('.card_castrados').forEach(element => {
     element.innerHTML = card_castrados;
 });
+
+document.querySelectorAll('.card_adoção').forEach(element => {
+  element.innerHTML = card_adoção;
+});
+
+document.querySelectorAll('.card_atendimento').forEach(element => {
+  element.innerHTML = card_atendimento;
+});
+
+// LINKS
 
 document.querySelectorAll('.local_prefeitura').forEach(element => {
     element.href = local_prefeitura;

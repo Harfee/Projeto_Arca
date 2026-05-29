@@ -1,0 +1,395 @@
+.cadastro_arca-principal{
+    width: 40%;
+    max-width: 1000px;
+    margin: 48px auto;
+    margin-bottom: 48px;
+    display: block;
+}
+
+.cadastro_arca-principal .caixa_formulario{
+    background-color: var(--cor-texto_cinza-claro);
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+    padding-bottom: 36px;
+    overflow: hidden;
+}
+
+.cadastro_arca-principal .titulo_formulario{
+    text-align: center;
+    font-size: 24px;
+    padding: 18px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao_white);
+    margin-bottom: 24px;
+    margin-top: 0px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+/* BOTÕES (Cidadão / ONG) */
+.cadastro_arca-principal .abas_botoes{
+    display: flex;
+    background-color: #cbd5e1;
+    padding: 6px;
+    border-radius: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 24px;
+}
+
+.cadastro_arca-principal .btn_aba{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cor_texto_gray);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.cadastro_arca-principal .btn_aba.active{
+    background-color: var(--cor-azul);
+    color: var(--cor-botao_white);
+}
+
+.cadastro_arca-principal .etapa_formulario{
+    display: none;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.cadastro_arca-principal .etapa_formulario.active{
+    display: block;
+}
+
+.cadastro_arca-principal .conteudo_aba{
+    display: none; 
+}
+
+.cadastro_arca-principal .conteudo_aba.active{
+    display: block;
+}
+
+.cadastro_arca-principal .titulo_etapa{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1e293b;
+    margin-bottom: 24px;
+    text-align: center;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 12px;
+}
+
+.cadastro_arca-principal .linha_inputs{
+    display: flex;
+    gap: 20px;
+}
+.cadastro_arca-principal .linha_inputs .grupo_input{
+    flex: 1;
+}
+
+.cadastro_arca-principal .grupo_input{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cadastro_arca-principal .grupo_input label{
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cor-texto_black);
+    text-align: left;
+}
+
+.cadastro_arca-principal .grupo_input input[type="text"], 
+.cadastro_arca-principal .grupo_input input[type="password"], 
+.cadastro_arca-principal .grupo_input input[type="email"], 
+.cadastro_arca-principal .grupo_input input[type="tel"],
+.cadastro_arca-principal .grupo_input select{
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background-color: #ffffff;
+    color: var(--cor-texto_black);
+}
+
+.cadastro_arca-principal .wrapper_select {
+    position: relative;
+    width: 100%;
+}
+
+.cadastro_arca-principal .grupo_input select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px; 
+    cursor: pointer;
+}
+
+.cadastro_arca-principal .grupo_input select:focus {
+    border-color: #475569; 
+    box-shadow: 0 0 0 2px rgba(71, 85, 105, 0.2);
+}
+
+.cadastro_arca-principal .wrapper_select .icone-select {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.cadastro_arca-principal .grupo_input input::placeholder{
+    color: #94a3b8;
+}
+
+.cadastro_arca-principal .grupo_input input[readonly]{
+    background-color: #f1f5f9;
+    color: #64748b;
+    cursor: not-allowed;
+    border-color: #cbd5e1;
+}
+
+.cadastro_arca-principal .caixa_data{
+    display: flex;
+    gap: 16px;
+}
+
+.cadastro_arca-principal .caixa_data .wrapper_select {
+    flex: 1;
+}
+
+.cadastro_arca-principal .caixa_data select{
+    border-radius: 50px;
+    padding-left: 20px;
+}
+
+.cadastro_arca-principal .grupo_checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cadastro_arca-principal .grupo_checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.cadastro_arca-principal .checkbox_customizado {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.cadastro_arca-principal .grupo_checkbox input[type="checkbox"]:checked + .checkbox_customizado {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.cadastro_arca-principal .checkbox_customizado::after {
+    content: "";
+    width: 5px;
+    height: 10px;
+    border: solid #FFFFFF;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg) scale(0);
+    position: absolute;
+    top: 2px;
+    transition: transform 0.15s ease;
+}
+
+.cadastro_arca-principal .grupo_checkbox input[type="checkbox"]:checked + .checkbox_customizado::after {
+    transform: rotate(45deg) scale(1);
+}
+
+.cadastro_arca-principal .texto_checkbox {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cor-texto_black);
+}
+
+.cadastro_arca-principal .secao_cadunico {
+    max-height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-primaria);
+    padding: 0px 16px;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+}
+
+.cadastro_arca-principal .secao_cadunico.mostrar {
+    max-height: 220px;
+    opacity: 1;
+    visibility: visible;
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.cadastro_arca-principal .msg_erro {
+    color: var(--cor-vermelho);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cadastro_arca-principal .caixa_acoes {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.cadastro_arca-principal .btn_submit {
+    width: auto;
+    min-width: 170px;
+    height: 44px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: var(--cor-botao_roxo);
+    color: var(--cor-botao_white);
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cadastro_arca-principal .btn_submit:hover {
+    background-color: var(--cor-botao_roxo-hover);
+}
+
+.cadastro_arca-principal .btn_voltar {
+    background: transparent;
+    border: none;
+    color: var(--cor_texto_gray);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 0px;
+}
+
+.container_passos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 20px 0;
+}
+
+.circulo_passo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.circulo_passo.pendente {
+    background-color: #cbd5e1;
+    color: #64748b;
+}
+
+.circulo_passo.ativo {
+    background-color: #475569;
+    box-shadow: 0 0 0 3px rgba(71, 85, 105, 0.2);
+}
+
+.circulo_passo.concluido {
+    background-color: #475569;
+}
+
+.linha_passo {
+    width: 60px;
+    height: 3px;
+    background-color: #cbd5e1;
+}
+
+.linha_passo.ativa {
+    background-color: #475569;
+}
+
+/* --- RADIO BUTTONS CUSTOMIZADOS (ONG / CLÍNICA) --- */
+.cadastro_arca-principal .grupo_radio {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cadastro_arca-principal .grupo_radio input[type="radio"] {
+    display: none;
+}
+
+.cadastro_arca-principal .radio_customizado {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #94a3b8;
+    border-radius: 50%; 
+    background-color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.cadastro_arca-principal .grupo_radio input[type="radio"]:checked + .radio_customizado {
+    border-color: var(--cor-primaria);
+}
+
+.cadastro_arca-principal .radio_customizado::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    transform: scale(0);
+    transition: transform 0.15s ease;
+}
+
+.cadastro_arca-principal .grupo_radio input[type="radio"]:checked + .radio_customizado::after {
+    transform: scale(1);
+}
+
+.cadastro_arca-principal .texto_radio {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cor-texto_black);
+}

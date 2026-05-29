@@ -25,7 +25,7 @@ html{
     scroll-behavior: smooth;
 }
 
-main {
+main{
     flex: 1;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -55,6 +55,11 @@ main {
     --cor-verde: #27AE60;
     --cor-amarelo: #E2B93B;
     --cor-vermelho: #EB5757;
+
+    /* CORES DIFERENTES */
+    --cor-roxo_1: #9665ce;
+    --cor-roxo_2: #8e44ad;
+    --cor-cinza: #939599;
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -108,7 +113,6 @@ main {
 
 .button_navbar:hover{
     background-color: var(--cor-botao_roxo-hover);
-    
 }
 
 /* RODAPÉ */

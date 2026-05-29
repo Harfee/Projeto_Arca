@@ -29,43 +29,58 @@ html{
     --cor-verde: #27AE60;
     --cor-amarelo: #E2B93B;
     --cor-vermelho: #EB5757;
+
+    /* CORES DIFERENTES */
+    --cor-roxo_1: #9665ce;
+    --cor-roxo_2: #8e44ad;
+    --cor-cinza: #939599;
 }
+
 
 .question_all{
     display: flex;
-    justify-content: end;
+    width: fit-content;
+    margin-left: auto;
     margin-right: 15px;
     font-size: 30px;
     text-decoration: none;
     color: var(--cor-texto_black);
 }
 
-
-/* --- ESTILO GERAL (Desktop / Notebook) --- */
+/* ---CARROSSEL --- */
 .carrossel-wrapper{
-    max-width: 900px;   /* Largura máxima no computador */
-    margin: 40px auto;  /* Centraliza na tela */
-    width: 90%;         /* Largura flexível em telas grandes */
-    overflow: hidden;   
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* CARROSSEL */
+.carousel-inner{
     border-radius: 15px;
 }
 
-.carousel-inner .carousel-item img {
-    height: 400px;      /* Altura padrão para telas grandes */
-    object-fit: cover;  
+.carousel-inner .carousel-item img{
     width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
-/* --- RESPONSIVIDADE (Celulares e Tablets) --- */
-@media (max-width: 768px) {
-    .carrossel-wrapper {
-        width: 95%;      /* Ocupa quase toda a largura em telas pequenas */
-        margin: 20px auto; /* Reduz a margem superior/inferior no celular */
-        border-radius: 10px; /* Bordas um pouco menos arredondadas */
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px){
+
+    .carrossel-wrapper{
+        width: 95%;
+        margin: 20px auto;
+        border-radius: 10px;
     }
 
-    .carousel-inner .carousel-item img {
-        height: 250px;   /* Reduz a altura da imagem para não empurrar o resto do site */
+    .carousel-inner .carousel-item img{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -75,46 +90,226 @@ html{
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(261deg) brightness(103%) contrast(101%);
 }
 
-
-.button_noticia{
+.button_noticia a{
     display: flex;
-    justify-content: center;
+    padding: 8px 40px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    text-decoration: none;
+    color: var(--cor-texto_4);
+    background-color: var(--cor-botao_roxo);
+    transition: 0.4s;
 }
 
-.cards_h3{
-    font-weight: bold;
-    font-size: 30px;
+.button_noticia a:hover{
+    background-color: var(--cor-botao_roxo-hover);
 }
+/* CARDS (NOSSOS NÚMEROS) */
 
 .cards_body{
     display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* "Se os elementos não couberem nesta linha, jogue os que sobrarem para a linha de baixo" (IMPORTANTE) */
+    gap: 30px;
+    padding: 20px;
 }
 
 .cards{
-    width: 250px;
-    padding: 10px;
     background-color: var(--cor-secundaria);
-    border-radius: 10px;
-    border: 1px groove;
-    overflow: hidden;
-    transition: 0.5s;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 4px 12px var(--cor-cinza);
+    transition: 0.6s;
 }
 
 .cards:hover{
     background-color: var(--cor-texto_cinza-claro);
-    transform: scale(1.02);
+    transform: scale(1.01);
+    cursor: default;
+}
+
+.cards i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: var(--cor-texto_black);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px var(--cor-texto_black);
+}
+
+.cards .fa-syringe{
+    background-color: var(--cor-botao_laranja);
+}
+
+.cards .fa-paw{
+    background-color: var(--cor-roxo_1);
+}
+
+.cards .fa-file-medical{
+    background-color: var(--cor-primaria);
+}
+
+.card_castrados, .card_adoção, .card_atendimento{
+    font-size: 38px;
+    font-weight: 700px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.card_castrados{
+    color: var(--cor-botao_laranja);
+}
+
+.card_adoção{
+    color: var(--cor-roxo_2);
+}
+
+.card_atendimento{
+    color: var(--cor-primaria);
 }
 
 .p_cards-bold{
-    font-size: 17px;
+    color: var(--cor-texto_black);
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 .p_cards-regular{
-    font-size: 13px;
-    color: gray;
+    color: var(--cor_texto_gray);
+    font-size: 14px;
 }
 
 
+.quem_somos-texto p{
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.quem_somos-texto strong{
+    color: var(--cor-verde);
+}
+
+/* QUEM SOMOS */
+
+.quem_somos-arca{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 80px;
+    margin-top: 80px;
+    align-items: center;
+}
+
+/* COLUNA ESQUERDA */
+
+.quem_somos-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quem_somos-texto{
+    color: var(--cor-texto_black);
+}
+
+.quem_somos-texto p{
+    margin: 0 0 15px 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--cor_texto_gray);
+}
+
+/* COLUNA DIREITA */
+
+.quem_somos-right{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.quem_somos-grid{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* CARDS */
+
+.quem_somos-card{
+    background: white;
+    border-radius: 30px;
+    border: 1px solid var(--cor-texto_cinza-claro);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    transition: 0.4s;
+}
+
+.quem_somos-card:hover{
+    transform: scale(1.01);
+}
+
+.quem_somos-card img{
+    width: 100%;
+    display: block;
+}
+
+.card_grande{
+    width: 100%;
+}
+
+.card_grande img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: white;
+}
+
+.quem_somos-grid .quem_somos-card{
+    height: 180px;
+}
+
+.quem_somos-grid .quem_somos-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_medio{
+    width: 75%;
+    height: 180px;
+    margin: auto;
+}
+
+.card_medio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media(max-width: 992px){
+
+    .quem_somos-arca{
+        grid-template-columns: 100%;
+        gap: 50px;
+    }
+
+    .quem_somos-grid{
+        grid-template-columns: 100%;
+    }
+
+    .quem_somos-grid .quem_somos-card,
+    .card_medio{
+        width: 100%;
+        height: 220px;
+    }
+
+}

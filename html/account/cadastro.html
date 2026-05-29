@@ -3,77 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arca - Cadastro</title>
+    <title>Cadastro - ARCA</title>
     <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/all.min.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/account/cadastro.css">
 </head>
 
 <body data-page="cadastro">
 <header id="navbar"></header>
 
+<main class="cadastro_arca-principal">
+    <div class="caixa_formulario">
+        <h2 class="titulo_formulario" id="titulo_principal">Cadastro - ARCA</h2>
 
-<main>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-5">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h3 class="text-center mb-4">CADASTRO ARCA</h3>
-
-            <!-- Navegação das Abas (Os seletores de perfil) -->
-            <ul class="nav nav-pills nav-justified mb-4" id="loginTabs" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="cidadao-tab" data-bs-toggle="pill" data-bs-target="#cidadao" type="button" role="tab" aria-controls="cidadao" aria-selected="true">Cidadão</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="ong-tab" data-bs-toggle="pill" data-bs-target="#ong" type="button" role="tab" aria-controls="ong" aria-selected="false">ONG / Clínica</button>
-              </li>
-            </ul>
-
-            <!-- Conteúdo das Abas (Os Formulários) -->
-            <div class="tab-content" id="loginTabsContent">
-              
-              <!-- Formulário 1: Cidadão -->
-              <div class="tab-pane fade show active" id="cidadao" role="tabpanel" aria-labelledby="cidadao-tab">
-                <form>
-                  <div class="mb-3">
-                    <label for="emailCidadao" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="emailCidadao" placeholder="seu@email.com" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="senhaCidadao" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaCidadao" placeholder="Sua senha" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                </form>
-              </div>
-
-              <!-- Formulário 2: ONG / Clínica Veterinária -->
-              <div class="tab-pane fade" id="ong" role="tabpanel" aria-labelledby="ong-tab">
-                <form>
-                  <div class="mb-3">
-                    <label for="cnpjOng" class="form-label">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpjOng" placeholder="00.000.000/0000-00" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="senhaOng" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaOng" placeholder="Sua senha" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                </form>
-              </div>
-          </div>
+        <div class="abas_botoes">
+            <button type="button" class="btn_aba active" id="aba_cidadao" onclick="mudar_aba('cidadao')">Cidadão</button>
+            <button type="button" class="btn_aba" id="aba_ong" onclick="mudar_aba('empresa')">ONG / Clínica Veterinária</button>
         </div>
-      </div>
+
+        <form id="formulario_cadastro">
+            
+            <div class="etapa_formulario active" id="etapa_1">
+                
+                <div id="conteudo_cidadao" class="conteudo_aba active">
+                    <div class="titulo_etapa">Dados Pessoais</div>
+
+                    <div class="container_passos">
+                        <div class="circulo_passo ativo">1</div>
+                        <div class="linha_passo"></div>
+                        <div class="circulo_passo pendente">2</div>
+                    </div>
+
+                    <div class="grupo_input">
+                        <label for="nome_cidadao">Nome:</label>
+                        <input type="text" id="nome_cidadao" placeholder="Informe seu nome completo" required>
+                    </div>
+
+                    <div class="linha_inputs">
+                        <div class="grupo_input">
+                            <label for="cpf_cidadao">CPF:</label>
+                            <input type="text" id="cpf_cidadao" placeholder="Informe apenas números" maxlength="14" oninput="mascara_cpf(this)" required>
+                        </div>
+                        <div class="grupo_input">
+                            <label for="telefone_cidadao">Telefone:</label>
+                            <input type="tel" id="telefone_cidadao" placeholder="(00) 00000-0000" maxlength="15" oninput="mascara_telefone(this)" required>
+                        </div>
+                    </div>
+                    
+                    <div class="grupo_input">
+                        <label>Data de Nascimento:</label>
+                        <div class="caixa_data">
+                            <div class="wrapper_select">
+                                <select id="cid_dia" required><option value="" disabled selected>Dia</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                            <div class="wrapper_select">
+                                <select id="cid_mes" required><option value="" disabled selected>Mês</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                            <div class="wrapper_select">
+                                <select id="cid_ano" required><option value="" disabled selected>Ano</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                        </div>
+                        <span class="msg_erro" id="erro_data_cid" style="display: none; margin-top: 8px;">Erro: ano inválido.</span>
+                    </div>
+
+                    <div class="grupo_input">
+                        <label for="email_cidadao">E-mail:</label>
+                        <input type="email" id="email_cidadao" placeholder="Informe o seu e-mail" required>
+                    </div>
+
+                    <div class="linha_inputs">
+                        <div class="grupo_input">
+                            <label for="senha_cidadao">Senha:</label>
+                            <input type="password" id="senha_cidadao" placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="grupo_input">
+                            <label for="confirme_senha_cidadao">Confirme sua senha:</label>
+                            <input type="password" id="confirme_senha_cidadao" placeholder="Confirme sua senha" required>
+                        </div>
+                    </div>
+
+                    <label class="grupo_input grupo_checkbox" for="check_cadunico">
+                        <input type="checkbox" id="check_cadunico">
+                        <span class="checkbox_customizado"></span>
+                        <span class="texto_checkbox">Possui CadÚnico?</span>
+                    </label>
+
+                    <div id="caixa_cadunico" class="secao_cadunico">
+                        <div class="grupo_input">
+                            <label for="nis_cidadao">Número do NIS:</label>
+                            <input type="text" maxlength="11" id="nis_cidadao" placeholder="Informe apenas números">
+                        </div>
+
+                        <div class="grupo_input">
+                            <label for="nome_mae_cidadao">Nome Completo da Mãe:</label>
+                            <input type="text" id="nome_mae_cidadao" placeholder="Nome da mãe conforme o registro">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="conteudo_ong" class="conteudo_aba">
+                    <div class="titulo_etapa">Dados da Empresa</div>
+
+                    <div class="container_passos">
+                        <div class="circulo_passo ativo">1</div>
+                        <div class="linha_passo"></div>
+                        <div class="circulo_passo pendente">2</div>
+                    </div>
+
+                    <div class="grupo_input">
+                        <label for="razao_social">Razão Social:</label>
+                        <input type="text" id="razao_social" placeholder="Informe a razão social da empresa" required>
+                    </div>
+
+                    <div class="grupo_input">
+                        <label for="nome_fantasia">Nome Fantasia:</label>
+                        <input type="text" id="nome_fantasia" placeholder="Informe o nome fantasia (opcional)">
+                    </div>
+
+                    <div class="linha_inputs">
+                        <div class="grupo_input">
+                            <label for="cnpj_empresa">CNPJ:</label>
+                            <input type="text" id="cnpj_empresa" placeholder="Informe apenas números" maxlength="18" oninput="mascara_cnpj(this)" required>
+                        </div>
+                        <div class="grupo_input">
+                            <label for="telefone_empresa">Telefone Corporativo:</label>
+                            <input type="tel" id="telefone_empresa" placeholder="(00) 00000-0000" maxlength="15" oninput="mascara_telefone(this)" required>
+                        </div>
+                    </div>
+                    
+                    <div class="grupo_input">
+                        <label>Data do Registro:</label>
+                        <div class="caixa_data">
+                            <div class="wrapper_select">
+                                <select id="emp_dia" required><option value="" disabled selected>Dia</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                            <div class="wrapper_select">
+                                <select id="emp_mes" required><option value="" disabled selected>Mês</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                            <div class="wrapper_select">
+                                <select id="emp_ano" required><option value="" disabled selected>Ano</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                        </div>
+                        <span class="msg_erro" id="erro_data_emp" style="display: none; margin-top: 8px;">Erro: ano inválido.</span>
+                    </div>
+
+                    <div class="grupo_input">
+                        <label for="email_empresa">E-mail:</label>
+                        <input type="email" id="email_empresa" placeholder="Informe o e-mail da instituição" required>
+                    </div>
+
+                    <div class="linha_inputs">
+                        <div class="grupo_input">
+                            <label for="senha_empresa">Senha:</label>
+                            <input type="password" id="senha_empresa" placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="grupo_input">
+                            <label for="confirme_senha_empresa">Confirme sua senha:</label>
+                            <input type="password" id="confirme_senha_empresa" placeholder="Confirme sua senha" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo_input">
+                        <label style="margin-bottom: 8px;">Tipo de empresa:</label>
+                        <div class="linha_inputs">
+                            <label class="grupo_input grupo_radio" for="tipo_ong">
+                                <input type="radio" id="tipo_ong" name="tipo_empresa" value="ong" required>
+                                <span class="radio_customizado"></span>
+                                <span class="texto_radio">ONG</span>
+                            </label>
+                            <label class="grupo_input grupo_radio" for="tipo_clinica">
+                                <input type="radio" id="tipo_clinica" name="tipo_empresa" value="clinica" required>
+                                <span class="radio_customizado"></span>
+                                <span class="texto_radio">Clínica Veterinária</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caixa_acoes">
+                    <button type="button" class="btn_submit" onclick="proxima_etapa()">Continuar</button>
+                </div>
+            </div>
+
+            <div class="etapa_formulario" id="etapa_2">
+                <button type="button" class="btn_voltar" onclick="etapa_anterior()">← Voltar</button>
+                
+                <div class="titulo_etapa" id="titulo_etapa_endereco">Endereço</div>
+
+                <div class="container_passos">
+                    <div class="circulo_passo concluido">1</div>
+                    <div class="linha_passo ativa"></div>
+                    <div class="circulo_passo ativo">2</div>
+                </div>
+
+                <div class="linha_inputs">
+                    <div class="grupo_input">
+                        <label for="cep_endereco">CEP:</label>
+                        <input type="text" id="cep_endereco" placeholder="00000-000" maxlength="9" oninput="mascara_cep(this)" required>
+                    </div>
+                    <div class="grupo_input">
+                        <label for="numero_endereco">Número:</label>
+                        <input type="text" id="numero_endereco" placeholder="Ex: 123" maxlength="10" required>
+                    </div>
+                </div>
+
+                <div class="grupo_input">
+                    <label for="logradouro_endereco">Rua / Avenida:</label>
+                    <input type="text" id="logradouro_endereco" placeholder="Ex: Rua das Flores" maxlength="100" required>
+                </div>
+
+                <div class="grupo_input">
+                    <label for="complemento_endereco">Complemento (Opcional):</label>
+                    <input type="text" id="complemento_endereco" placeholder="Ex: Apto 101, Bloco B" maxlength="60">
+                </div>
+
+                <div class="linha_inputs">
+                    <div class="grupo_input">
+                        <label for="bairro_endereco">Bairro:</label>
+                        <div class="wrapper_select">
+                            <select id="bairro_endereco" required>
+                                <option value="" disabled selected>Selecione um bairro</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down icone-select"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="grupo_input">
+                        <label for="cidade_endereco">Cidade:</label>
+                        <input type="text" id="cidade_endereco" value="Serra" readonly required>
+                    </div>
+                </div>
+
+                <div class="caixa_acoes">
+                    <button type="submit" class="btn_submit">Finalizar Cadastro</button>
+                </div>
+            </div>
+
+        </form>
     </div>
-  </div>
 </main>
 
 <footer id="footer"></footer>
 
 <script src="/js/global.js"></script>
-<script src="/assets/js/bootstrap.bundle.min.js"></script>   
+<script src="/js/account/cadastro.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
