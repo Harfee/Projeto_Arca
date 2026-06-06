@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Arca - Início</title>
+  <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/all.min.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/home_page/style.css">
+</head>
+
+<body data-page="home_page">
+<header id="navbar"></header>
+
+<div class="breadcrumb-bar border-bottom">
+    <div class="container py-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a class="test" href="/">Início</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Testando...</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<main>
+<div class="container">    
+    <div class="carrossel-wrapper">
+        <div id="carouselExampleIndicators" class="carousel slide"data-bs-ride="carousel" data-bs-interval="4000">
+            <!-- Intervalo (1000 = 1s , 2000 = 2s , 3000 - 3s, ... 5000 = 5s, ... 10000 = 10s, ...) -->
+
+        <!-- INDICADORES -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carrossel 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Carrossel 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Carrossel 3"></button>
+        </div>
+
+        <!-- IMAGENS FORMATOS (1800 x 800 px) -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#" class="site_prefeitura"><img src="/img/carrossel/carrossel1.png" alt="Carrossel 1"></a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="/html/navbar/servicos/adocao.html"><img src="/img/carrossel/carrossel2.png" alt="Carrossel 2 (Adoção)"></a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="/html/navbar/servicos/castrar.html"><img src="/img/carrossel/carrossel3.png" alt="Carrossel 3 (Castração)"></a>
+            </div>
+
+        </div>
+
+        <!-- SETINHAS -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+</div>
+
+<div class="button_noticia">
+    <a href="#">Ver todas as notícias</a>
+</div>
+
+<div class="cards_home">
+    <div class="cards_header">
+        <h3><strong>Nossos números</strong></h3>
+    </div>
+
+    <div class="cards_body">
+        <div class="cards">
+            <i class="fa-solid fa-syringe"></i><strong><p class="card_castrados"></p></strong>
+            <p class="p_cards-bold"><b>Animais castrados</b></p>
+            <p class="p_cards-regular">Controle populacional e saúde preventiva.</p>
+        </div>
+
+        <div class="cards">
+            <i class="fa-solid fa-paw"></i><strong><p class="card_adoção"></p></strong>
+            <p class="p_cards-bold"><b>Eventos de adoção</b></p>
+            <p class="p_cards-regular">Unindo famílias e novos melhores amigos.</p>
+        </div>
+
+        <div class="cards">
+            <i class="fa-solid fa-file-medical"></i><strong><p class="card_atendimento"></p></strong>
+            <p class="p_cards-bold"><b>Atendimentos veterinários</b></p>
+            <p class="p_cards-regular">Saúde de ponta para quem mais precisa.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>  
+
+<a class="question_all" href="#"><i class="fa-regular fa-circle-question"></i></a>
+<hr>
+
+
+<div class="container"> 
+    <section class="quem_somos-arca">
+        <div class="quem_somos-left">
+            <div class="quem_somos-texto">
+                <h3><b>Quem somos</b></h3>
+                    <p> O <span style="font-weight: bold;" class="programa_arca"></span> (Animais Resgatados, Cuidados e Acolhidos), criado em
+                        <strong>janeiro de 2022</strong> pela <a href="#" class="site_prefeitura" target="_blank">Prefeitura Municipal da Serra</a>,
+                        é uma iniciativa voltada ao comprometimento do <strong>bem-estar animal</strong>, com foco em ações para castração, resgate, atendimento veterinário e adoção.
+                    </p>
+            </div>
+
+            <div class="quem_somos-texto">
+                <h3><b>Nossa missão</b></h3>
+                    <p>
+                        No <span style="font-weight: bold;" class="programa_arca"></span>, nossa missão é voltada à proteção e ao cuidado dos animais em situação de risco. Com atuação integrada,
+                        o programa desenvolve ações de <strong>castração</strong>, <strong>resgate</strong>, <strong>atendimento veterinário</strong> e promoção da <a href="#">adoção responsável</a>.
+                    </p>
+
+                    <p>
+                        Mais do que atender emergências, o <span class="programa_arca"></span> busca atuar de forma preventiva e contribuir para o <strong>controle populacional</strong> e para a conscientização da sociedade sobre a <em>guarda responsável</em>.
+                    </p>
+            </div>
+        </div>
+
+        <div class="quem_somos-right">
+
+            <div class="quem_somos-card card_grande"><img src="/img/quem_somos/painel1.png" alt="Quem somos Painel 1"></div>
+
+            <div class="quem_somos-grid">
+                <div class="quem_somos-card"><img src="/img/quem_somos/painel2.png" alt=""></div>
+                <div class="quem_somos-card"><img src="/img/quem_somos/painel3.png" alt="Quem somos Painel 3"></div>
+            </div>
+
+            <div class="quem_somos-card card_medio"><img src="/img/quem_somos/painel4.png" alt="Quem somos Painel 4"></div>
+        </div>
+    </section>
+</div>
+
+<a class="question_all" href="#"><i class="fa-regular fa-circle-question"></i></a>
+<hr>
+
+<div class="container">
+
+<h1>Colocar algo aqui</h1>
+
+</div>
+
+<a class="question_all" href="#"><i class="fa-regular fa-circle-question"></i></a>
+<hr>
+
+
+</main>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/js/home_page/script.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
