@@ -40,11 +40,10 @@ const navbar = `
         </li>
         <li class="nav-item"><a class="nav-link ${currentPage === 'seja_parceiro' ? 'active fw-bold' : ''}" href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link ${currentPage === 'suporte' ? 'active fw-bold' : ''} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Suporte</a>
+          <a class="nav-link ${currentPage === 'faleconosco' || currentPage === 'perguntas_frequentes' ? 'active fw-bold' : ''} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Suporte</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Ajuda</a></li>
-            <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Teste 2</a></li>
-            <li><a class="dropdown-item" href="/html/navbar/suporte/suporte.html">Teste 3</a></li>
+            <li><a class="dropdown-item" href="/html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
+            <li><a class="dropdown-item" href="/html/navbar/suporte/perguntas_frequentes.html">Perguntas frequentes</a></li>
           </ul>
         </li>
       </ul>
@@ -80,8 +79,8 @@ const footer = `
           <li><a href="/html/navbar/servicos/denuncias.html">Criar denúncia</a></li>
           <li><a href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
           <li><a href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a></li>
-          <li><a href="#">Fale conosco</a></li>
-          <li><a href="#">Perguntas frequentes</a></li>
+          <li><a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
+          <li><a href="/html/navbar/suporte/perguntas_frequentes.html">Perguntas frequentes</a></li>
         </ul>
       </div>
     </div>
