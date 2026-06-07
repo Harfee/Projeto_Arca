@@ -48,26 +48,42 @@
     --nav-mobile-bg: #2d9ac4;
 }
 
-.breadcrumb-bar {
-    position: fixed;
-    top: var(--nav-altura);
-    left: 0;
-    width: 100%;
-
-    background-color: var(--cor-secundaria);
-    border-bottom: 1px solid var(--cor-texto_cinza-claro);
-
-    z-index: 999;
-}
-
-main{
-    padding-top: 80px; /* navbar */
-}
-
 html{
     scroll-behavior: smooth;
     scrollbar-color: var(--cor-secundaria) var(--cor_texto_gray);
 }
+
+
+
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+
+/* BREADCRUMB  */
+.breadcrumb-bar {
+    background-color: var(--cor-secundaria);
+    border-bottom: 1px solid var(--cor-texto_cinza-claro);
+}
+.breadcrumb-bar .breadcrumb-item a {
+    color: var(--cor_texto_gray);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+.breadcrumb-bar .breadcrumb-item a:hover {
+    color: var(--cor-primaria);
+}
+.breadcrumb-bar .breadcrumb-item.active {
+    color: var(--cor-primaria);
+    font-size: 0.875rem;
+}
+
+
 
 body{
     margin: 0;
@@ -508,6 +524,7 @@ main{
         justify-content: center;
     }
 }
+
 
 /* =========================
    ÍCONE DE AJUDA GLOBAL

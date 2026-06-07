@@ -40,37 +40,11 @@ main > .container {
     padding-top: 0.75rem !important;
 }
 
-/* ---------- Breadcrumb ---------- */
-.breadcrumb {
-    padding: 0;
-    margin: 0;
-    background: none;
-}
-
-
-/* BREADCRUMB  */
-.breadcrumb-bar {
-    background-color: var(--cor-secundaria);
-    border-bottom: 1px solid var(--cor-texto_cinza-claro);
-}
-.breadcrumb-bar .breadcrumb-item a {
-    color: var(--cor_texto_gray);
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: color 0.2s;
-}
-.breadcrumb-bar .breadcrumb-item a:hover {
-    color: var(--cor-primaria);
-}
-.breadcrumb-bar .breadcrumb-item.active {
-    color: var(--cor-primaria);
-    font-size: 0.875rem;
-}
-
 /* ---------- Títulos da seção ---------- */
 .suporte-title {
     font-size: 2rem;
     font-weight: 700;
+    margin-top: auto;
     color: var(--arca-text);
 }
 .suporte-subtitle {

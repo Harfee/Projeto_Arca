@@ -57,6 +57,7 @@ const navbar = `
           <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/castrar.html">Agendamento de castração</a></li>
           <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
           <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/denuncias.html">Criar denúncias</a></li>
+          <li><a class="arca-nav__dropdown-link" href="/html/navbar/ongs.html">ONG's de proteção animal</a></li>
         </ul>
       </li>
 
