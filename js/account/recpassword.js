@@ -25,21 +25,6 @@ function validarCampo(campo) {
     }
 }
 
-function alternarSenha(inputId, btn) {
-    const input = document.getElementById(inputId);
-    const icone = btn.querySelector("i");
-
-    if (input.type === "password") {
-        input.type = "text";
-        icone.classList.remove("fa-eye");
-        icone.classList.add("fa-eye-slash");
-    } else {
-        input.type = "password";
-        icone.classList.remove("fa-eye-slash");
-        icone.classList.add("fa-eye");
-    }
-}
-
 function mascara_cpf(valor) {
     let v = valor.replace(/\D/g, "").slice(0, 11);
     v = v.replace(/(\d{3})(\d)/, "$1.$2");
@@ -79,35 +64,37 @@ function aplicar_mascara(input, tipo) {
     }
 }
 
-function fazerLogin(tipo) {
-    let camposValidos = true;
-    let campos = [];
+function avancar(tipo) {
+    let campo;
 
     if (tipo === "cidadao") {
-        campos = [
-            document.getElementById("login_cpf_email"),
-            document.getElementById("login_senha")
-        ];
+        campo = document.getElementById("cid_cpf_email");
     } else {
-        campos = [
-            document.getElementById("login_cnpj_email"),
-            document.getElementById("login_senha_empresa")
-        ];
+        campo = document.getElementById("emp_cnpj_email");
     }
 
-    campos.forEach(campo => {
-        validarCampo(campo);
-        if (!campo.value || !campo.value.trim()) {
-            camposValidos = false;
-        }
-    });
+    validarCampo(campo);
 
-    if (!camposValidos) return;
+    if (!campo.value || !campo.value.trim()) return;
+
+    if (tipo === "cidadao") {
+        document.getElementById("cid_etapa_1").classList.remove("active");
+        document.getElementById("cid_etapa_2").classList.add("active");
+    } else {
+        document.getElementById("emp_etapa_1").classList.remove("active");
+        document.getElementById("emp_etapa_2").classList.add("active");
+    }
+}
+
+function reenviar(inputId, idEtapa1, idEtapa2) {
+    document.getElementById(inputId).value = "";
+    document.getElementById(idEtapa2).classList.remove("active");
+    document.getElementById(idEtapa1).classList.add("active");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const cid = document.getElementById("login_cpf_email");
-    const emp = document.getElementById("login_cnpj_email");
+    const cid = document.getElementById("cid_cpf_email");
+    const emp = document.getElementById("emp_cnpj_email");
 
     if (cid) {
         cid.addEventListener("input", function () {

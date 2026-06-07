@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção - ARCA</title>
+    <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/servicos/adocao/adocao.css">
+</head>
+
+<body data-page="servicos">
+<header id="navbar"></header>
+
+<main>
+    <div class="adocao_wrapper">
+
+        <!-- Filtros -->
+        <div class="adocao_filtros">
+            <div class="filtros_esquerda">
+                <span class="filtros_label">Filtro:</span>
+
+                <div class="wrapper_select_filtro">
+                    <select id="filtro_animal" onchange="aplicar_filtros()">
+                        <option value="">Animal</option>
+                        <option value="Cão">Cão</option>
+                        <option value="Gato">Gato</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down icone_select_filtro"></i>
+                </div>
+
+                <div class="wrapper_select_filtro">
+                    <select id="filtro_raca" onchange="aplicar_filtros()">
+                        <option value="">Raça</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down icone_select_filtro"></i>
+                </div>
+
+                <div class="wrapper_select_filtro">
+                    <select id="filtro_sexo" onchange="aplicar_filtros()">
+                        <option value="">Sexo</option>
+                        <option value="Macho">Macho</option>
+                        <option value="Fêmea">Fêmea</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down icone_select_filtro"></i>
+                </div>
+
+                <div class="wrapper_select_filtro">
+                    <select id="filtro_idade" onchange="aplicar_filtros()">
+                        <option value="">Idade</option>
+                        <option value="Filhote">Filhote</option>
+                        <option value="1 ano">1 ano</option>
+                        <option value="2 anos">2 anos</option>
+                        <option value="3 anos">3 anos</option>
+                        <option value="4+ anos">4+ anos</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down icone_select_filtro"></i>
+                </div>
+            </div>
+
+            <div class="filtros_direita">
+                <div class="prioridade_wrapper">
+                    <span class="prioridade_label">Prioridade:</span>
+                    <div class="wrapper_select_filtro">
+                        <select id="filtro_ordem" onchange="aplicar_filtros()">
+                            <option value="recente">mais recente</option>
+                            <option value="antigo">mais antigo</option>
+                            <option value="az">A-Z</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down icone_select_filtro"></i>
+                    </div>
+                </div>
+
+                <span class="divisor_filtro">|</span>
+
+                <div class="visualizacao_toggle">
+                    <button class="btn_visualizacao" id="btn_lista" onclick="mudar_visualizacao('lista')" title="Lista">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                    <button class="btn_visualizacao active" id="btn_grid" onclick="mudar_visualizacao('grid')" title="Grade">
+                        <i class="fa-solid fa-grip"></i>
+                    </button>
+                </div>
+
+                <span class="divisor_filtro">|</span>
+
+                <div class="barra_pesquisa">
+                    <input type="text" id="input_pesquisa" placeholder="Pesquisar" oninput="aplicar_filtros()">
+                    <button class="btn_pesquisa" onclick="aplicar_filtros()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="adocao_contador">
+            <span id="contador_texto">Exibindo 0 resultados</span>
+        </div>
+
+        <div class="adocao_cards grid" id="adocao_cards"></div>
+
+        <div class="sem_resultados" id="sem_resultados" style="display:none;">
+            <i class="fa-solid fa-paw"></i>
+            <p>Nenhum animal encontrado com os filtros selecionados.</p>
+        </div>
+
+    </div>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/js/servicos/adocao/adocao.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

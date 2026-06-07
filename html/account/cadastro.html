@@ -19,8 +19,10 @@
         <h2 class="titulo_formulario" id="titulo_principal">Cadastro - ARCA</h2>
 
         <div class="abas_botoes">
-            <button type="button" class="btn_aba active" id="aba_cidadao" onclick="mudar_aba('cidadao')">Cidadão</button>
-            <button type="button" class="btn_aba" id="aba_ong" onclick="mudar_aba('empresa')">ONG / Clínica Veterinária</button>
+            <button type="button" class="btn_aba active" id="aba_cidadao" onclick="mudar_aba('cidadao')">
+                <i class="fa-solid fa-user"></i> Cidadão</button>
+            <button type="button" class="btn_aba" id="aba_ong" onclick="mudar_aba('empresa')">
+                <i class="fa-solid fa-house-medical"></i> ONG / Clínica Veterinária</button>
         </div>
 
         <form id="formulario_cadastro">
@@ -237,7 +239,10 @@
                     
                     <div class="grupo_input">
                         <label for="cidade_endereco">Cidade:</label>
-                        <input type="text" id="cidade_endereco" value="Serra" readonly required>
+                        <div class="campo_bloqueado_wrapper" data-tooltip="Campo bloqueado: atendemos apenas na Serra">
+                            <input type="text" id="cidade_endereco" value="Serra" readonly required class="campo_bloqueado">
+                            <i class="fa-solid fa-lock icone_cadeado"></i>
+                        </div>
                     </div>
                 </div>
 

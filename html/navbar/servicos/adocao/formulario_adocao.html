@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Adoção - ARCA</title>
+    <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/servicos/adocao/formulario_adocao.css">
+</head>
+<body>
+
+<header id="navbar"></header>
+
+<main>
+    <div class="form_adocao-principal">
+        <div class="caixa_formulario">
+            <div class="container_passos">
+                <div class="circulo_passo ativo" id="passo_1">1</div>
+                <div class="linha_passo" id="linha_passos"></div>
+                <div class="circulo_passo pendente" id="passo_2">2</div>
+            </div>
+
+            <section class="etapa_formulario active" id="etapa_1">
+                <div class="bloco_animal">
+                    <div class="bloco_animal_foto" id="animal_foto_wrapper">
+                        <i class="fa-solid fa-paw placeholder_paw"></i>
+                    </div>
+                    <div class="bloco_animal_info">
+                        <div class="bloco_titulo">Informações gerais do animal</div>
+                        <div class="bloco_corpo">
+                            <div class="info_grid_animal">
+                                <div><strong>Nome:</strong> <span id="animal_nome">—</span></div>
+                                <div><strong>Porte:</strong> <span id="animal_porte">—</span></div>
+                                <div><strong>Idade:</strong> <span id="animal_idade">—</span></div>
+                                <div><strong>Tipo:</strong> <span id="animal_tipo">—</span></div>
+                                <div class="span2"><strong>ONG/Cuidador:</strong> <span id="animal_ong">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloco_secao">
+                    <div class="bloco_titulo">Dados do interessado</div>
+                    <div class="bloco_corpo">
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label for="nome_completo">Nome completo:</label>
+                                <input type="text" id="nome_completo" placeholder="Informe seu nome completo">
+                            </div>
+                            <div class="grupo_input">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" placeholder="Informe o seu e-mail">
+                            </div>
+                        </div>
+
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label>Data de nascimento:</label>
+                                <div class="caixa_data">
+                                    <div class="wrapper_select">
+                                        <select id="data_dd"><option value="" disabled selected>Dia</option></select>
+                                        <i class="fa-solid fa-angle-down icone-select"></i>
+                                    </div>
+                                    <div class="wrapper_select">
+                                        <select id="data_mm"><option value="" disabled selected>Mês</option></select>
+                                        <i class="fa-solid fa-angle-down icone-select"></i>
+                                    </div>
+                                    <div class="wrapper_select">
+                                        <select id="data_yyyy"><option value="" disabled selected>Ano</option></select>
+                                        <i class="fa-solid fa-angle-down icone-select"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grupo_input">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" maxlength="14" placeholder="000.000.000-00">
+                            </div>
+                        </div>
+
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="grupo_input"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caixa_acoes">
+                    <button type="button" class="btn_submit" onclick="ir_etapa_2()">
+                        <i class="fa-solid fa-circle-plus"></i> Continuar
+                    </button>
+                </div>
+            </section>
+
+            <section class="etapa_formulario" id="etapa_2">
+                <div class="bloco_secao">
+                    <div class="bloco_titulo">Informações gerais do interessado</div>
+                    <div class="bloco_corpo">
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label for="estado">Estado</label>
+                                <div class="campo_bloqueado_wrapper" data-tooltip="Campo bloqueado: atendemos apenas o ES">
+                                    <input type="text" id="estado" value="ES" readonly class="campo_bloqueado">
+                                    <i class="fa-solid fa-lock icone_cadeado"></i>
+                                </div>
+                            </div>
+
+                            <div class="grupo_input">
+                                <label for="cidade">Cidade</label>
+                                <div class="campo_bloqueado_wrapper" data-tooltip="Campo bloqueado: atendemos apenas na Serra">
+                                    <input type="text" id="cidade" value="Serra" readonly class="campo_bloqueado">
+                                    <i class="fa-solid fa-lock icone_cadeado"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label for="bairro">Bairro:</label>
+                                <div class="wrapper_select">
+                                    <select id="bairro">
+                                        <option value="" disabled selected>Selecione um bairro</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down icone-select"></i>
+                                </div>
+                            </div>
+
+                            <div class="grupo_input">
+                                <label for="cep">CEP:</label>
+                                <input type="text" id="cep" maxlength="9" placeholder="00000-000">
+                            </div>
+                        </div>
+
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label for="rua">Rua / Avenida:</label>
+                                <input type="text" id="rua" placeholder="Ex: Rua das Flores" maxlength="100">
+                            </div>
+
+                            <div class="grupo_input">
+                                <label for="complemento">Complemento (Opcional):</label>
+                                <input type="text" id="complemento" placeholder="Ex: Apartamento, bloco, referência" maxlength="60">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloco_secao">
+                    <div class="bloco_titulo">Informações para adoção</div>
+                    <div class="bloco_corpo">
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label>Tipo de moradia</label>
+                                <div class="linha_check">
+                                    <label class="grupo_checkbox"><input type="checkbox" name="moradia" value="Casa"><span class="checkbox_customizado"></span><span class="texto_checkbox">Casa</span></label>
+                                    <label class="grupo_checkbox"><input type="checkbox" name="moradia" value="Apartamento"><span class="checkbox_customizado"></span><span class="texto_checkbox">Apartamento</span></label>
+                                </div>
+                            </div>
+                            <div class="grupo_input">
+                                <label>Possui quintal?</label>
+                                <div class="linha_check">
+                                    <label class="grupo_checkbox"><input type="checkbox" name="quintal" value="Sim"><span class="checkbox_customizado"></span><span class="texto_checkbox">Sim</span></label>
+                                    <label class="grupo_checkbox"><input type="checkbox" name="quintal" value="Não"><span class="checkbox_customizado"></span><span class="texto_checkbox">Não</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label>Mora de aluguel?</label>
+                                <div class="linha_check">
+                                    <label class="grupo_checkbox"><input type="checkbox" name="aluguel" value="Sim"><span class="checkbox_customizado"></span><span class="texto_checkbox">Sim</span></label>
+                                    <label class="grupo_checkbox"><input type="checkbox" name="aluguel" value="Não"><span class="checkbox_customizado"></span><span class="texto_checkbox">Não</span></label>
+                                </div>
+                            </div>
+                            <div class="grupo_input">
+                                <label>Já teve pets antes?</label>
+                                <div class="linha_check">
+                                    <label class="grupo_checkbox"><input type="checkbox" name="pets" value="Sim"><span class="checkbox_customizado"></span><span class="texto_checkbox">Sim</span></label>
+                                    <label class="grupo_checkbox"><input type="checkbox" name="pets" value="Não"><span class="checkbox_customizado"></span><span class="texto_checkbox">Não</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="linha_inputs">
+                            <div class="grupo_input">
+                                <label for="motivacao">Motivação da adoção</label>
+                                <textarea id="motivacao" rows="4" placeholder="Explique porque deseja adotar este animal"></textarea>
+                            </div>
+
+                            <div class="grupo_input">
+                                <label>Comprovante de residência</label>
+                                <div class="upload_dropzone" id="upload_dropzone">
+
+                                    <div class="upload_dropzone_conteudo" id="upload_dropzone_conteudo">
+                                        <i class="fa-solid fa-cloud-arrow-up upload_icone_nuvem"></i>
+                                        <span class="upload_texto_principal">Arraste o arquivo aqui</span>
+                                        <span class="upload_texto_ou">ou</span>
+                                        <button type="button" class="upload_btn_browse" onclick="document.getElementById('comprovante').click()">
+                                            Procure arquivos
+                                        </button>
+                                    </div>
+
+                                    <div class="upload_arquivo_selecionado" id="upload_arquivo_selecionado" style="display:none;">
+                                        <i class="fa-solid fa-file-lines upload_icone_arquivo"></i>
+                                        <span class="upload_nome_arquivo" id="upload_nome">—</span>
+                                        <button type="button" class="upload_btn_remover" onclick="remover_arquivo()">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <input type="file" id="comprovante" hidden accept=".pdf,.jpg,.jpeg,.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caixa_acoes">
+                    <div class="linha_botoes">
+                        <button type="button" class="btn_voltar_rodape" onclick="ir_etapa_1()">
+                            <i class="fa-solid fa-circle-arrow-left"></i> Voltar
+                        </button>
+                        <button type="button" class="btn_submit" onclick="enviar_solicitacao()">
+                            <i class="fa-solid fa-circle-plus"></i> Enviar solicitação
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<div class="confirmacao_overlay" id="confirmacao_overlay">
+    <div class="confirmacao_box">
+
+        <div class="confirmacao_icone">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="confirmacao_titulo">Solicitação enviada!</div>
+
+        <p class="confirmacao_subtitulo">
+            Obrigado por dar um passo tão especial! A ONG responsável entrará em contato com você para prosseguir com o processo de adoção.
+        </p>
+
+        <div class="confirmacao_animal" id="confirmacao_animal_info">
+            <div class="confirmacao_animal_foto_placeholder" id="confirmacao_foto_placeholder">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+            <img id="confirmacao_foto_img" class="confirmacao_animal_foto" src="" alt="" style="display:none;">
+            <div class="confirmacao_animal_info">
+                <div class="nome" id="confirmacao_nome_animal">—</div>
+                <div class="detalhe" id="confirmacao_detalhe_animal">—</div>
+            </div>
+        </div>
+
+        <div class="confirmacao_contatos">
+            <div class="confirmacao_contatos_titulo">
+                <i class="fa-solid fa-phone"></i> Entre em contato com a ONG
+            </div>
+            <div class="confirmacao_contato_linha">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="#" id="confirmacao_instagram" target="_blank">—</a>
+            </div>
+            <div class="confirmacao_contato_linha">
+                <i class="fa-solid fa-phone"></i>
+                <span id="confirmacao_tel">—</span>
+            </div>
+            <div class="confirmacao_contato_linha">
+                <i class="fa-solid fa-building-ngo"></i>
+                <span id="confirmacao_ong">—</span>
+            </div>
+        </div>
+
+        <button class="btn_confirmacao_voltar" onclick="fechar_confirmacao()">
+            <i class="fa-solid fa-paw"></i> Ver mais animais
+        </button>
+
+    </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/js/servicos/adocao/formulario_adocao.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

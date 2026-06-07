@@ -14,47 +14,31 @@
 <body data-page="home_page">
 <header id="navbar"></header>
 
-<div class="breadcrumb-bar border-bottom">
-    <div class="container py-2">
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a class="test" href="/">Início</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Testando...</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-
 <main>
 <div class="container">    
     <div class="carrossel-wrapper">
         <div id="carouselExampleIndicators" class="carousel slide"data-bs-ride="carousel" data-bs-interval="4000">
-            <!-- Intervalo (1000 = 1s , 2000 = 2s , 3000 - 3s, ... 5000 = 5s, ... 10000 = 10s, ...) -->
-
-        <!-- INDICADORES -->
-        <div class="carousel-indicators">
+            <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carrossel 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Carrossel 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Carrossel 3"></button>
         </div>
 
-        <!-- IMAGENS FORMATOS (1800 x 800 px) -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="#" class="site_prefeitura"><img src="/img/carrossel/carrossel1.png" alt="Carrossel 1"></a>
+                <a href="#" class="site_prefeitura" target="_blank"><img src="/img/carrossel/carrossel1.png" alt="Carrossel 1"></a>
             </div>
 
             <div class="carousel-item">
-                <a href="/html/navbar/servicos/adocao.html"><img src="/img/carrossel/carrossel2.png" alt="Carrossel 2 (Adoção)"></a>
+                <a href="/html/navbar/servicos/adocao/adocao.html" target="_blank"><img src="/img/carrossel/carrossel2.png" alt="Carrossel 2 (Adoção)"></a>
             </div>
 
             <div class="carousel-item">
-                <a href="/html/navbar/servicos/castrar.html"><img src="/img/carrossel/carrossel3.png" alt="Carrossel 3 (Castração)"></a>
+                <a href="/html/navbar/servicos/castrar.html" target="_blank"><img src="/img/carrossel/carrossel3.png" alt="Carrossel 3 (Castração)"></a>
             </div>
 
         </div>
 
-        <!-- SETINHAS -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
@@ -68,7 +52,7 @@
 </div>
 
 <div class="button_noticia">
-    <a href="#">Ver todas as notícias</a>
+    <a href="https://www.serra.es.gov.br/busca?palavra=Programa+Arca" target="_blank">Ver todas as notícias</a>
 </div>
 
 <div class="cards_home">
@@ -97,67 +81,152 @@
     </div>
 </div>
 
-
-
-
-
 </div>  
 
-<a class="question_all" href="#"><i class="fa-regular fa-circle-question"></i></a>
-<hr>
-
+<hr id="quem-somos">
 
 <div class="container"> 
     <section class="quem_somos-arca">
-        <div class="quem_somos-left">
+        
+        <div class="quem_somos-bloco1">
             <div class="quem_somos-texto">
-                <h3><b>Quem somos</b></h3>
-                    <p> O <span style="font-weight: bold;" class="programa_arca"></span> (Animais Resgatados, Cuidados e Acolhidos), criado em
-                        <strong>janeiro de 2022</strong> pela <a href="#" class="site_prefeitura" target="_blank">Prefeitura Municipal da Serra</a>,
-                        é uma iniciativa voltada ao comprometimento do <strong>bem-estar animal</strong>, com foco em ações para castração, resgate, atendimento veterinário e adoção.
-                    </p>
+                <div class="quem_somos-titulo">
+                    <span class="icone-emoji azul"><i class="fa-solid fa-users"></i></span>
+                    <h3>Quem <span class="destaque-roxo">somos</span></h3>
+                </div>
+                <p> O <span style="font-weight: bold;" class="programa_arca"></span> (Animais Resgatados, Cuidados e Acolhidos), criado em
+                    <strong>janeiro de 2022</strong> pela <a href="#" class="site_prefeitura" target="_blank">Prefeitura Municipal da Serra</a>,
+                    é uma iniciativa voltada ao comprometimento do <strong>bem-estar animal</strong>, com foco em ações para castração, resgate, atendimento veterinário e adoção.
+                </p>
             </div>
-
-            <div class="quem_somos-texto">
-                <h3><b>Nossa missão</b></h3>
-                    <p>
-                        No <span style="font-weight: bold;" class="programa_arca"></span>, nossa missão é voltada à proteção e ao cuidado dos animais em situação de risco. Com atuação integrada,
-                        o programa desenvolve ações de <strong>castração</strong>, <strong>resgate</strong>, <strong>atendimento veterinário</strong> e promoção da <a href="#">adoção responsável</a>.
-                    </p>
-
-                    <p>
-                        Mais do que atender emergências, o <span class="programa_arca"></span> busca atuar de forma preventiva e contribuir para o <strong>controle populacional</strong> e para a conscientização da sociedade sobre a <em>guarda responsável</em>.
-                    </p>
+            
+            <div class="quem_somos-img-top">
+                <img src="/img/quem_somos/painel1.png" alt="Animais Arca">
             </div>
         </div>
 
-        <div class="quem_somos-right">
-
-            <div class="quem_somos-card card_grande"><img src="/img/quem_somos/painel1.png" alt="Quem somos Painel 1"></div>
-
-            <div class="quem_somos-grid">
-                <div class="quem_somos-card"><img src="/img/quem_somos/painel2.png" alt=""></div>
-                <div class="quem_somos-card"><img src="/img/quem_somos/painel3.png" alt="Quem somos Painel 3"></div>
+        <div class="quem_somos-bloco2">
+            <div class="quem_somos-texto">
+                <div class="quem_somos-titulo">
+                    <span class="icone-emoji roxo"><i class="fa-regular fa-heart"></i></span>
+                    <h3>Nossa missão</h3>
+                </div>
+                <p>
+                    No <span style="font-weight: bold;" class="programa_arca"></span>, nossa missão é voltada à proteção e ao cuidado dos animais em situação de risco. Com atuação integrada,
+                    o programa desenvolve ações de <strong>castração</strong>, <strong>resgate</strong>, <strong>atendimento veterinário</strong> e promoção da <a href="/html/navbar/servicos/adocao/adocao.html" target="_blank">adoção responsável</a>.
+                </p>
+                <p>
+                    Mais do que atender emergências, o <span class="programa_arca"></span> busca atuar de forma preventiva e contribuir para o <strong>controle populacional</strong> e para a conscientização da sociedade sobre a <em>guarda responsável</em>.
+                </p>
             </div>
 
-            <div class="quem_somos-card card_medio"><img src="/img/quem_somos/painel4.png" alt="Quem somos Painel 4"></div>
+            <div class="quem_somos-grid-imagens">
+                <img src="/img/quem_somos/painel2.png" alt="Resgate animal" class="img-missao img1">
+                <img src="/img/quem_somos/painel3.png" alt="Gatinho" class="img-missao img2">
+                <img src="/img/quem_somos/painel4.png" alt="Cachorro feliz" class="img-missao img3">
+            </div>
         </div>
+
     </section>
 </div>
 
-<a class="question_all" href="#"><i class="fa-regular fa-circle-question"></i></a>
 <hr>
 
 <div class="container">
 
-<h1>Colocar algo aqui</h1>
+<section class="banner-apoie">
+    <div class="banner-apoie-conteudo">
+        <div class="banner-apoie-texto">
+        <div class="banner-apoie-titulo">
+            <div class="banner-heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <h2>Descubre. Apoie. Cuide. Faça parte.</h2>
+        </div>
+            <p>Cada ação é um recomeço cheio de amor. Veja forma de apoiar as ONG's e clínicas veterinárias parceiras.</p>
+        </div>
+        <div class="banner-apoie-acao">
+            <a href="/html/navbar/seja_parceiro.html" class="btn-banner">Saiba como ajudar &rarr;</a>
+            <i class="fa-solid fa-paw pata1"></i>
+            <i class="fa-solid fa-paw pata2"></i>
+            <i class="fa-solid fa-paw pata3"></i>
+        </div>
+    </div>
+</section>
+
+<section class="faq-servicos-container">
+    
+    <div class="faq-box">
+        <h2>Perguntas frequentes</h2>
+
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                <span>Como adotar um pet?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="faq-resposta">
+                Para adotar um pet pelo Programa Arca da Serra, basta acompanhar os eventos de adoção e preencher o cadastro responsável. Após a análise, você poderá conhecer os animais disponíveis e encontrar um novo melhor amigo para sua família.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                <span>Como solicitar um resgate?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="faq-resposta">
+                O resgate pode ser solicitado através dos canais oficiais do Programa Arca da Serra. Informe a localização do animal, fotos e detalhes da situação para que a equipe possa avaliar e realizar o atendimento adequado.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                <span>Como realizar uma denúncia?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="faq-resposta">
+                Casos de maus-tratos, abandono ou situações de risco podem ser denunciados pelos canais da Prefeitura da Serra e do Programa Arca. Quanto mais informações forem enviadas, mais rápido será o atendimento.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                <span>Como cadastrar a minha ONG?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="faq-resposta">
+                ONGs interessadas em parceria podem entrar em contato com o Programa Arca da Serra para apresentar documentação, projetos e informações sobre atuação na proteção animal.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                <span>Como solicitar um serviço de castração para o meu pet?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="faq-resposta">
+                O agendamento da castração é realizado pelos canais oficiais do Programa Arca da Serra. É necessário acompanhar a abertura de vagas e enviar os documentos solicitados para confirmação do atendimento.
+            </div>
+        </div>
+    </div>
+
+    <div class="servicos-box">
+        <h2>Nossos serviços</h2>
+        <p>Encontre cuidado, proteção e amor para os animais em um só lugar através de nossos serviços.</p>
+        <p>Clique em "Saiba mais" e descubra todos os serviços disponíveis.</p>
+        
+        <a href="/html/navbar/servicos/sobre.html" class="btn-servicos">Saiba mais</a>
+
+    </div>
+</section>
 
 </div>
-
-<a class="question_all" href="#"><i class="fa-regular fa-circle-question"></i></a>
-<hr>
-
-
 </main>
 
 <footer id="footer"></footer>

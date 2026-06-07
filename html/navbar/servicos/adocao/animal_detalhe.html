@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe do Animal - ARCA</title>
+    <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/servicos/adocao/animal_detalhe.css">
+</head>
+<body>
+<header id="navbar"></header>
+
+<main>
+    <div class="detalhe_wrapper" id="detalhe_wrapper">
+
+<button onclick="history.back()" class="btn_voltar">
+    <i class="fa-solid fa-arrow-left"></i>
+    Voltar
+</button>
+
+        <div class="detalhe_principal">
+            <div class="detalhe_foto_wrapper" id="foto_wrapper">
+                <i class="fa-solid fa-paw detalhe_foto_placeholder"></i>
+            </div>
+
+            <div class="detalhe_info_card">
+                <div class="detalhe_info_nome" id="info_nome">—</div>
+                <div class="detalhe_badge_linha" id="info_badge">—</div>
+                <p class="detalhe_descricao_completa" id="info_descricao">—</p>
+                <button class="btn_quero_adotar" onclick="abrir_termo()">
+                    <i class="fa-solid fa-circle-plus"></i> Quero adotar
+                </button>
+            </div>
+
+        </div>
+
+        <div class="detalhe_secoes">
+            <div>
+                <div class="secao_titulo"><i class="fa-solid fa-clipboard-list"></i> Mais detalhes</div>
+                <div class="detalhe_tags" id="tags_saude"></div>
+                <div id="info_detalhes"></div>
+            </div>
+            <div>
+                <div class="secao_titulo"><i class="fa-solid fa-address-card"></i> Contato</div>
+                <div id="info_contato"></div>
+            </div>
+        </div>
+
+        <div class="mais_animais_secao">
+            <div class="mais_animais_titulo">
+                <i class="fa-solid fa-paw"></i> Mais animais esperando adoção
+            </div>
+            <div class="mais_animais_grid" id="mais_animais_grid"></div>
+        </div>
+
+    </div>
+</main>
+
+<!-- TERMO DE COMPROMETIMENTO -->
+<div class="modal_overlay" id="modal_termo">
+    <div class="modal_box">
+        <div class="modal_conteudo">
+
+            <h2 class="modal_titulo">Termo de comprometimento</h2>
+
+            <p class="modal_texto">
+                Ao realizar a adoção de um animal por meio desta plataforma/projeto, o(a) adotante declara estar ciente de que assume integral responsabilidade pela saúde, segurança, bem-estar e qualidade de vida do animal adotado.
+            </p>
+            <p class="modal_texto">
+                Os animais disponibilizados para adoção foram acolhidos, avaliados e preparados para convivência familiar, buscando-se garantir a eles uma nova oportunidade de vida em um ambiente seguro, digno e livre de qualquer forma de negligência ou maus-tratos.
+            </p>
+            <p class="modal_texto">
+                O(a) adotante declara compreender que a adoção é um ato de responsabilidade e compromisso contínuo, comprometendo-se a oferecer ao animal condições adequadas de sobrevivência, cuidado e afeto durante toda a sua vida.
+            </p>
+
+            <div class="modal_subtitulo">O(A) ADOTANTE COMPROMETE-SE A:</div>
+            <ol class="modal_lista">
+                <li data-num="1">Fornecer alimentação adequada, compatível com o porte, idade e necessidades do animal, além de disponibilizar água limpa e fresca diariamente.</li>
+                <li data-num="2">Garantir abrigo seguro, limpo, protegido contra sol, chuva, frio e demais condições climáticas inadequadas.</li>
+                <li data-num="3">Assegurar acompanhamento veterinário periódico, incluindo vacinação, vermifugação, tratamentos necessários e demais cuidados preventivos e emergenciais.</li>
+                <li data-num="4">Zelar pela saúde física e emocional do animal, proporcionando convivência saudável, socialização, atenção, carinho e respeito às suas características comportamentais.</li>
+                <li data-num="5">Manter o animal em ambiente seguro, evitando fugas, acidentes e situações de risco, utilizando guia e coleira durante passeios, quando aplicável.</li>
+                <li data-num="6">Não submeter o animal a situações de violência, abandono, negligência, exploração, confinamento inadequado ou qualquer prática que possa caracterizar maus-tratos.</li>
+                <li data-num="7">Informar à equipe responsável pela adoção caso não possa mais permanecer com o animal, comprometendo-se a não doá-lo, vendê-lo ou abandoná-lo sem orientação prévia.</li>
+                <li data-num="8">Permitir acompanhamento pós-adoção, quando solicitado, com a finalidade de verificar a adaptação e o bem-estar do animal.</li>
+            </ol>
+
+            <div class="modal_subtitulo">O(A) ADOTANTE DECLARA ESTAR CIENTE DE QUE:</div>
+            <p class="modal_texto">
+                A adoção é um compromisso de longo prazo, considerando que cães e gatos podem viver por muitos anos e necessitam de cuidados contínuos ao longo de toda a vida.
+            </p>
+            <p class="modal_texto">
+                O descumprimento das obrigações previstas neste termo poderá resultar em medidas cabíveis, incluindo comunicação aos órgãos competentes e eventual recolhimento do animal, quando necessário para sua proteção.
+            </p>
+            <p class="modal_texto">
+                Praticar atos de abuso, maus-tratos, ferimento ou abandono de animais é crime, conforme previsto no artigo 32 da Lei de Crimes Ambientais, sujeito às penalidades civis, administrativas e penais aplicáveis.
+            </p>
+
+            <label class="modal_declaracao" for="checkbox_termo">
+                <input type="checkbox" id="checkbox_termo" onchange="atualizar_btn_continuar()">
+                <span class="modal_declaracao_texto">
+                    Declaro ter lido, compreendido e concordado integralmente com os termos acima, assumindo a responsabilidade pela guarda responsável do animal adotado.
+                </span>
+            </label>
+
+        </div>
+
+        <div class="modal_rodape">
+            <button class="btn_modal_fechar" onclick="fechar_termo()">
+                <i class="fa-solid fa-xmark"></i> Fechar
+            </button>
+            <button class="btn_modal_continuar" id="btn_continuar" onclick="confirmar_adocao()" disabled>
+                Continuar
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="confirmacao_overlay" id="confirmacao_overlay">
+    <div class="confirmacao_box">
+
+        <div class="confirmacao_icone">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="confirmacao_titulo">Solicitação enviada!</div>
+
+        <p class="confirmacao_subtitulo">
+            Obrigado por dar um passo tão especial! A ONG responsável entrará em contato com você para prosseguir com o processo de adoção.
+        </p>
+
+        <div class="confirmacao_animal" id="confirmacao_animal_info">
+            <div class="confirmacao_animal_foto_placeholder" id="confirmacao_foto_placeholder">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+            <img id="confirmacao_foto_img" class="confirmacao_animal_foto" src="" alt="" style="display:none;">
+            <div class="confirmacao_animal_info">
+                <div class="nome" id="confirmacao_nome_animal">—</div>
+                <div class="detalhe" id="confirmacao_detalhe_animal">—</div>
+            </div>
+        </div>
+
+        <div class="confirmacao_contatos">
+            <div class="confirmacao_contatos_titulo">
+                <i class="fa-solid fa-phone"></i> Entre em contato com a ONG
+            </div>
+            <div class="confirmacao_contato_linha">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="#" id="confirmacao_instagram" target="_blank">—</a>
+            </div>
+            <div class="confirmacao_contato_linha">
+                <i class="fa-solid fa-phone"></i>
+                <span id="confirmacao_tel">—</span>
+            </div>
+            <div class="confirmacao_contato_linha">
+                <i class="fa-solid fa-building-ngo"></i>
+                <span id="confirmacao_ong">—</span>
+            </div>
+        </div>
+
+        <button class="btn_confirmacao_voltar" onclick="fechar_confirmacao()">
+            <i class="fa-solid fa-paw"></i> Ver mais animais
+        </button>
+
+    </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/js/servicos/adocao/animal_detalhe.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

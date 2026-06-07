@@ -1,0 +1,409 @@
+.adocao_wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 56px;
+}
+
+.adocao_filtros{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+.filtros_esquerda{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.filtros_direita{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.filtros_label{
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cor-texto_black);
+    white-space: nowrap;
+    margin-right: 2px;
+}
+
+.wrapper_select_filtro{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.wrapper_select_filtro select{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 7px 30px 7px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto_black);
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    min-width: 100px;
+    transition: border-color 0.2s;
+}
+
+.wrapper_select_filtro select:focus{
+    border-color: var(--cor-primaria);
+}
+
+.icone_select_filtro{
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 11px;
+    pointer-events: none;
+}
+
+.prioridade_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.prioridade_label{
+    font-size: 14px;
+    color: var(--cor_texto_gray);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.prioridade_wrapper .wrapper_select_filtro select{
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    font-weight: 600;
+    color: var(--cor-texto_black);
+    min-width: 110px;
+}
+
+.prioridade_wrapper .icone_select_filtro{
+    right: 4px;
+}
+
+.divisor_filtro{
+    color: #cbd5e1;
+    font-size: 18px;
+    user-select: none;
+}
+
+.visualizacao_toggle{
+    display: flex;
+    gap: 4px;
+}
+
+.btn_visualizacao{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn_visualizacao:hover{
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+.btn_visualizacao.active{
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: #ffffff;
+}
+
+/* Pesquisa */
+.barra_pesquisa{
+    display: flex;
+    align-items: center;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: border-color 0.2s;
+}
+
+.barra_pesquisa:focus-within{
+    border-color: var(--cor-primaria);
+}
+
+.barra_pesquisa input{
+    border: none;
+    outline: none;
+    padding: 7px 10px 7px 14px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    width: 150px;
+    color: var(--cor-texto_black);
+    background: transparent;
+}
+
+.barra_pesquisa input::placeholder{
+    color: #94a3b8;
+}
+
+.btn_pesquisa{
+    background: transparent;
+    border: none;
+    padding: 7px 12px;
+    cursor: pointer;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.btn_pesquisa:hover{
+    color: var(--cor-primaria);
+}
+
+.adocao_contador{
+    text-align: right;
+    margin-bottom: 18px;
+}
+
+.adocao_contador span{
+    font-size: 14px;
+    color: #64748b;
+}
+
+.adocao_cards.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.adocao_cards.lista{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ---- Card ---- */
+.animal_card{
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.animal_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.adocao_cards.grid .animal_card_img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background-color: #f1f5f9;
+}
+
+.animal_card_corpo{
+    padding: 14px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.animal_card_nome{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor-texto_black);
+    margin-bottom: 4px;
+}
+
+.animal_card_info_linha{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.animal_card_idade,
+.animal_card_sexo{
+    font-size: 13px;
+    color: #64748b;
+}
+
+.animal_card_raca{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cor-texto_black);
+    margin-bottom: 8px;
+}
+
+.animal_card_descricao{
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn_saiba_mais{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--cor-botao_roxo);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 9px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-family: 'Poppins', sans-serif;
+    align-self: flex-start;
+}
+
+.btn_saiba_mais:hover{
+    background-color: var(--cor-botao_roxo-hover);
+    color: #ffffff;
+}
+
+.adocao_cards.lista .animal_card{
+    flex-direction: row;
+}
+
+.adocao_cards.lista .animal_card_img{
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+    background-color: #f1f5f9;
+}
+
+.adocao_cards.lista .animal_card_corpo{
+    padding: 16px 20px;
+}
+
+.adocao_cards.lista .animal_card_descricao{
+    -webkit-line-clamp: 3;
+}
+
+/* ---- Imagem placeholder (sem foto) ---- */
+.animal_card_img_placeholder{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 48px;
+}
+
+.adocao_cards.lista .animal_card_img_placeholder{
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    aspect-ratio: unset;
+}
+
+.sem_resultados{
+    text-align: center;
+    padding: 70px 20px;
+    color: #94a3b8;
+}
+
+.sem_resultados i{
+    font-size: 52px;
+    margin-bottom: 16px;
+    display: block;
+    color: #cbd5e1;
+}
+
+.sem_resultados p{
+    font-size: 16px;
+    color: #64748b;
+}
+
+/* ---- Responsivo ---- */
+@media (max-width: 1100px){
+    .adocao_cards.grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px){
+    .adocao_filtros{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filtros_direita{
+        flex-wrap: wrap;
+    }
+
+    .adocao_cards.grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px){
+    .adocao_wrapper {
+        padding: 16px 14px 40px;
+    }
+
+    .adocao_cards.grid{
+        grid-template-columns: 1fr;
+    }
+
+    .adocao_cards.lista .animal_card{
+        flex-direction: column;
+    }
+
+    .adocao_cards.lista .animal_card_img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .adocao_cards.lista .animal_card_img_placeholder{
+        width: 100%;
+        height: 200px;
+        aspect-ratio: unset;
+    }
+
+    .barra_pesquisa input{
+        width: 110px;
+    }
+}

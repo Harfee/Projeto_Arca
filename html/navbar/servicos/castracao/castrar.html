@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Castração - ARCA</title>
+    <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/servicos/castracao/castrar.css">
+</head>
+<body>
+
+<body data-page="servicos">
+<header id="navbar"></header>
+
+<main>
+
+    <!-- ============================================================
+         BREADCRUMB — padrão do projeto: "Serviços > Agendamento de castração"
+         Copie esse bloco nas outras páginas e ajuste o texto do último item
+         ============================================================ -->
+    <nav class="breadcrumb_castracao" aria-label="Navegação estrutural">
+        <a href="/html/navbar/servicos/servicos.html" class="breadcrumb_link">Serviços</a>
+        <i class="fa-solid fa-chevron-right breadcrumb_sep"></i>
+        <span class="breadcrumb_atual">Agendamento de castração</span>
+    </nav>
+
+    <section class="tela_castracao active" id="tela_info">
+        <div class="titulo_castracao">
+            <span class="pawprint pawprint_esq">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+                    <ellipse cx="40" cy="55" rx="20" ry="15" fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="22" cy="35" rx="8"  ry="11" fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="58" cy="35" rx="8"  ry="11" fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="30" cy="20" rx="6"  ry="8"  fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="50" cy="20" rx="6"  ry="8"  fill="#d1c4e9" opacity=".5"/>
+                </svg>
+            </span>
+
+            <div class="titulo_texto">
+                <div class="titulo_linha1">Agendamento de</div>
+                <div class="titulo_linha2">castração<span class="titulo_tracos"></span></div>
+                <div class="titulo_sublinhado"></div>
+            </div>
+
+            <span class="pawprint pawprint_dir">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+                    <ellipse cx="40" cy="55" rx="20" ry="15" fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="22" cy="35" rx="8"  ry="11" fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="58" cy="35" rx="8"  ry="11" fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="30" cy="20" rx="6"  ry="8"  fill="#d1c4e9" opacity=".5"/>
+                    <ellipse cx="50" cy="20" rx="6"  ry="8"  fill="#d1c4e9" opacity=".5"/>
+                </svg>
+            </span>
+        </div>
+
+        <div class="info_grid">
+            <div class="info_card">
+                <div class="info_card_titulo">Como funciona o agendamento?</div>
+                <div class="info_card_corpo">
+                    <p>O Programa ARCA oferece serviços de castração gratuitos, garantindo a saúde e segurança do seu pet. Conheça as etapas para o agendamento:</p>
+                    <ul class="info_lista">
+                        <li>Envio de documentos (Documento oficia com foto do tutor, imagem do animal domiciliado, comprovante de residência e comprovante de renda);</li>
+                        <li>Análise dos documentos pela equipe técnica;</li>
+                        <li>Seleção conforme critérios de prioridade;</li>
+                        <li>Participação em palestra obrigatória com a equipe da Semma;</li>
+                        <li>Assinatura do Termo de Responsabilidade pelo tutor;</li>
+                        <li>Encaminhamento do animal para a clínica.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info_coluna_dir">
+                <div class="info_card">
+                    <div class="info_card_titulo">Como faço para agendar?</div>
+                    <div class="info_card_corpo info_card_corpo--centro">
+                        <p>Aos tutores interessados em castrar seu pet, prossiga clicando o botao abaixo:</p>
+                        <button class="btn_agendar" onclick="abrir_formulario()">Quero agendar</button>
+                    </div>
+                </div>
+                <div class="info_card info_card--mutirao">
+                    <div class="info_card_titulo_mutirao">Mutirões de castração</div>
+                    <div class="info_card_corpo info_card_corpo--centro">
+                        <p>Tem interesse em ter o apoio do nosso programa para organizar mutirões? Entre em contato conosco!</p>
+                        <div class="mutirao_telefone">
+                            <i class="fa-solid fa-phone"></i>
+                            <strong><a href="#" class="tel_prefeitura">(27) 3291-2005</a></strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="tela_castracao" id="tela_formulario">
+        <div class="etapa_castracao active" id="etapa_1">
+            <div class="form_card">
+                <div class="form_card_header">Dados do tutor</div>
+                <div class="form_card_corpo">
+                    <div class="passos_castracao">
+                        <div class="passo_circulo ativo" id="passo_cast_1">1</div>
+                        <div class="passo_linha" id="passo_linha_cast"></div>
+                        <div class="passo_circulo pendente" id="passo_cast_2">2</div>
+                    </div>
+
+                    <div class="campo_grupo">
+                        <label class="campo_label" for="cast_nome">Nome completo</label>
+                        <input type="text" id="cast_nome" class="campo_input" placeholder="Informe seu nome completo">
+                    </div>
+
+                    <div class="campo_grupo">
+                        <label class="campo_label">Data de nascimento:</label>
+                        <div class="caixa_data">
+                            <div class="wrapper_select">
+                                <select id="cast_dd"><option value="" disabled selected>Dia</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+
+                            <div class="wrapper_select">
+                                <select id="cast_mm"><option value="" disabled selected>Mês</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+
+                            <div class="wrapper_select">
+                                <select id="cast_yyyy"><option value="" disabled selected>Ano</option></select>
+                                <i class="fa-solid fa-angle-down icone-select"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="campo_grupo">
+                        <label class="campo_label" for="cast_email">E-mail</label>
+                        <input type="email" id="cast_email" class="campo_input" placeholder="Informe o seu e-mail">
+                    </div>
+                </div>
+            </div>
+
+            <div class="acoes_castracao">
+                <button class="btn_continuar" onclick="ir_etapa_2_cast()">Continuar</button>
+            </div>
+        </div>
+
+        <div class="etapa_castracao" id="etapa_2">
+            <div class="docs_header">Envio de documentos</div>
+            <div class="docs_card">
+                <div class="passos_castracao">
+                    <div class="passo_circulo concluido" id="passo_cast_1b">1</div>
+                    <div class="passo_linha ativa" id="passo_linha_cast2"></div>
+                    <div class="passo_circulo ativo" id="passo_cast_2b">2</div>
+                </div>
+
+                <div class="docs_grid">
+                    <div class="upload_bloco">
+                        <div class="upload_titulo">Documento oficial com foto do tutor</div>
+                        <div class="upload_area_wrapper">
+                            <span class="upload_label_link" onclick="document.getElementById('file_doc').click()">Upload arquivo</span>
+                            <div class="upload_dropzone" id="dropzone_doc"
+                                 ondragover="drag_over(event, this)"
+                                 ondragleave="drag_leave(this)"
+                                 ondrop="drag_drop(event, 'file_doc', 'nome_doc', this)">
+                                <i class="fa-solid fa-cloud-arrow-up upload_icone"></i>
+                                <span class="upload_texto">Arraste o arquivo aqui</span>
+                                <span class="upload_ou">ou</span>
+                                <span class="upload_procure" onclick="document.getElementById('file_doc').click()">Procure arquivos</span>
+                                <span class="upload_arquivo_nome" id="nome_doc" style="display:none;"></span>
+                            </div>
+                            <input type="file" id="file_doc" hidden accept=".pdf,.jpg,.jpeg,.png"
+                                   onchange="arquivo_selecionado(this, 'nome_doc', 'dropzone_doc')">
+                        </div>
+                        <button class="btn_upload_agora" onclick="document.getElementById('file_doc').click()">Upload agora</button>
+                    </div>
+
+                    <div class="upload_bloco">
+                        <div class="upload_titulo">Imagem do animal domiciliado</div>
+                        <div class="upload_area_wrapper">
+                            <span class="upload_label_link" onclick="document.getElementById('file_animal').click()">Upload arquivo</span>
+                            <div class="upload_dropzone" id="dropzone_animal"
+                                 ondragover="drag_over(event, this)"
+                                 ondragleave="drag_leave(this)"
+                                 ondrop="drag_drop(event, 'file_animal', 'nome_animal', this)">
+                                <i class="fa-solid fa-cloud-arrow-up upload_icone"></i>
+                                <span class="upload_texto">Arraste o arquivo aqui</span>
+                                <span class="upload_ou">ou</span>
+                                <span class="upload_procure" onclick="document.getElementById('file_animal').click()">Procure arquivos</span>
+                                <span class="upload_arquivo_nome" id="nome_animal" style="display:none;"></span>
+                            </div>
+                            <input type="file" id="file_animal" hidden accept=".jpg,.jpeg,.png"
+                                   onchange="arquivo_selecionado(this, 'nome_animal', 'dropzone_animal')">
+                        </div>
+                        <button class="btn_upload_agora" onclick="document.getElementById('file_animal').click()">Upload agora</button>
+                    </div>
+
+                    <div class="upload_bloco">
+                        <div class="upload_titulo">Comprovante de residência</div>
+                        <div class="upload_area_wrapper">
+                            <span class="upload_label_link" onclick="document.getElementById('file_residencia').click()">Upload arquivo</span>
+                            <div class="upload_dropzone" id="dropzone_residencia"
+                                 ondragover="drag_over(event, this)"
+                                 ondragleave="drag_leave(this)"
+                                 ondrop="drag_drop(event, 'file_residencia', 'nome_residencia', this)">
+                                <i class="fa-solid fa-cloud-arrow-up upload_icone"></i>
+                                <span class="upload_texto">Arraste o arquivo aqui</span>
+                                <span class="upload_ou">ou</span>
+                                <span class="upload_procure" onclick="document.getElementById('file_residencia').click()">Procure arquivos</span>
+                                <span class="upload_arquivo_nome" id="nome_residencia" style="display:none;"></span>
+                            </div>
+                            <input type="file" id="file_residencia" hidden accept=".pdf,.jpg,.jpeg,.png"
+                                   onchange="arquivo_selecionado(this, 'nome_residencia', 'dropzone_residencia')">
+                        </div>
+                        <button class="btn_upload_agora" onclick="document.getElementById('file_residencia').click()">Upload agora</button>
+                    </div>
+
+                    <div class="upload_bloco">
+                        <div class="upload_titulo">Comprovante de renda</div>
+                        <div class="upload_area_wrapper">
+                            <span class="upload_label_link" onclick="document.getElementById('file_renda').click()">Upload arquivo</span>
+                            <div class="upload_dropzone" id="dropzone_renda"
+                                 ondragover="drag_over(event, this)"
+                                 ondragleave="drag_leave(this)"
+                                 ondrop="drag_drop(event, 'file_renda', 'nome_renda', this)">
+                                <i class="fa-solid fa-cloud-arrow-up upload_icone"></i>
+                                <span class="upload_texto">Arraste o arquivo aqui</span>
+                                <span class="upload_ou">ou</span>
+                                <span class="upload_procure" onclick="document.getElementById('file_renda').click()">Procure arquivos</span>
+                                <span class="upload_arquivo_nome" id="nome_renda" style="display:none;"></span>
+                            </div>
+                            <input type="file" id="file_renda" hidden accept=".pdf,.jpg,.jpeg,.png"
+                                   onchange="arquivo_selecionado(this, 'nome_renda', 'dropzone_renda')">
+                        </div>
+                        <button class="btn_upload_agora" onclick="document.getElementById('file_renda').click()">Upload agora</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="acoes_castracao acoes_castracao--duplo">
+                <button class="btn_voltar_cast" onclick="ir_etapa_1_cast()">Voltar</button>
+                <button class="btn_continuar" onclick="abrir_modal_confirmar()">Continuar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div class="cast_overlay" id="overlay_confirmar">
+    <div class="cast_modal cast_modal--confirmar">
+        <div class="cast_modal_titulo">Enviar documentos?</div>
+        <p class="cast_modal_texto">Tem certeza de que deseja enviar esses documentos?</p>
+        <div class="cast_modal_botoes">
+            <button class="btn_modal_cancelar" onclick="fechar_modal_confirmar()">Cancelar</button>
+            <button class="btn_modal_enviar"   onclick="confirmar_envio()">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<div class="cast_overlay" id="overlay_sucesso">
+    <div class="cast_modal cast_modal--sucesso">
+        <button class="cast_modal_fechar" onclick="fechar_modal_sucesso()" aria-label="Fechar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="sucesso_icone">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="sucesso_titulo">Tudo certo!</div>
+        <p class="sucesso_texto">Entraremos em contato pelo seu e-mail.</p>
+    </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/js/servicos/castracao/castrar.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
