@@ -44,7 +44,7 @@ main > .container {
 .suporte-title {
     font-size: 2rem;
     font-weight: 700;
-    margin-top: auto;
+    margin-top: 32px;
     color: var(--arca-text);
 }
 .suporte-subtitle {
