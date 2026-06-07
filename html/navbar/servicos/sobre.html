@@ -3,26 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resgate</title>
+    <title>Nossos Serviços - ARCA</title>
     <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/all.min.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/sobre.css">
 </head>
 
 <body data-page="serviços">
 <header id="navbar"></header>
 
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-bar">
+            <div class="container py-2">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                        <li class="breadcrumb-item"><a href="/suporte.html">Suporte</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Informações sobre</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+
 <main>
+    <div class="container py-5">
+    <!-- HERO -->
+    <section class="sobre-hero container-fluid px-4">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <h1 class="sobre-titulo">
+                    Nossos<br>
+                    <span class="destaque-roxo">Serviços</span>
+                    </span>
+                </h1>
+                <p class="sobre-descricao">
+                    O Projeto ARCA disponibiliza serviços como resgate, cuidado e
+                    acolhimento de animais em situação de vulnerabilidade, promovendo
+                    ações que garantem proteção, saúde e novas oportunidades por meio
+                    do cuidado responsável.
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-5 d-flex justify-content-end">
+                <div class="sobre-hero-img">
+                    <div class="sobre-blob"></div>
+                    <img src="/img/img/cachorros.png" alt="Cachorros" class="sobre-dogs-img">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CARDS DE SERVIÇOS -->
+    <section class="sobre-services-section container-fluid px-4 pb-4">
+        <div class="sobre-services-wrapper">
+            <div class="row g-3">
 
+                <!-- Adoção -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="sobre-card">
+                        <div class="sobre-card-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h3 class="sobre-card-titulo">Adoção</h3>
+                        <p class="sobre-card-texto">
+                            Encontre cães e gatos disponíveis para adoção de
+                            todas as idades e portes. Dê um novo lar e transforme uma vida.
+                        </p>
+                        <a href="/html/navbar/servicos/adocao.html" class="btn sobre-btn-saiba">Saiba mais</a>
+                    </div>
+                </div>
 
-    
+                <!-- Solicitação de Resgate -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="sobre-card">
+                        <div class="sobre-card-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3 class="sobre-card-titulo">Solicitação de resgate</h3>
+                        <p class="sobre-card-texto">
+                            Com parcerias com ONG's, resgatamos animais de
+                            forma rápida a partir de relatos de animais perdidos ou feridos.
+                        </p>
+                        <a href="/html/navbar/servicos/resgate.html" class="btn sobre-btn-saiba">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- Denunciar Maus-tratos -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="sobre-card">
+                        <div class="sobre-card-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="sobre-card-titulo">Denunciar maus-tratos</h3>
+                        <p class="sobre-card-texto">
+                            Você pode denunciar qualquer caso de maus-tratos
+                            a animais, de forma segura, anônima e sigilosa.
+                        </p>
+                        <a href="/html/navbar/servicos/denuncias.html" class="btn sobre-btn-saiba">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- Agendamento de Castração -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="sobre-card">
+                        <div class="sobre-card-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <h3 class="sobre-card-titulo">Agendamento de castração</h3>
+                        <p class="sobre-card-texto">
+                            Disponibilizamos castração gratuita para controlar a
+                            população animal e promover mais saúde e qualidade de vida.
+                        </p>
+                        <a href="/html/navbar/servicos/castrar.html" class="btn sobre-btn-saiba">Saiba mais</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </section>
+
 </main>
 
 <footer id="footer"></footer>
 
 <script src="/js/global.js"></script>
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/js/sobre.js"></script>
 </body>
 </html>

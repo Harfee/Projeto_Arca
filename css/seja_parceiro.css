@@ -59,9 +59,6 @@
 @keyframes sublinhado-entra {
     to { transform: scaleX(1); }
 }
-.icone-lapis {
-    font-style: normal;
-}
 
 /* ── INTRO ── */
 .parceiro-intro {

@@ -57,7 +57,7 @@ const navbar = `
           <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/castrar.html">Agendamento de castração</a></li>
           <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
           <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/denuncias.html">Criar denúncias</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/ongs.html">ONG's de proteção animal</a></li>
+          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
         </ul>
       </li>
 
@@ -131,6 +131,7 @@ const navbar = `
           <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/castrar.html">Agendamento de castração</a></li>
           <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
           <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/denuncias.html">Criar denúncias</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
         </ul>
       </li>
 
@@ -191,7 +192,7 @@ const footer = `
           <li><a href="/html/navbar/quem_somos.html">Quem somos</a></li>
           <li><a href="/html/navbar/servicos/adocao.html">Adoção</a></li>
           <li><a href="/html/navbar/servicos/castrar.html">Agendamento de castração</a></li>
-          <li><a href="#">ONG's de proteção animal</a></li>
+          <li><a href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
         </ul>
 
         <ul>
@@ -199,6 +200,7 @@ const footer = `
           <li><a href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
           <li><a href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a></li>
           <li><a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
+          <li><a href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
           <li><a href="/html/navbar/suporte/perguntas_frequentes.html">Perguntas frequentes</a></li>
         </ul>
 

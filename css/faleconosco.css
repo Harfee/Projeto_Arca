@@ -105,8 +105,8 @@ main > .container {
 .formulario-titulo {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--arca-white);
-    background: var(--arca-cyan);
+    color: #ffffff;
+    background: #36ABD9;
     border-radius: 10px 10px 0 0;
     margin: -2rem -2rem 1.5rem -2rem;
     padding: 1rem 1.5rem;
