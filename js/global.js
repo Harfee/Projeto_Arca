@@ -20,12 +20,10 @@ const navbar = `
 <nav class="arca-nav" id="arca-nav">
   <div class="arca-nav__container">
 
-    <!-- LOGO -->
     <a class="arca-nav__logo" href="/index.html" id="navbar_arca">
       <img src="/img/logos/painel-arca.png" alt="Logo do Projeto Arca" class="arca_logo">
     </a>
 
-    <!-- LINKS — desktop -->
     <ul class="arca-nav__links" id="arca-nav-links">
 
       <li><a class="arca-nav__link ${currentPage === 'home_page' ? 'arca-nav__link--ativo' : ''}" href="/index.html">Início</a></li>
@@ -60,13 +58,11 @@ const navbar = `
 
     </ul>
 
-    <!-- BOTÕES — desktop -->
     <div class="arca-nav__botoes arca-nav__botoes--desktop">
       <a class="arca-nav__btn arca-nav__btn--entrar" href="/html/account/login.html">Entrar</a>
       <a class="arca-nav__btn arca-nav__btn--cadastrar" href="/html/account/cadastro.html">Cadastrar</a>
     </div>
 
-    <!-- HAMBÚRGUER -->
     <button class="arca-nav__hamburguer" id="arca-hamburguer" aria-label="Abrir menu">
       <span class="arca-nav__hamburguer-linha"></span>
       <span class="arca-nav__hamburguer-linha"></span>
@@ -75,7 +71,6 @@ const navbar = `
 
   </div>
 
-  <!-- MENU MOBILE -->
   <div class="arca-nav__mobile" id="arca-mobile">
     <ul class="arca-nav__mobile-links">
 
@@ -111,7 +106,6 @@ const navbar = `
 
     </ul>
 
-    <!-- BOTÕES dentro do menu mobile -->
     <div class="arca-nav__botoes arca-nav__botoes--mobile">
       <a class="arca-nav__btn arca-nav__btn--entrar" href="/html/account/login.html">Entrar</a>
       <a class="arca-nav__btn arca-nav__btn--cadastrar" href="/html/account/cadastro.html">Cadastrar</a>
@@ -222,9 +216,6 @@ document.addEventListener('click', () => {
     });
 });
 
-document.getElementById('navbar').innerHTML = navbar;
-document.getElementById('footer').innerHTML = footer;
-
 
 document.querySelectorAll('.projeto_arca').forEach(element => {
     element.innerHTML = projeto_arca;
@@ -235,7 +226,6 @@ document.querySelectorAll('.programa_arca').forEach(element => {
 });
 
 // CARDS HOME 
-
 document.querySelectorAll('.card_castrados').forEach(element => {
     element.innerHTML = card_castrados;
 });
@@ -249,7 +239,6 @@ document.querySelectorAll('.card_atendimento').forEach(element => {
 });
 
 // LINKS
-
 document.querySelectorAll('.local_prefeitura').forEach(element => {
     element.href = local_prefeitura;
 });

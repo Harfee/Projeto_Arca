@@ -13,7 +13,7 @@ git add "." - Para adicionar os arquivos no repositório atual e o ".." e para a
 
 git commit -m "Commit inicial" - Apenas "salva" as alterações no seu computador (no repositório local) (Ele ainda não envia nada para a internet/GitHub)
 
-git pushgit origin main - Envia os arquivos salvos para o GitHub
+git push origin main - Envia os arquivos salvos para o GitHub
 
 
 
