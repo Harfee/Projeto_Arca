@@ -38,6 +38,35 @@
     position: relative;
     display: inline-block;
 }
+
+.destaque-preto {
+    color: var(--cor-texto_black);
+    position: relative;
+    display: inline-block;
+}
+/* sublinhado laranja ondulado */
+.destaque-preto::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--cor-botao_laranja);
+    border-radius: 2px;
+    margin-top: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: sublinhado-entra 0.6s ease 0.3s forwards;
+}
+@keyframes sublinhado-entra {
+    to { transform: scaleX(1); }
+}
+.icone-lapis {
+    font-style: normal;
+}
+
+
+
+
 /* sublinhado laranja ondulado */
 .destaque-roxo::after {
     content: '';

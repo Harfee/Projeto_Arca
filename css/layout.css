@@ -48,6 +48,22 @@
     --nav-mobile-bg: #2d9ac4;
 }
 
+.breadcrumb-bar {
+    position: fixed;
+    top: var(--nav-altura);
+    left: 0;
+    width: 100%;
+
+    background-color: var(--cor-secundaria);
+    border-bottom: 1px solid var(--cor-texto_cinza-claro);
+
+    z-index: 999;
+}
+
+main{
+    padding-top: 80px; /* navbar */
+}
+
 html{
     scroll-behavior: smooth;
     scrollbar-color: var(--cor-secundaria) var(--cor_texto_gray);
@@ -491,4 +507,165 @@ main{
     .footer_contato p{
         justify-content: center;
     }
+}
+
+/* =========================
+   ÍCONE DE AJUDA GLOBAL
+========================= */
+
+.ajuda-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 46px;
+    height: 46px;
+    background: var(--cor-primaria);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    z-index: 2000;
+    transition: background 0.2s, transform 0.2s;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.ajuda-btn:hover {
+    background: var(--cor-botao_roxo);
+    transform: scale(1.08);
+}
+
+.ajuda-modal {
+    position: fixed;
+    bottom: 5.2rem;
+    right: 1.5rem;
+    width: 300px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+    z-index: 1999;
+    overflow: hidden;
+    animation: ajudaSlide 0.22s ease;
+}
+.ajuda-modal.ajuda-modal--oculto {
+    display: none;
+}
+
+@keyframes ajudaSlide {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.ajuda-modal__header {
+    background: var(--cor-primaria);
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #fff;
+}
+.ajuda-modal__header i {
+    font-size: 1.1rem;
+}
+.ajuda-modal__header span {
+    flex: 1;
+    font-weight: 700;
+    font-size: 0.97rem;
+}
+.ajuda-modal__fechar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.85;
+    transition: opacity 0.15s;
+}
+.ajuda-modal__fechar:hover { opacity: 1; }
+
+.ajuda-modal__body {
+    padding: 1.2rem 1rem;
+    background: #f7f8fa;
+}
+.ajuda-modal__body > p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.85rem;
+}
+.ajuda-modal__opcao {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dde3ec;
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.88rem;
+    color: #2d3748;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    font-family: 'Poppins', sans-serif;
+}
+.ajuda-modal__opcao:last-child { margin-bottom: 0; }
+.ajuda-modal__opcao:hover {
+    background: #f0e6fa;
+    border-color: var(--cor-botao_roxo);
+    color: var(--cor-botao_roxo);
+}
+
+/* Conteúdo de resposta da ajuda */
+.ajuda-modal__resposta {
+    display: none;
+    padding: 1.2rem 1rem;
+    background: #f7f8fa;
+}
+.ajuda-modal__resposta.ajuda-modal__resposta--ativo {
+    display: block;
+}
+.ajuda-modal__resposta h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-botao_roxo);
+    margin-bottom: 0.6rem;
+}
+.ajuda-modal__resposta p,
+.ajuda-modal__resposta li {
+    font-size: 0.84rem;
+    color: #334155;
+    line-height: 1.6;
+}
+.ajuda-modal__resposta ul {
+    padding-left: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.ajuda-modal__resposta a {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    text-decoration: none;
+}
+.ajuda-modal__resposta a:hover { text-decoration: underline; }
+.ajuda-modal__voltar {
+    background: none;
+    border: none;
+    color: var(--cor-botao_roxo);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+.ajuda-modal__voltar:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+    .ajuda-modal { width: calc(100vw - 2rem); right: 1rem; }
 }

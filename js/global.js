@@ -292,3 +292,141 @@ document.querySelectorAll('.local_prefeitura').forEach(el => el.href = local_pre
 document.querySelectorAll('.footer_tel').forEach(el => el.href = footer_tel);
 document.querySelectorAll('.instagram_link').forEach(el => el.href = instagram_link);
 document.querySelectorAll('.site_prefeitura').forEach(el => el.href = site_prefeitura);
+
+
+// ======================================
+// ÍCONE DE AJUDA GLOBAL
+// ======================================
+ 
+const ajudaRespostas = {
+    adotar: {
+        titulo: 'Como adotar um pet?',
+        conteudo: `
+            <p>Para adotar um animal pelo Programa ARCA, siga os passos abaixo:</p>
+            <ul>
+                <li>Acesse a página de <a href="/html/navbar/servicos/adocao.html">Adoção</a> e veja os animais disponíveis.</li>
+                <li>Escolha um pet e clique em "Quero adotar".</li>
+                <li>Preencha o formulário de interesse — nossa equipe entrará em contato.</li>
+                <li>Após análise, você será convidado para conhecer o animal pessoalmente.</li>
+                <li>Assine o Termo de Adoção Responsável e leve seu novo amigo para casa!</li>
+            </ul>
+            <p><strong>Requisitos:</strong> ser maior de 18 anos, apresentar documento de identidade e comprovante de residência.</p>
+            <p>Dúvidas? <a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a>.</p>
+        `
+    },
+    cadastrar: {
+        titulo: 'Como se cadastrar?',
+        conteudo: `
+            <p>O cadastro no site do Programa ARCA é rápido e gratuito:</p>
+            <ul>
+                <li>Clique em <a href="/html/account/cadastro.html">Cadastrar</a> no menu superior.</li>
+                <li>Preencha seu nome completo, e-mail e crie uma senha.</li>
+                <li>Confirme seu e-mail pelo link enviado para a sua caixa de entrada.</li>
+                <li>Pronto! Com o cadastro você pode acompanhar solicitações, favoritar pets e muito mais.</li>
+            </ul>
+            <p>Já tem conta? <a href="/html/account/login.html">Faça login aqui</a>.</p>
+        `
+    },
+    suporte: {
+        titulo: 'Falar com suporte',
+        conteudo: `
+            <p>Nossa equipe está pronta para te ajudar! Escolha o canal de atendimento:</p>
+            <ul>
+                <li><strong>Formulário online:</strong> <a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a> — respondemos em até 2 dias úteis.</li>
+                <li><strong>Telefone:</strong> <a href="tel:+552732912005">(27) 3291-2005</a> — seg. a sex., das 8h às 17h.</li>
+                <li><strong>Instagram:</strong> <a href="https://www.instagram.com/prefeituraserra/" target="_blank">@prefeituraserra</a></li>
+                <li><strong>Presencial:</strong> Rua Maestro Antônio Cícero, 111 — Caçaroca, Serra/ES.</li>
+            </ul>
+        `
+    }
+};
+ 
+const ajudaHTML = `
+<button class="ajuda-btn" id="ajudaBtn" aria-label="Ajuda">
+    <i class="fa-solid fa-question"></i>
+</button>
+ 
+<div class="ajuda-modal ajuda-modal--oculto" id="ajudaModal">
+    <div class="ajuda-modal__header">
+        <i class="fa-regular fa-circle-question"></i>
+        <span>Ajuda ARCA</span>
+        <button class="ajuda-modal__fechar" id="ajudaFechar" aria-label="Fechar ajuda">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+ 
+    <!-- Tela de opções -->
+    <div class="ajuda-modal__body" id="ajudaOpcoes">
+        <p>Como posso te ajudar?</p>
+        <button class="ajuda-modal__opcao" data-ajuda="adotar">Como adotar um pet?</button>
+        <button class="ajuda-modal__opcao" data-ajuda="cadastrar">Como se cadastrar</button>
+        <button class="ajuda-modal__opcao" data-ajuda="suporte">Falar com suporte</button>
+    </div>
+ 
+    <!-- Tela de resposta -->
+    <div class="ajuda-modal__resposta" id="ajudaResposta">
+        <h4 id="ajudaRespostaTitulo"></h4>
+        <div id="ajudaRespostaConteudo"></div>
+        <button class="ajuda-modal__voltar" id="ajudaVoltar">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+</div>
+`;
+ 
+// Injeta no body
+document.body.insertAdjacentHTML('beforeend', ajudaHTML);
+ 
+// Referências
+const ajudaBtn    = document.getElementById('ajudaBtn');
+const ajudaModal  = document.getElementById('ajudaModal');
+const ajudaFechar = document.getElementById('ajudaFechar');
+const ajudaOpcoes = document.getElementById('ajudaOpcoes');
+const ajudaResp   = document.getElementById('ajudaResposta');
+const ajudaRespTitulo   = document.getElementById('ajudaRespostaTitulo');
+const ajudaRespConteudo = document.getElementById('ajudaRespostaConteudo');
+const ajudaVoltar = document.getElementById('ajudaVoltar');
+ 
+// Abrir/fechar modal
+ajudaBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const oculto = ajudaModal.classList.toggle('ajuda-modal--oculto');
+    if (!oculto) mostrarOpcoes();
+});
+ 
+ajudaFechar.addEventListener('click', () => {
+    ajudaModal.classList.add('ajuda-modal--oculto');
+});
+ 
+// Fechar ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!ajudaModal.contains(e.target) && e.target !== ajudaBtn) {
+        ajudaModal.classList.add('ajuda-modal--oculto');
+    }
+});
+ 
+// Fechar com ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') ajudaModal.classList.add('ajuda-modal--oculto');
+});
+ 
+// Clique nas opções
+ajudaOpcoes.querySelectorAll('.ajuda-modal__opcao').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const chave = btn.dataset.ajuda;
+        const dados = ajudaRespostas[chave];
+        if (!dados) return;
+        ajudaRespTitulo.textContent = dados.titulo;
+        ajudaRespConteudo.innerHTML = dados.conteudo;
+        ajudaOpcoes.style.display = 'none';
+        ajudaResp.classList.add('ajuda-modal__resposta--ativo');
+    });
+});
+ 
+// Voltar para opções
+ajudaVoltar.addEventListener('click', mostrarOpcoes);
+ 
+function mostrarOpcoes() {
+    ajudaResp.classList.remove('ajuda-modal__resposta--ativo');
+    ajudaOpcoes.style.display = '';
+}
