@@ -194,9 +194,8 @@
             </div>
 
             <div class="etapa_formulario" id="etapa_2">
-                <button type="button" class="btn_voltar" onclick="etapa_anterior()">← Voltar</button>
                 
-                <div class="titulo_etapa" id="titulo_etapa_endereco">Endereço</div>
+                <div class="titulo_etapa" id="titulo_etapa_endereco">Endereço Residencial</div>
 
                 <div class="container_passos">
                     <div class="circulo_passo concluido">1</div>
@@ -222,7 +221,7 @@
 
                 <div class="grupo_input">
                     <label for="complemento_endereco">Complemento (Opcional):</label>
-                    <input type="text" id="complemento_endereco" placeholder="Ex: Apto 101, Bloco B" maxlength="60">
+                    <input type="text" id="complemento_endereco" placeholder="Ex: Apartamento, bloco, referência" maxlength="60">
                 </div>
 
                 <div class="linha_inputs">
@@ -242,14 +241,21 @@
                     </div>
                 </div>
 
-                <div class="caixa_acoes">
-                    <button type="submit" class="btn_submit">Finalizar Cadastro</button>
+                <div class="caixa_acoes linha_botoes">
+                    <button type="button" class="btn_voltar_rodape" onclick="etapa_anterior()">Voltar</button>
+                    <button type="button" class="btn_submit" onclick="finalizarCadastro()">
+                        Finalizar cadastro
+                    </button>
                 </div>
             </div>
 
         </form>
     </div>
 </main>
+
+<div id="mensagem_sucesso" class="toast_escondido">
+    <span>Cadastro finalizado com sucesso!</span>
+</div>
 
 <footer id="footer"></footer>
 

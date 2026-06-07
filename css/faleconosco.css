@@ -26,6 +26,10 @@ header,
     padding-bottom: 0 !important;
 }
 
+.suporte-subtitle.text-center.mb-5 {
+    color: var(--cor-texto-black);
+}
+
 main {
     padding-top: 0 !important;
     margin-top: 0 !important;
@@ -110,7 +114,7 @@ main > .container {
 .contato-info p,
 .contato-info a {
     font-size: 0.88rem;
-    color: var(--arca-text);
+    color: var(--cor-texto_black);
     margin: 0;
     line-height: 1.5;
     text-decoration: none;
@@ -122,6 +126,7 @@ main > .container {
     background: var(--cor-texto_cinza-claro);
     border-radius: 16px;
     padding: 2rem;
+    margin-left: 50px;
 }
 .formulario-titulo {
     font-size: 1.15rem;
@@ -223,127 +228,4 @@ main > .container {
     color: var(--arca-text);
     line-height: 1.6;
     margin: 0;
-}
-
-/* ---------- Botão de Ajuda flutuante ---------- */
-.btn-ajuda {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 44px;
-    height: 44px;
-    background: var(--arca-white);
-    border: 2px solid var(--arca-border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    z-index: 1000;
-    transition: background 0.2s, border-color 0.2s;
-    font-size: 1.1rem;
-    color: var(--arca-muted);
-}
-.btn-ajuda:hover {
-    background: var(--arca-purple-bg);
-    border-color: var(--arca-purple);
-    color: var(--arca-purple);
-}
-
-/* ---------- Modal de Ajuda ---------- */
-.modal-ajuda {
-    position: fixed;
-    bottom: 5rem;
-    right: 1.5rem;
-    width: 280px;
-    background: var(--arca-white);
-    border-radius: 14px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.16);
-    z-index: 1001;
-    overflow: hidden;
-    animation: slideUp 0.25s ease;
-}
-.modal-ajuda.d-none { display: none !important; }
-
-.modal-ajuda-header {
-    background: var(--arca-gray-bg);
-    padding: 0.85rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    border-bottom: 1px solid var(--arca-border);
-}
-.modal-ajuda-icone {
-    color: var(--arca-purple);
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-}
-.modal-ajuda-header span {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--arca-text);
-    flex: 1;
-}
-.modal-ajuda-fechar {
-    background: none;
-    border: none;
-    color: var(--arca-muted);
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-    transition: color 0.15s;
-}
-.modal-ajuda-fechar:hover { color: var(--arca-purple); }
-
-.modal-ajuda-body {
-    padding: 1.1rem 1rem;
-}
-.modal-ajuda-body > p {
-    font-size: 0.97rem;
-    font-weight: 600;
-    color: var(--arca-text);
-    margin-bottom: 0.8rem;
-}
-.modal-ajuda-opcao {
-    display: block;
-    width: 100%;
-    background: var(--arca-white);
-    border: 1px solid var(--arca-border);
-    border-radius: 8px;
-    padding: 0.65rem 0.9rem;
-    font-size: 0.88rem;
-    color: var(--arca-text);
-    text-align: left;
-    cursor: pointer;
-    margin-bottom: 0.5rem;
-    transition: background 0.15s, border-color 0.15s;
-}
-.modal-ajuda-opcao:last-child { margin-bottom: 0; }
-.modal-ajuda-opcao:hover {
-    background: var(--arca-purple-bg);
-    border-color: var(--arca-purple);
-    color: var(--arca-purple);
-}
-
-/* ---------- Animações ---------- */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------- Responsividade ---------- */
-@media (max-width: 767px) {
-    .formulario-titulo {
-        font-size: 1rem;
-        padding: 0.85rem 1rem;
-    }
-    .formulario-box { padding: 1.4rem; }
-    .modal-ajuda { width: calc(100vw - 3rem); right: 1rem; }
 }

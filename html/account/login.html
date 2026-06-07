@@ -3,77 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arca - Login</title>
+    <title>Entrar - ARCA</title>
     <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/all.min.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/account/login.css">
 </head>
 
 <body data-page="login">
 <header id="navbar"></header>
 
+<main class="login_arca-principal">
+    <div class="login_lado-esquerdo">
+        <h1 class="login_boas-vindas">Bem-<span class="destaque">vindo(a)</span>!</h1>
+        <p class="login_subtitulo">Faça login para acessar sua conta e continuar ajudando os animais.</p>
 
-<main>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-5">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h3 class="text-center mb-4">Acesso ao ARCA</h3>
-
-            <!-- Navegação das Abas (Os seletores de perfil) -->
-            <ul class="nav nav-pills nav-justified mb-4" id="loginTabs" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="cidadao-tab" data-bs-toggle="pill" data-bs-target="#cidadao" type="button" role="tab" aria-controls="cidadao" aria-selected="true">Cidadão</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="ong-tab" data-bs-toggle="pill" data-bs-target="#ong" type="button" role="tab" aria-controls="ong" aria-selected="false">ONG / Clínica</button>
-              </li>
-            </ul>
-
-            <!-- Conteúdo das Abas (Os Formulários) -->
-            <div class="tab-content" id="loginTabsContent">
-              
-              <!-- Formulário 1: Cidadão -->
-              <div class="tab-pane fade show active" id="cidadao" role="tabpanel" aria-labelledby="cidadao-tab">
-                <form>
-                  <div class="mb-3">
-                    <label for="emailCidadao" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="emailCidadao" placeholder="seu@email.com" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="senhaCidadao" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaCidadao" placeholder="Sua senha" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                </form>
-              </div>
-
-              <!-- Formulário 2: ONG / Clínica Veterinária -->
-              <div class="tab-pane fade" id="ong" role="tabpanel" aria-labelledby="ong-tab">
-                <form>
-                  <div class="mb-3">
-                    <label for="cnpjOng" class="form-label">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpjOng" placeholder="00.000.000/0000-00" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="senhaOng" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaOng" placeholder="Sua senha" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">Entrar</button>
-                </form>
-              </div>
-          </div>
-        </div>
-      </div>
+        <ul class="login_beneficios">
+            <li class="login_beneficio-item">
+                <span class="login_beneficio-icone"><i class="fa-solid fa-heart"></i></span>
+                <div>
+                    <strong>Adoção responsável</strong>
+                    <p>Encontre seu novo melhor amigo.</p>
+                </div>
+            </li>
+            <li class="login_beneficio-item">
+                <span class="login_beneficio-icone"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                <div>
+                    <strong>Apoie ONGs</strong>
+                    <p>Sua doação transforma vidas.</p>
+                </div>
+            </li>
+            <li class="login_beneficio-item">
+                <span class="login_beneficio-icone"><i class="fa-solid fa-paw"></i></span>
+                <div>
+                    <strong>Transforme Vidas</strong>
+                    <p>Pequenas atitudes geram grandes impactos.</p>
+                </div>
+            </li>
+        </ul>
     </div>
-  </div>
+
+    <div class="caixa_formulario">
+        <h2 class="titulo_formulario">Entrar - ARCA</h2>
+
+        <div class="abas_botoes">
+            <button type="button" class="btn_aba active" id="aba_cidadao" onclick="mudar_aba('cidadao')">
+                <i class="fa-solid fa-user"></i> Cidadão
+            </button>
+            <button type="button" class="btn_aba" id="aba_ong" onclick="mudar_aba('empresa')">
+                <i class="fa-solid fa-house-medical"></i> ONG / Clínica Veterinária
+            </button>
+        </div>
+
+        <div class="conteudo_login">
+
+            <!-- ABA CIDADÃO -->
+            <div id="form_cidadao" class="form_aba active">
+                <p class="login_titulo_acesso">Acesse sua conta</p>
+
+                <div class="grupo_input">
+                    <label for="login_cpf_email">CPF ou Email:</label>
+                    <input type="text" id="login_cpf_email" placeholder="Seu CPF ou Email" oninput="validarCampo(this)">
+                </div>
+
+                <div class="grupo_input">
+                    <label for="login_senha">Senha:</label>
+                    <div class="wrapper_senha">
+                        <input type="password" id="login_senha" placeholder="Digite sua senha" oninput="validarCampo(this)">
+                        <button type="button" class="btn_ver_senha" onclick="alternarSenha('login_senha', this)" tabindex="-1">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="#" class="link_esqueceu_senha">Esqueci minha senha</a>
+
+                <div class="caixa_acoes">
+                    <button type="button" class="btn_submit" onclick="fazerLogin('cidadao')">Entrar</button>
+                </div>
+
+                <p class="login_cadastro-link">Ainda não tem uma conta? <a href="/html/account/cadastro.html">Cadastre-se</a></p>
+            </div>
+
+            <!-- ABA ONG / CLÍNICA VETERINÁRIA -->
+            <div id="form_empresa" class="form_aba">
+                <p class="login_titulo_acesso">Acesse sua conta</p>
+
+                <div class="grupo_input">
+                    <label for="login_cnpj_email">CNPJ ou Email:</label>
+                    <input type="text" id="login_cnpj_email" placeholder="Seu CNPJ ou Email" oninput="validarCampo(this)">
+                </div>
+
+                <div class="grupo_input">
+                    <label for="login_senha_empresa">Senha:</label>
+                    <div class="wrapper_senha">
+                        <input type="password" id="login_senha_empresa" placeholder="Digite sua senha" oninput="validarCampo(this)">
+                        <button type="button" class="btn_ver_senha" onclick="alternarSenha('login_senha_empresa', this)" tabindex="-1">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="#" class="link_esqueceu_senha">Esqueci minha senha</a>
+
+                <div class="caixa_acoes">
+                    <button type="button" class="btn_submit" onclick="fazerLogin('empresa')">Entrar</button>
+                </div>
+
+                <p class="login_cadastro-link">Ainda não tem uma conta? <a href="/html/account/cadastro.html">Cadastre-se</a></p>
+            </div>
+
+        </div>
+    </div>
+
 </main>
 
 <footer id="footer"></footer>
 
 <script src="/js/global.js"></script>
-<script src="/assets/js/bootstrap.bundle.min.js"></script>   
+<script src="/js/account/login.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
