@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto Arca - Início</title>
-  <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+  <link class="antigravity-ignore" rel="icon" href="/img/logos/logo-arca.png" type="image/png">
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/all.min.css">
   <link rel="stylesheet" href="/css/layout.css">
@@ -14,11 +14,22 @@
 <body data-page="home_page">
 <header id="navbar"></header>
 
+<div class="breadcrumb-bar">
+    <div class="container py-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
 <main>
 <div class="container">    
     <div class="carrossel-wrapper">
-        <div id="carouselExampleIndicators" class="carousel slide"data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-indicators">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            
+        <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carrossel 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Carrossel 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Carrossel 3"></button>
@@ -34,9 +45,8 @@
             </div>
 
             <div class="carousel-item">
-                <a href="/html/navbar/servicos/castrar.html" target="_blank"><img src="/img/carrossel/carrossel3.png" alt="Carrossel 3 (Castração)"></a>
+                <a href="/html/navbar/servicos/castracao/castrar.html" target="_blank"><img src="/img/carrossel/carrossel3.png" alt="Carrossel 3 (Castração)"></a>
             </div>
-
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -83,10 +93,10 @@
 
 </div>  
 
-<hr id="quem-somos">
+<hr >
 
 <div class="container"> 
-    <section class="quem_somos-arca">
+    <section class="quem_somos-arca" id="quem-somos">
         
         <div class="quem_somos-bloco1">
             <div class="quem_somos-texto">
@@ -116,7 +126,7 @@
                     o programa desenvolve ações de <strong>castração</strong>, <strong>resgate</strong>, <strong>atendimento veterinário</strong> e promoção da <a href="/html/navbar/servicos/adocao/adocao.html" target="_blank">adoção responsável</a>.
                 </p>
                 <p>
-                    Mais do que atender emergências, o <span class="programa_arca"></span> busca atuar de forma preventiva e contribuir para o <strong>controle populacional</strong> e para a conscientização da sociedade sobre a <em>guarda responsável</em>.
+                    Mais do que atender emergencies, o <span class="programa_arca"></span> busca atuar de forma preventiva e contribuir para o <strong>controle populacional</strong> e para a conscientização da sociedade sobre a <em>guarda responsável</em>.
                 </p>
             </div>
 
@@ -141,7 +151,6 @@
             <div class="banner-heart">
                 <i class="fa-regular fa-heart"></i>
             </div>
-
             <h2>Descubre. Apoie. Cuide. Faça parte.</h2>
         </div>
             <p>Cada ação é um recomeço cheio de amor. Veja forma de apoiar as ONG's e clínicas veterinárias parceiras.</p>
@@ -157,7 +166,7 @@
 
 <section class="faq-servicos-container">
     
-    <div class="faq-box">
+    <div class="faq-box" id="perguntas-frequentes">
         <h2>Perguntas frequentes</h2>
 
         <div class="faq-item">
@@ -165,7 +174,6 @@
                 <span>Como adotar um pet?</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-
             <div class="faq-resposta">
                 Para adotar um pet pelo Programa Arca da Serra, basta acompanhar os eventos de adoção e preencher o cadastro responsável. Após a análise, você poderá conhecer os animais disponíveis e encontrar um novo melhor amigo para sua família.
             </div>
@@ -176,7 +184,6 @@
                 <span>Como solicitar um resgate?</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-
             <div class="faq-resposta">
                 O resgate pode ser solicitado através dos canais oficiais do Programa Arca da Serra. Informe a localização do animal, fotos e detalhes da situação para que a equipe possa avaliar e realizar o atendimento adequado.
             </div>
@@ -187,7 +194,6 @@
                 <span>Como realizar uma denúncia?</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-
             <div class="faq-resposta">
                 Casos de maus-tratos, abandono ou situações de risco podem ser denunciados pelos canais da Prefeitura da Serra e do Programa Arca. Quanto mais informações forem enviadas, mais rápido será o atendimento.
             </div>
@@ -198,7 +204,6 @@
                 <span>Como cadastrar a minha ONG?</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-
             <div class="faq-resposta">
                 ONGs interessadas em parceria podem entrar em contato com o Programa Arca da Serra para apresentar documentação, projetos e informações sobre atuação na proteção animal.
             </div>
@@ -209,7 +214,6 @@
                 <span>Como solicitar um serviço de castração para o meu pet?</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-
             <div class="faq-resposta">
                 O agendamento da castração é realizado pelos canais oficiais do Programa Arca da Serra. É necessário acompanhar a abertura de vagas e enviar os documentos solicitados para confirmação do atendimento.
             </div>
@@ -220,9 +224,7 @@
         <h2>Nossos serviços</h2>
         <p>Encontre cuidado, proteção e amor para os animais em um só lugar através de nossos serviços.</p>
         <p>Clique em "Saiba mais" e descubra todos os serviços disponíveis.</p>
-        
         <a href="/html/navbar/servicos/sobre.html" class="btn-servicos">Saiba mais</a>
-
     </div>
 </section>
 

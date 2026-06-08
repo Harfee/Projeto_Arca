@@ -9,7 +9,7 @@ html {
     overflow: visible !important;
 }
 
-:root{
+:root {
     /* CORES PRIMÁRIAS */
     --cor-primaria: #36ABD9;
     --cor-secundaria: #F7F8FA;
@@ -39,7 +39,7 @@ html {
     --cor-cinza: #939599;
 }
 
-.question_all{
+.question_all {
     display: flex;
     width: fit-content;
     margin-left: auto;
@@ -50,7 +50,7 @@ html {
 }
 
 /* ---CARROSSEL --- */
-.carrossel-wrapper{
+.carrossel-wrapper {
     max-width: 900px;
     width: 90%;
     margin: 40px auto;
@@ -72,7 +72,7 @@ html {
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .carrossel-wrapper {
         width: 95%;
         margin: 20px auto;
@@ -91,7 +91,7 @@ html {
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(261deg) brightness(103%) contrast(101%);
 }
 
-.button_noticia a{
+.button_noticia a {
     display: flex;
     padding: 8px 40px;
     border-radius: 10px;
@@ -103,7 +103,7 @@ html {
     transition: 0.4s;
 }
 
-.button_noticia a:hover{
+.button_noticia a:hover {
     background-color: var(--cor-botao_roxo-hover);
 }
 
@@ -116,7 +116,7 @@ html {
     padding: 20px;
 }
 
-.cards{
+.cards {
     background-color: var(--cor-secundaria);
     border-radius: 16px;
     padding: 30px 20px;
@@ -126,13 +126,13 @@ html {
     transition: 0.6s;
 }
 
-.cards:hover{
+.cards:hover {
     background-color: var(--cor-texto_cinza-claro);
     transform: scale(1.01);
     cursor: default;
 }
 
-.cards i{
+.cards i {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -145,50 +145,50 @@ html {
     box-shadow: 0 2px 6px var(--cor-texto_black);
 }
 
-.cards .fa-syringe{
+.cards .fa-syringe {
     background-color: var(--cor-botao_laranja);
 }
 
-.cards .fa-paw{
+.cards .fa-paw {
     background-color: var(--cor-roxo_1);
 }
 
-.cards .fa-file-medical{
+.cards .fa-file-medical {
     background-color: var(--cor-primaria);
 }
 
-.card_castrados, .card_adoção, .card_atendimento{
+.card_castrados, .card_adoção, .card_atendimento {
     font-size: 38px;
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 0;
 }
 
-.card_castrados{
+.card_castrados {
     color: var(--cor-botao_laranja);
 }
 
-.card_adoção{
+.card_adoção {
     color: var(--cor-roxo_2);
 }
 
-.card_atendimento{
+.card_atendimento {
     color: var(--cor-primaria);
 }
 
-.p_cards-bold{
+.p_cards-bold {
     color: var(--cor-texto_black);
     font-size: 18px;
     margin-bottom: 8px;
 }
 
-.p_cards-regular{
+.p_cards-regular {
     color: var(--cor_texto_gray);
     font-size: 14px;
 }
 
-/* QUEM SOMOS */
-.quem_somos-arca{
+/* QUEM SOMOS (Layout corrigido conforme a segunda imagem) */
+.quem_somos-arca {
     display: flex;
     flex-direction: column;
     gap: 15px; 
@@ -196,7 +196,7 @@ html {
     margin-bottom: 80px;
 }
 
-.quem_somos-bloco1{
+.quem_somos-bloco1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -204,7 +204,7 @@ html {
     padding: 0 40px; 
 }
 
-.quem_somos-bloco2{
+.quem_somos-bloco2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -214,42 +214,42 @@ html {
     border-radius: 20px;
 }
 
-.quem_somos-texto{
+.quem_somos-texto {
     display: flex;
     flex-direction: column;
     gap: 15px;
     color: var(--cor-texto_black);
 }
 
-.quem_somos-texto p{
+.quem_somos-texto p {
     margin: 0 0 15px 0;
     font-size: 16px;
     line-height: 1.6;
     color: var(--cor-texto_black);
 }
 
-.quem_somos-texto strong{
+.quem_somos-texto strong {
     color: var(--cor-verde);
 }
 
-.quem_somos-titulo{
+.quem_somos-titulo {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 10px;
 }
 
-.quem_somos-titulo h3{
+.quem_somos-titulo h3 {
     font-size: 28px;
     font-weight: 700;
     margin: 0;
 }
 
-.destaque-roxo{
+.destaque-roxo {
     color: var(--cor-roxo_2); 
 }
 
-.icone-emoji{
+.icone-emoji {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -259,42 +259,42 @@ html {
     font-size: 20px;
 }
 
-.icone-emoji.azul{
+.icone-emoji.azul {
     background-color: #D6EAF8;
     color: var(--cor-primaria);
 }
 
-.icone-emoji.roxo{
+.icone-emoji.roxo {
     border: 2px solid var(--cor-roxo_2);
     color: var(--cor-roxo_2);
     background-color: transparent;
 }
 
-.quem_somos-img-top{
+.quem_somos-img-top {
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.quem_somos-img-top img{
+.quem_somos-img-top img {
     width: 100%;
     max-width: 450px;
     object-fit: contain;
     transition: transform 0.4s ease; 
 }
 
-.quem_somos-img-top img:hover{
+.quem_somos-img-top img:hover {
     transform: scale(1.02);
 }
 
-.quem_somos-grid-imagens{
+.quem_somos-grid-imagens {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 15px;
 }
 
-.img-missao{
+.img-missao {
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
@@ -302,29 +302,29 @@ html {
     transition: transform 0.4s ease; 
 }
 
-.img-missao:hover{
+.img-missao:hover {
     transform: scale(1.02);
 }
 
-.img1{
+.img1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     height: 150px;
 }
 
-.img2{
+.img2 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     height: 150px;
 }
 
-.img3{
+.img3 {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     height: 180px;
 }
 
-@media(max-width: 992px){
+@media(max-width: 992px) {
     .quem_somos-bloco1,
     .quem_somos-bloco2 {
         grid-template-columns: 100%;
@@ -351,7 +351,7 @@ html {
 }
 
 /* --- BANNER APOIE --- */
-.banner-apoie{
+.banner-apoie {
     background: linear-gradient(135deg, #EBE5F7, #ddd2f5);
     border-radius: 15px;
     padding: 30px 40px;
@@ -361,25 +361,25 @@ html {
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
-.banner-apoie-conteudo{
+.banner-apoie-conteudo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
 }
 
-.banner-apoie-texto{
+.banner-apoie-texto {
     max-width: 70%;
 }
 
-.banner-apoie-titulo{
+.banner-apoie-titulo {
     display: flex;
     align-items: center;
     gap: 22px;
     margin-bottom: 10px;
 }
 
-.banner-heart{
+.banner-heart {
     width: 70px;
     height: 70px;
     display: flex;
@@ -388,13 +388,13 @@ html {
     flex-shrink: 0;
 }
 
-.banner-heart i{
+.banner-heart i {
     font-size: 50px;
     color: #ff4d6d;
     line-height: 1;
 }
 
-.banner-apoie-titulo h2{
+.banner-apoie-titulo h2 {
     font-size: 38px;
     font-weight: 700;
     margin: 0;
@@ -402,7 +402,7 @@ html {
     line-height: 1.2;
 }
 
-.banner-apoie-texto p{
+.banner-apoie-texto p {
     margin: 0;
     color: var(--cor-texto_black);
     font-size: 17px;
@@ -411,7 +411,7 @@ html {
     max-width: 800px;
 }
 
-.banner-apoie-acao{
+.banner-apoie-acao {
     position: relative;
     display: flex;
     align-items: center;
@@ -419,7 +419,7 @@ html {
     min-width: 250px;
 }
 
-.btn-banner{
+.btn-banner {
     border: 1px solid var(--cor_texto_gray);
     color: var(--cor_texto_gray);
     background-color: transparent;
@@ -432,7 +432,7 @@ html {
     transition: background-color 0.35s ease, color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.btn-banner:hover{
+.btn-banner:hover {
     background-color: var(--cor-botao_roxo);
     color: var(--cor-texto_4);
     border-color: var(--cor-botao_roxo);
@@ -440,7 +440,7 @@ html {
     box-shadow: 0 12px 25px rgba(122, 55, 140, 0.25);
 }
 
-.btn-banner:active{
+.btn-banner:active {
     transform: scale(0.98);
 }
 
@@ -450,21 +450,21 @@ html {
     z-index: 1;
 }
 
-.pata1{
+.pata1 {
     top: -35px;
     right: 10px;
     transform: rotate(15deg);
     font-size: 28px;
 }
 
-.pata2{
+.pata2 {
     top: -10px;
     right: 65px;
     transform: rotate(-10deg);
     font-size: 20px;
 }
 
-.pata3{
+.pata3 {
     bottom: -30px;
     right: 35px;
     transform: rotate(20deg);
@@ -472,8 +472,7 @@ html {
 }
 
 /* FAQ  */
-
-.faq-servicos-container{
+.faq-servicos-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -489,7 +488,7 @@ html {
     border: 1px solid rgba(122,55,140,0.08);
 }
 
-.faq-box h2{
+.faq-box h2 {
     font-size: 22px;
     font-weight: 700;
     margin-top: 0;
@@ -497,17 +496,17 @@ html {
     color: var(--cor-texto_black);
 }
 
-.faq-item{
+.faq-item {
     border-bottom: 1px solid rgba(0,0,0,0.08);
     padding: 14px 0;
 }
 
-.faq-item:last-child{
+.faq-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
 
-.faq-pergunta{
+.faq-pergunta {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -515,7 +514,7 @@ html {
     gap: 20px;
 }
 
-.faq-pergunta span{
+.faq-pergunta span {
     color: var(--cor-texto_black);
     font-weight: 600;
     transition: 0.3s ease;
@@ -523,7 +522,7 @@ html {
     width: fit-content;
 }
 
-.faq-pergunta span::after{
+.faq-pergunta span::after {
     content: "";
     position: absolute;
     left: 0;
@@ -534,21 +533,21 @@ html {
     transition: width 0.3s ease;
 }
 
-.faq-pergunta:hover span::after{
+.faq-pergunta:hover span::after {
     width: 100%;
 }
 
-.faq-pergunta i{
+.faq-pergunta i {
     font-size: 14px;
     transition: transform 0.35s ease;
     color: var(--cor-botao_roxo);
 }
 
-.faq-item.active .faq-pergunta i{
+.faq-item.active .faq-pergunta i {
     transform: rotate(180deg);
 }
 
-.faq-resposta{
+.faq-resposta {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -559,13 +558,13 @@ html {
     padding-right: 15px;
 }
 
-.faq-item.active .faq-resposta{
+.faq-item.active .faq-resposta {
     max-height: 200px;
     opacity: 1;
     margin-top: 15px;
 }
 
-.servicos-box{
+.servicos-box {
     background-color: var(--cor-botao_roxo);
     border-radius: 15px;
     padding: 35px;
@@ -576,7 +575,7 @@ html {
     justify-content: flex-start;
 }
 
-.servicos-box h2{
+.servicos-box h2 {
     font-size: 36px;
     font-weight: 700;
     margin-top: 0;
@@ -588,7 +587,7 @@ html {
     line-height: 1.2;
 }
 
-.servicos-box p{
+.servicos-box p {
     margin-bottom: 8px;
     font-size: 16px;
     line-height: 1.5;
@@ -598,7 +597,7 @@ html {
     z-index: 2;
 }
 
-.btn-servicos{
+.btn-servicos {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -615,67 +614,66 @@ html {
     z-index: 2;
 }
 
-.btn-servicos:hover{
+.btn-servicos:hover {
     background-color: var(--cor-botao_laranja-hover);
     transform: translateY(-3px);
     box-shadow: 0 10px 24px rgba(242, 116, 5, 0.45);
 }
 
-.btn-servicos:active{
+.btn-servicos:active {
     transform: translateY(0px);
     box-shadow: none;
 }
 
-/* RESPONSIVIDADE */
-
-@media(max-width: 1200px){
-    .banner-apoie-titulo h2{
+/* RESPONSIVIDADE ADICIONAL */
+@media(max-width: 1200px) {
+    .banner-apoie-titulo h2 {
         font-size: 32px;
     }
-    .banner-apoie-texto p{
+    .banner-apoie-texto p {
         padding-left: 88px;
     }
-    .servicos-box h2{
+    .servicos-box h2 {
         font-size: 32px;
     }
 }
 
-@media(max-width: 992px){
-    .banner-apoie{
+@media(max-width: 992px) {
+    .banner-apoie {
         padding: 30px 25px;
     }
-    .banner-apoie-conteudo{
+    .banner-apoie-conteudo {
         flex-direction: column;
         align-items: flex-start;
     }
-    .banner-apoie-texto{
+    .banner-apoie-texto {
         max-width: 100%;
     }
-    .banner-apoie-titulo{
+    .banner-apoie-titulo {
         align-items: center;
         gap: 18px;
     }
-    .banner-heart{
+    .banner-heart {
         width: 60px;
         height: 60px;
     }
-    .banner-heart i{
+    .banner-heart i {
         font-size: 42px;
     }
-    .banner-apoie-titulo h2{
+    .banner-apoie-titulo h2 {
         font-size: 30px;
     }
-    .banner-apoie-texto p{
+    .banner-apoie-texto p {
         padding-left: 78px;
         font-size: 16px;
         margin-top: 5px;
     }
-    .banner-apoie-acao{
+    .banner-apoie-acao {
         margin-top: 20px;
         align-self: flex-start;
     }
 
-    .faq-servicos-container{
+    .faq-servicos-container {
         grid-template-columns: 1fr;
         margin-bottom: 60px;
     }
@@ -685,103 +683,103 @@ html {
     }
 }
 
-@media(max-width: 768px){
-    .banner-apoie{
+@media(max-width: 768px) {
+    .banner-apoie {
         padding: 25px 20px;
     }
-    .banner-apoie-titulo{
+    .banner-apoie-titulo {
         gap: 14px;
         align-items: center;
     }
-    .banner-heart{
+    .banner-heart {
         width: 52px;
         height: 52px;
     }
-    .banner-heart i{
+    .banner-heart i {
         font-size: 36px;
     }
-    .banner-apoie-titulo h2{
+    .banner-apoie-titulo h2 {
         font-size: 24px;
         line-height: 1.3;
     }
-    .banner-apoie-texto p{
+    .banner-apoie-texto p {
         padding-left: 66px;
         font-size: 15px;
     }
-    .btn-banner{
+    .btn-banner {
         width: 100%;
         text-align: center;
     }
-    .faq-box{
+    .faq-box {
         padding: 24px 20px;
     }
-    .servicos-box{
+    .servicos-box {
         padding: 28px 22px;
     }
-    .faq-box h2{
+    .faq-box h2 {
         font-size: 20px;
     }
-    .servicos-box h2{
+    .servicos-box h2 {
         font-size: 26px;
     }
     .servicos-box p {
         font-size: 15px;
     }
-    .faq-pergunta span{
+    .faq-pergunta span {
         font-size: 14px;
     }
-    .faq-resposta{
+    .faq-resposta {
         font-size: 13px;
     }
 }
 
-@media(max-width: 480px){
-    .banner-apoie{
+@media(max-width: 480px) {
+    .banner-apoie {
         padding: 22px 16px;
     }
-    .banner-apoie-titulo{
+    .banner-apoie-titulo {
         gap: 12px;
         align-items: center;
     }
-    .banner-heart{
+    .banner-heart {
         width: 46px;
         height: 46px;
     }
-    .banner-heart i{
+    .banner-heart i {
         font-size: 30px;
     }
-    .banner-apoie-titulo h2{
+    .banner-apoie-titulo h2 {
         font-size: 20px;
         line-height: 1.3;
     }
-    .banner-apoie-texto p{
+    .banner-apoie-texto p {
         padding-left: 58px;
         font-size: 14px;
         line-height: 1.5;
     }
-    .btn-banner{
+    .btn-banner {
         padding: 10px 18px;
         font-size: 14px;
     }
-    .faq-box{
+    .faq-box {
         padding: 20px 16px;
     }
-    .servicos-box{
+    .servicos-box {
         padding: 22px 18px;
     }
-    .faq-box h2{
+    .faq-box h2 {
         font-size: 18px;
     }
-    .servicos-box h2{
+    .servicos-box h2 {
         font-size: 22px;
     }
     .servicos-box p {
         font-size: 14px;
     }
-    .faq-pergunta{
+    .faq-pergunta {
         gap: 10px;
     }
-    .faq-pergunta span{
+    .faq-pergunta span {
         font-size: 13px;
     }
 }

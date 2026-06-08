@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - ARCA</title>
+    <link rel="icon" href="/img/logos/logo-arca.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/faleconosco.css">
+</head>
+
+<body data-page="faleconosco">
+<header id="navbar"></header>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-bar">
+            <div class="container py-2">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                        <li class="breadcrumb-item"><a href="/suporte.html">Suporte</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Fale conosco</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+<main>
+    <div class="container py-5">
+        <!-- Título -->
+        <h1 class="suporte-title text-center mb-2">Fale conosco</h1>
+        <p class="suporte-subtitle text-center mb-5">Quer saber mais, tirar dúvidas ou oferecer ajuda? Estamos aqui para você!</p>
+
+        <div class="row g-4 align-items-start">
+
+            <!-- Informações de contato -->
+            <div class="col-md-5">
+                <div class="contato-card mb-3">
+                    <div class="contato-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contato-info">
+                        <h4>Localização</h4>
+                        <p>Rua Maestro Antônio Cícero, 111, Caçaroca,<br>Prefeitura, Serra/ES, CEP 29176-110</p>
+                    </div>
+                </div>
+
+                <div class="contato-card mb-3">
+                    <div class="contato-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="contato-info">
+                        <h4>Instagram</h4>
+                        <a href="https://www.instagram.com/prefeituraserra" target="_blank" rel="noopener">
+                            Prefeitura da Serra (@prefeituraserra) • Fotos e vídeos do Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contato-card">
+                    <div class="contato-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contato-info">
+                        <h4>Telefone</h4>
+                        <p>(27) 3291-2005</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário -->
+            <div class="col-md-7">
+                <div class="formulario-box">
+                    <h2 class="formulario-titulo">Preencher relatório</h2>
+
+                    <div class="row g-3">
+                        <div class="col-md-7">
+                            <label class="form-label">Nome completo</label>
+                            <input type="text" id="nome" class="form-control arca-input" placeholder="Informe seu nome completo">
+                        </div>
+                        <div class="col-md-5">
+                            <label class="form-label">Telefone</label>
+                            <input type="text" id="telefone" class="form-control arca-input" placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">E-mail</label>
+                            <input type="email" id="email" class="form-control arca-input" placeholder="seuemail@endereco.com">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Tipo de assunto</label>
+                            <input type="text" id="assunto" class="form-control arca-input" placeholder="Assunto tratado">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Mensagem</label>
+                            <textarea id="mensagem" class="form-control arca-input" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button class="btn btn-arca-primary" onclick="enviarRelatorio()">
+                                Enviar relatório
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- Overlay de sucesso -->
+<div id="overlay-sucesso" class="overlay-sucesso d-none">
+    <div class="overlay-box">
+        <p>A sua solicitação foi enviada para análise. Mantenha-se conectado no seu e-mail ou no site!</p>
+        <button class="btn btn-arca-outline mt-3" onclick="fecharOverlay()">
+            <a href="/index.html">
+            <i class="fas fa-arrow-left me-2"></i><span>Voltar para o início</span>
+            </a>
+        </button>
+    </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="/js/global.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/js/faleconosco.js"></script>
+</body>
+</html>

@@ -8,21 +8,222 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/all.min.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/resgate.css">
 </head>
 
 <body data-page="serviços">
 <header id="navbar"></header>
 
+    <div class="breadcrumb-bar border-bottom">
+        <div class="container py-2">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                    <li class="breadcrumb-item"><a href="/html/navbar/servicos.html">Serviços</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Solicitar resgate</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
 <main>
+    <div class="container py-5">
+        <div class="row g-5 align-items-start">
 
+            <!-- ========== COLUNA ESQUERDA ========== -->
+            <div class="col-lg-5 col-md-12 resgate-esquerda">
 
+                <!-- Título + Imagens lado a lado -->
+                <div class="resgate-topo">
+                    <div class="resgate-titulo-bloco">
+                        <h1 class="resgate-titulo">
+                            Solicitar
+                            <span class="resgate-titulo-destaque">resgate<span class="resgate-traco-laranja"></span></span>
+                        </h1>
+                    </div>
+                    <div class="resgate-animais">
+                        <div class="resgate-blob"></div>
+                        <img src="/img/img/gato.png" alt="Gato" class="resgate-gato" />
+                        <img src="/img/img/cachorro fofo.png" alt="Cachorro" class="resgate-cachorro" />
+                    </div>
+                </div>
 
-    
+                <!-- Texto Relatar -->
+                <div class="resgate-relatar">
+                    <h2 class="resgate-relatar-titulo">Relatar um animal perdido</h2>
+                    <p class="resgate-relatar-texto">
+                        Você encontrou um animal perdido que precisa de ajuda? Preencha com seus dados e
+                        dê o máximo de detalhes possíveis. Nossa equipe responderá rapidamente para ajudar o animal.
+                    </p>
+                </div>
+
+                <!-- Card Emergência -->
+                <div class="resgate-emergencia-card">
+                    <div class="resgate-emergencia-header">
+                        <i class="fas fa-bell resgate-emergencia-icon"></i>
+                        <span class="resgate-emergencia-titulo">Emergência?</span>
+                    </div>
+                    <p class="resgate-emergencia-texto">
+                        Se o animal estiver ferido ou em perigo imediato,
+                        informe sua localização para encontrarmos a ONG
+                        de resgate mais próxima de você e exibirmos o
+                        contato de emergência para atendimento rápido.
+                    </p>
+                    <input
+                        type="text"
+                        class="form-control resgate-emergencia-input"
+                        placeholder="Endereço do local"
+                        id="enderecoEmergencia"
+                    />
+                    <button class="btn resgate-btn-enviar" type="button" id="btnEmergencia">
+                        Enviar
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- ========== COLUNA DIREITA — FORMULÁRIO ========== -->
+            <div class="col-lg-7 col-md-12">
+                <div class="resgate-form-card">
+                    <h2 class="resgate-form-titulo">Preencher relatório</h2>
+
+                    <form id="formResgate" novalidate>
+                        <div class="row g-3">
+
+                            <!-- Nome + Telefone -->
+                            <div class="col-md-6">
+                                <label class="resgate-label" for="nomeCompleto">Nome completo</label>
+                                <input
+                                    type="text"
+                                    class="form-control resgate-input"
+                                    id="nomeCompleto"
+                                    placeholder="Informe seu nome completo"
+                                    required
+                                />
+                                <div class="invalid-feedback">Por favor, informe seu nome completo.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="resgate-label" for="telefone">Telefone</label>
+                                <input
+                                    type="tel"
+                                    class="form-control resgate-input"
+                                    id="telefone"
+                                    placeholder="(XX) XXXXX-XXXX"
+                                    maxlength="15"
+                                    required
+                                />
+                                <div class="invalid-feedback">Por favor, informe um telefone válido.</div>
+                            </div>
+
+                            <!-- E-mail -->
+                            <div class="col-12">
+                                <label class="resgate-label" for="email">E-mail</label>
+                                <input
+                                    type="email"
+                                    class="form-control resgate-input"
+                                    id="email"
+                                    placeholder="seuemail@endereco.com"
+                                    required
+                                />
+                                <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
+                            </div>
+
+                            <!-- Local -->
+                            <div class="col-12">
+                                <label class="resgate-label" for="localEncontrado">Local que o animal foi encontrado</label>
+                                <input
+                                    type="text"
+                                    class="form-control resgate-input"
+                                    id="localEncontrado"
+                                    placeholder="Endereço do local"
+                                    required
+                                />
+                                <div class="invalid-feedback">Por favor, informe o endereço do local.</div>
+                            </div>
+
+                            <!-- Tipo de animal (somente Gato ou Cachorro) -->
+                            <div class="col-md-6">
+                                <label class="resgate-label" for="tipoAnimal">Tipo de animal</label>
+                                <select class="form-select resgate-input" id="tipoAnimal" required>
+                                    <option value="" disabled selected>Selecione o tipo de animal</option>
+                                    <option value="cachorro">Cachorro</option>
+                                    <option value="gato">Gato</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, selecione o tipo de animal.</div>
+                            </div>
+
+                            <!-- Condição do animal (mais opções) -->
+                            <div class="col-md-6">
+                                <label class="resgate-label" for="condicaoAnimal">Condição do animal</label>
+                                <select class="form-select resgate-input" id="condicaoAnimal" required>
+                                    <option value="" disabled selected>Selecione a condição do pet</option>
+                                    <option value="saudavel">Saudável</option>
+                                    <option value="ferido">Ferido</option>
+                                    <option value="debilitado">Debilitado / Fraco</option>
+                                    <option value="perigo">Em perigo imediato</option>
+                                    <option value="doente">Doente</option>
+                                    <option value="com_filhotes">Com filhotes</option>
+                                    <option value="preso">Preso / Encurralado</option>
+                                    <option value="abandonado">Abandonado recentemente</option>
+                                    <option value="assustado">Assustado / Agressivo</option>
+                                    <option value="desconhecido">Não sei avaliar</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, selecione a condição do animal.</div>
+                            </div>
+
+                            <!-- Descrição -->
+                            <div class="col-12">
+                                <label class="resgate-label" for="descricao">Descrição</label>
+                                <textarea
+                                    class="form-control resgate-input resgate-textarea"
+                                    id="descricao"
+                                    placeholder="Descreva o animal (cor, raça, tamanho e outros) e fale sobre o ocorrido..."
+                                    rows="4"
+                                    required
+                                    minlength="20"
+                                ></textarea>
+                                <div class="invalid-feedback">Por favor, descreva o animal com pelo menos 20 caracteres.</div>
+                            </div>
+
+                            <!-- Botão Enviar centralizado -->
+                            <div class="col-12 d-flex justify-content-center mt-2">
+                                <button type="submit" class="btn resgate-btn-relatorio">
+                                    Enviar relatório
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <!-- Toast de sucesso (oculto por padrão) -->
+                    <div id="resgateToast" class="resgate-toast" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="resgateToastMsg"></span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </main>
+
+            <!-- Overlay de sucesso -->
+            <div id="overlay-sucesso" class="overlay-sucesso d-none">
+                <div class="overlay-box">
+                    <p>A sua solicitação foi enviada para análise. Mantenha-se conectado no seu e-mail ou no site!</p>
+                    <button class="btn btn-arca-outline mt-3" onclick="fecharOverlay()">
+                        <a href="/index.html">
+                        <i class="fas fa-arrow-left me-2"></i><span>Voltar para o início</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
 
 <footer id="footer"></footer>
 
 <script src="/js/global.js"></script>
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/js/resgate.js"></script>
 </body>
 </html>

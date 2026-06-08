@@ -1,0 +1,216 @@
+/*  SEJA_PARCEIRO.CSS
+   Segue as variáveis definidas em layout.css
+ */
+
+
+/* HERO */
+.parceiro-hero {
+    text-align: center;
+    padding: 5px 10px 12px;
+}
+.parceiro-hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--cor-texto_black);
+    line-height: 1.25;
+    margin: 0;
+}
+.destaque-roxo {
+    color: var(--cor-botao_roxo);
+    position: relative;
+    display: inline-block;
+}
+
+.destaque-preto {
+    color: var(--cor-texto_black);
+    position: relative;
+    display: inline-block;
+}
+/* sublinhado laranja ondulado */
+.destaque-preto::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--cor-botao_laranja);
+    border-radius: 2px;
+    margin-top: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: sublinhado-entra 0.6s ease 0.3s forwards;
+}
+@keyframes sublinhado-entra {
+    to { transform: scaleX(1); }
+}
+
+/* sublinhado laranja ondulado */
+.destaque-roxo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--cor-botao_laranja);
+    border-radius: 2px;
+    margin-top: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: sublinhado-entra 0.6s ease 0.3s forwards;
+}
+@keyframes sublinhado-entra {
+    to { transform: scaleX(1); }
+}
+
+/* ── INTRO ── */
+.parceiro-intro {
+    max-width: 1390px;
+    margin: 24px auto 36px;
+    padding: 0 50px;
+}
+.parceiro-intro p {
+    font-size: 1rem;
+    color: var(--cor_texto_gray);
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* CAIXA ROXA */
+.formas-section {
+    max-width: 1350px;
+    margin: 0 auto 60px;
+    padding: 0 30px;
+}
+.formas-box {
+    background-color: var(--cor-botao_roxo);
+    border-radius: 20px;
+    padding: 40px 36px 36px;
+}
+.formas-titulo {
+    text-align: center;
+    color: #000000;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+/* GRID DE CARDS */
+.formas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* CARD INDIVIDUAL */
+.forma-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 26px 18px 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    /* animação de entrada */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.45s ease, transform 0.45s ease, box-shadow 0.3s ease;
+}
+.forma-card.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+.forma-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+/* ícone */
+.forma-card .icone-circulo {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #ede7f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+.forma-card:hover .icone-circulo {
+    background-color: #d8c9ef;
+}
+.forma-card .icone-circulo i {
+    font-size: 1.65rem;
+    color: var(--cor-primaria);
+}
+
+/* título */
+.forma-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-texto_black);
+    margin: 0;
+    line-height: 1.35;
+}
+
+/* descrição */
+.forma-card p {
+    font-size: 0.8rem;
+    color: var(--cor_texto_gray);
+    line-height: 1.65;
+    margin: 0;
+    text-align: justify;
+}
+
+/* ── BOTÃO CTA ── */
+.parceiro-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+.btn-parceiro {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-botao_roxo);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 50px;
+    padding: 13px 38px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+.btn-parceiro:hover {
+    background-color: var(--cor-botao_roxo-hover);
+    color: #fff;
+    transform: scale(1.04);
+    border-color: rgba(255,255,255,0.7);
+}
+.btn-parceiro i {
+    transition: transform 0.3s;
+}
+.btn-parceiro:hover i {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .formas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 560px) {
+    .formas-grid {
+        grid-template-columns: 1fr;
+    }
+    .parceiro-hero h1 {
+        font-size: 2rem;
+    }
+    .formas-box {
+        padding: 28px 20px 28px;
+    }
+}
