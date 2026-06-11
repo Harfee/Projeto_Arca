@@ -1,70 +1,36 @@
-# ENTENDENDO O PROJETO ARCA
-O Projeto ARCA, criado em janeiro de 2022, promove bem-estar animal com foco em castração, resgate, atendimento veterinário e adoção.
+# Projeto ARCA (Acadêmico)
 
-<ul>
-<li>Alta demanda por serviços gratuitos → mais de 2.100 vagas de castração esgotadas rapidamente.</li>
-<li>Em jan–fev/2026: 428 castrações e 198 atendimentos veterinários</li>
-<li>Realização de 114 eventos de adoção, incentivando a redução do abandono.</li>
-</ul>
+O Programa ARCA, criado em janeiro de 2022, promove bem-estar animal com foco em castração, resgate, atendimento veterinário e adoção.
 
-Prioridade de atendimento:
-<ul>
-<li>Pessoas de baixa renda (CadÚnico)</li>
-<li>ONGs e protetores independentes</li>
-<li>Regiões com maior vulnerabilidade</li>
-</ul>
+*   **Alta demanda por serviços gratuitos:** mais de 2.100 vagas de castração esgotadas rapidamente.
+*   **Em jan–fev/2026:** 428 castrações e 198 atendimentos veterinários.
+*   **Realização:** 114 eventos de adoção, incentivando a redução do abandono.
 
-Público predominante:
-<ul>
-<li>Pessoas de baixa renda e dependentes de serviços públicos</li>
-<li>Moradores de áreas com alta vulnerabilidade social</li>
-<li>Tutores e cuidadores de animais abandonados</li>
+### 📋 Prioridade de atendimento
+*   Pessoas de baixa renda (CadÚnico)
+*   ONGs e protetores independentes
+*   Regiões com maior vulnerabilidade
 
-<li>Uso do sistema para: castração, adoção, resgate e denúncias</li>
-</ul>
+### 👥 Público predominante
+*   Pessoas de baixa renda e dependentes de serviços públicos
+*   Moradores de áreas com alta vulnerabilidade social
+*   Tutores e cuidadores de animais abandonados
+*   *Uso do sistema para:* castração, adoção, resgate e denúncias.
 
-Desafios:
-<ul>
-<li>Site muito limitado.</li>
-<li>Poucas pessoas conhecem o projeto.</li>
-</ul>
+### ⚠️ Desafios Identificados
+*   Site muito limitado.
+*   Poucas pessoas conhecem o projeto.
 
-Conclusão:
-<ul>
-<li>Os usuários precisam de um sistema simples, acessível e eficiente, que considere suas limitações tecnológicas e a urgência das demandas relacionadas ao bem-estar animal.</li>
-</ul>
-# ENTENDENDO O PROJETO ARCA
-O Projeto ARCA, criado em janeiro de 2022, promove bem-estar animal com foco em castração, resgate, atendimento veterinário e adoção.
+### 💡 A Solução Desenvolvida
+Os usuários precisam de um sistema simples, acessível e eficiente, que considere suas limitações tecnológicas e a urgência das demandas relacionadas ao bem-estar animal. Como proposta de melhoria, desenvolvi uma interface moderna e intuitiva focada em resolver esses problemas.
 
-<ul>
-<li>Alta demanda por serviços gratuitos → mais de 2.100 vagas de castração esgotadas rapidamente.</li>
-<li>Em jan–fev/2026: 428 castrações e 198 atendimentos veterinários</li>
-<li>Realização de 114 eventos de adoção, incentivando a redução do abandono.</li>
-</ul>
+*   **O que foi feito:** Criação de um site responsivo e acessível, com destaque para a tela de login dinâmica que alterna de forma simples entre os perfis "Cidadão" e "ONG/Clínica Veterinária".
+*   **Participação do Grupo:** Análise dos problemas do sistema antigo, organização das ideias de usabilidade, estruturação da experiência do usuário (UI/UX) e desenvolvimento completo do código front-end.
 
-Prioridade de atendimento:
-<ul>
-<li>Pessoas de baixa renda (CadÚnico)</li>
-<li>ONGs e protetores independentes</li>
-<li>Regiões com maior vulnerabilidade</li>
-</ul>
+### 🛠️ Tecnologias Utilizadas
+*   HTML5 (Tags semânticas)
+*   CSS3 (Estilizações customizadas)
+*   **Bootstrap** (Componentes estruturados e responsividade fluida)
+*   JavaScript (Lógica de interação e manipulação do DOM)
 
-Público predominante:
-<ul>
-<li>Pessoas de baixa renda e dependentes de serviços públicos</li>
-<li>Moradores de áreas com alta vulnerabilidade social</li>
-<li>Tutores e cuidadores de animais abandonados</li>
-
-<li>Uso do sistema para: castração, adoção, resgate e denúncias</li>
-</ul>
-
-Desafios:
-<ul>
-<li>Site muito limitado.</li>
-<li>Poucas pessoas conhecem o projeto.</li>
-</ul>
-
-Conclusão:
-<ul>
-<li>Os usuários precisam de um sistema simples, acessível e eficiente, que considere suas limitações tecnológicas e a urgência das demandas relacionadas ao bem-estar animal.</li>
-</ul>
+🔗 **[Clique aqui para ver o Projeto Arca rodando](https://projetoarca.online)**

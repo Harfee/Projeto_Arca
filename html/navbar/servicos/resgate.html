@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <base href="/Projeto_Arca/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resgate</title>
@@ -141,7 +142,7 @@
                                 <div class="invalid-feedback">Por favor, informe o endereço do local.</div>
                             </div>
 
-                            <!-- Tipo de animal (somente Gato ou Cachorro) -->
+                            <!-- Tipo de animal -->
                             <div class="col-md-6">
                                 <label class="resgate-label" for="tipoAnimal">Tipo de animal</label>
                                 <select class="form-select resgate-input" id="tipoAnimal" required>
@@ -152,7 +153,7 @@
                                 <div class="invalid-feedback">Por favor, selecione o tipo de animal.</div>
                             </div>
 
-                            <!-- Condição do animal (mais opções) -->
+                            <!-- Condição do animal -->
                             <div class="col-md-6">
                                 <label class="resgate-label" for="condicaoAnimal">Condição do animal</label>
                                 <select class="form-select resgate-input" id="condicaoAnimal" required>
@@ -185,7 +186,7 @@
                                 <div class="invalid-feedback">Por favor, descreva o animal com pelo menos 20 caracteres.</div>
                             </div>
 
-                            <!-- Botão Enviar centralizado -->
+                            <!-- Botão Enviar -->
                             <div class="col-12 d-flex justify-content-center mt-2">
                                 <button type="submit" class="btn resgate-btn-relatorio">
                                     Enviar relatório
@@ -195,7 +196,7 @@
                         </div>
                     </form>
 
-                    <!-- Toast de sucesso (oculto por padrão) -->
+                    <!-- Toast de sucesso -->
                     <div id="resgateToast" class="resgate-toast" style="display:none;">
                         <i class="fas fa-check-circle"></i>
                         <span id="resgateToastMsg"></span>
@@ -208,17 +209,17 @@
     </div>
 </main>
 
-            <!-- Overlay de sucesso -->
-            <div id="overlay-sucesso" class="overlay-sucesso d-none">
-                <div class="overlay-box">
-                    <p>A sua solicitação foi enviada para análise. Mantenha-se conectado no seu e-mail ou no site!</p>
-                    <button class="btn btn-arca-outline mt-3" onclick="fecharOverlay()">
-                        <a href="/index.html">
-                        <i class="fas fa-arrow-left me-2"></i><span>Voltar para o início</span>
-                        </a>
-                    </button>
-                </div>
-            </div>
+<!-- Overlay de sucesso -->
+<div id="overlay-sucesso" class="overlay-sucesso d-none">
+    <div class="overlay-box">
+        <p>A sua solicitação foi enviada para análise. Mantenha-se conectado no seu e-mail ou no site!</p>
+        <button class="btn btn-arca-outline mt-3" onclick="fecharOverlay()">
+            <a href="/index.html">
+            <i class="fas fa-arrow-left me-2"></i><span>Voltar para o início</span>
+            </a>
+        </button>
+    </div>
+</div>
 
 <footer id="footer"></footer>
 
