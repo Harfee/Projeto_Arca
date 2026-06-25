@@ -12,48 +12,64 @@ const instagram_link   = 'https://www.instagram.com/prefeituraserra/';
 const footer_tel       = 'tel:+552732912005';
 const site_prefeitura  = 'https://www.serra.es.gov.br';
 
+// ─── Calcula o prefixo relativo até a raiz do projeto ───────────────────────
+// Conta quantas pastas existem no caminho atual e sobe até a raiz.
+// Ex: html/navbar/servicos/ongs.html → 3 pastas → prefixo = '../../../'
+function getRootPrefix() {
+    const path = window.location.pathname;
+    // Número de '/' após o repositório (Projeto_Arca/)
+    const match = path.match(/\/Projeto_Arca\/(.*)/);
+    if (!match || !match[1]) return './';
+    const parts = match[1].split('/').filter(Boolean);
+    const depth = parts.length - 1; // descontar o próprio arquivo
+    if (depth <= 0) return './';
+    return '../'.repeat(depth);
+}
+
+const R = getRootPrefix(); // ex: '../../' ou '../../../'
+
 const navbar = `
 <nav class="arca-nav" id="arca-nav">
   <div class="arca-nav__container">
-    <a class="arca-nav__logo" href="/index.html" id="navbar_arca">
-      <img src="/img/logos/painel-arca.png" alt="Logo do Projeto Arca" class="arca_logo">
+    <a class="arca-nav__logo" href="${R}index.html" id="navbar_arca">
+      <img src="${R}img/logos/painel-arca.png" alt="Logo do Projeto Arca" class="arca_logo">
     </a>
     <ul class="arca-nav__links">
       <li>
-        <a class="arca-nav__link ${currentPage === 'home_page' ? 'arca-nav__link--ativo' : ''}" href="/index.html">Início</a>
+        <a class="arca-nav__link ${currentPage === 'home_page' ? 'arca-nav__link--ativo' : ''}" href="${R}index.html">Início</a>
       </li>
       <li>
-        <a class="arca-nav__link ${currentPage === 'quem_somos' ? 'arca-nav__link--ativo' : ''}" href="/index.html#quem-somos">Quem somos</a>
+        <a class="arca-nav__link ${currentPage === 'quem_somos' ? 'arca-nav__link--ativo' : ''}" href="${R}index.html#quem-somos">Quem somos</a>
       </li>
       <li class="arca-nav__dropdown-item">
         <button class="arca-nav__link arca-nav__dropdown-btn" data-dropdown="servicos">
           Serviços <i class="fa-solid fa-angle-down arca-nav__seta" id="seta-servicos"></i>
         </button>
         <ul class="arca-nav__dropdown" id="dropdown-servicos">
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/sobre.html">Informações sobre</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/adocao/adocao.html">Adoção</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/castracao/castrar.html">Agendamento de castração</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/denuncia/denuncia.html">Criar denúncias</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/servicos/sobre.html">Informações sobre</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/servicos/adocao/adocao.html">Adoção</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/servicos/castracao/castrar.html">Agendamento de castração</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/servicos/denuncia/denuncia.html">Criar denúncias</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
         </ul>
       </li>
       <li>
-        <a class="arca-nav__link ${currentPage === 'seja_parceiro' ? 'arca-nav__link--ativo' : ''}" href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a>
+        <a class="arca-nav__link ${currentPage === 'seja_parceiro' ? 'arca-nav__link--ativo' : ''}" href="${R}html/navbar/seja_parceiro.html">Seja nosso parceiro</a>
       </li>
       <li class="arca-nav__dropdown-item">
         <button class="arca-nav__link arca-nav__dropdown-btn" data-dropdown="suporte">
           Suporte <i class="fa-solid fa-angle-down arca-nav__seta" id="seta-suporte"></i>
         </button>
         <ul class="arca-nav__dropdown" id="dropdown-suporte">
-          <li><a class="arca-nav__dropdown-link" href="/html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
-          <li><a class="arca-nav__dropdown-link" href="/index.html#perguntas-frequentes">Perguntas frequentes</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
+          <li><a class="arca-nav__dropdown-link" href="${R}index.html#perguntas-frequentes">Perguntas frequentes</a></li>
         </ul>
       </li>
     </ul>
     <div class="arca-nav__botoes arca-nav__botoes--desktop">
-      <a class="arca-nav__btn arca-nav__btn--entrar" href="/html/account/login.html">Entrar</a>
-      <a class="arca-nav__btn arca-nav__btn--cadastrar" href="/html/account/cadastro.html">Cadastrar</a>
+      <a class="arca-nav__btn arca-nav__btn--entrar" href="${R}html/account/login.html">Entrar</a>
+      <a class="arca-nav__btn arca-nav__btn--cadastrar" href="${R}html/account/cadastro.html">Cadastrar</a>
     </div>
     <button class="arca-nav__hamburguer" id="arca-hamburguer" aria-label="Abrir menu">
       <span class="arca-nav__hamburguer-linha"></span>
@@ -64,40 +80,40 @@ const navbar = `
   <div class="arca-nav__mobile" id="arca-mobile">
     <ul class="arca-nav__mobile-links">
       <li>
-        <a class="arca-nav__mobile-link ${currentPage === 'home_page' ? 'arca-nav__mobile-link--ativo' : ''}" href="/index.html">Início</a>
+        <a class="arca-nav__mobile-link ${currentPage === 'home_page' ? 'arca-nav__mobile-link--ativo' : ''}" href="${R}index.html">Início</a>
       </li>
       <li>
-        <a class="arca-nav__mobile-link ${currentPage === 'quem_somos' ? 'arca-nav__mobile-link--ativo' : ''}" href="/index.html#quem-somos">Quem somos</a>
+        <a class="arca-nav__mobile-link ${currentPage === 'quem_somos' ? 'arca-nav__mobile-link--ativo' : ''}" href="${R}index.html#quem-somos">Quem somos</a>
       </li>
       <li>
         <button class="arca-nav__mobile-link arca-nav__mobile-dropdown-btn" data-mobile-dropdown="mob-servicos">
           Serviços <i class="fa-solid fa-angle-down arca-nav__seta" id="seta-mob-servicos"></i>
         </button>
         <ul class="arca-nav__mobile-submenu" id="mob-servicos">
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/sobre.html">Informações sobre</a></li>
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/adocao/adocao.html">Adoção</a></li>
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/castracao/castrar.html">Agendamento de castração</a></li>
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/denuncia/denuncia.html">Criar denúncias</a></li>
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/servicos/sobre.html">Informações sobre</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/servicos/adocao/adocao.html">Adoção</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/servicos/castracao/castrar.html">Agendamento de castração</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/servicos/denuncia/denuncia.html">Criar denúncias</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
         </ul>
       </li>
       <li>
-        <a class="arca-nav__mobile-link ${currentPage === 'seja_parceiro' ? 'arca-nav__mobile-link--ativo' : ''}" href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a>
+        <a class="arca-nav__mobile-link ${currentPage === 'seja_parceiro' ? 'arca-nav__mobile-link--ativo' : ''}" href="${R}html/navbar/seja_parceiro.html">Seja nosso parceiro</a>
       </li>
       <li>
         <button class="arca-nav__mobile-link arca-nav__mobile-dropdown-btn" data-mobile-dropdown="mob-suporte">
           Suporte <i class="fa-solid fa-angle-down arca-nav__seta" id="seta-mob-suporte"></i>
         </button>
         <ul class="arca-nav__mobile-submenu" id="mob-suporte">
-          <li><a class="arca-nav__mobile-sublink" href="/html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
-          <li><a class="arca-nav__mobile-sublink" href="/index.html#perguntas-frequentes">Perguntas frequentes</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
+          <li><a class="arca-nav__mobile-sublink" href="${R}index.html#perguntas-frequentes">Perguntas frequentes</a></li>
         </ul>
       </li>
     </ul>
     <div class="arca-nav__botoes arca-nav__botoes--mobile">
-      <a class="arca-nav__btn arca-nav__btn--entrar" href="/html/account/login.html">Entrar</a>
-      <a class="arca-nav__btn arca-nav__btn--cadastrar" href="/html/account/cadastro.html">Cadastrar</a>
+      <a class="arca-nav__btn arca-nav__btn--entrar" href="${R}html/account/login.html">Entrar</a>
+      <a class="arca-nav__btn arca-nav__btn--cadastrar" href="${R}html/account/cadastro.html">Cadastrar</a>
     </div>
   </div>
 </nav>
@@ -108,25 +124,25 @@ const footer = `
   <div class="container">
     <div class="footer_img">
       <a href="#navbar_arca">
-        <img class="footer_img-arca" src="/img/logos/painel-arca.png" alt="Logo do Projeto Arca">
+        <img class="footer_img-arca" src="${R}img/logos/painel-arca.png" alt="Logo do Projeto Arca">
       </a>
     </div>
     <div class="footer_links">
       <h5>Navegação</h5>
       <div class="footer_nav">
         <ul>
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="/index.html#quem-somos">Quem somos</a></li>
-          <li><a href="/html/navbar/servicos/adocao/adocao.html">Adoção</a></li>
-          <li><a href="/html/navbar/servicos/castracao/castrar.html">Agendamento de castração</a></li>
-          <li><a href="/html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
+          <li><a href="${R}index.html">Inicio</a></li>
+          <li><a href="${R}index.html#quem-somos">Quem somos</a></li>
+          <li><a href="${R}html/navbar/servicos/adocao/adocao.html">Adoção</a></li>
+          <li><a href="${R}html/navbar/servicos/castracao/castrar.html">Agendamento de castração</a></li>
+          <li><a href="${R}html/navbar/servicos/ongs.html">ONG's de proteção animal</a></li>
         </ul>
         <ul>
-          <li><a href="/html/navbar/servicos/denuncia/denuncia.html">Criar denúncia</a></li>
-          <li><a href="/html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
-          <li><a href="/html/navbar/seja_parceiro.html">Seja nosso parceiro</a></li>
-          <li><a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
-          <li><a href="/index.html#perguntas-frequentes">Perguntas frequentes</a></li>
+          <li><a href="${R}html/navbar/servicos/denuncia/denuncia.html">Criar denúncia</a></li>
+          <li><a href="${R}html/navbar/servicos/resgate.html">Solicitar resgate</a></li>
+          <li><a href="${R}html/navbar/seja_parceiro.html">Seja nosso parceiro</a></li>
+          <li><a href="${R}html/navbar/suporte/faleconosco.html">Fale conosco</a></li>
+          <li><a href="${R}index.html#perguntas-frequentes">Perguntas frequentes</a></li>
         </ul>
       </div>
     </div>
@@ -140,7 +156,7 @@ const footer = `
     </div>
     <div class="footer_img">
       <a href="#" class="site_prefeitura" target="_blank">
-        <img class="footer_img-serra" src="/img/logos/serra.png" alt="Logo da Prefeitura da Serra">
+        <img class="footer_img-serra" src="${R}img/logos/serra.png" alt="Logo da Prefeitura da Serra">
       </a>
     </div>
   </div>
@@ -226,14 +242,14 @@ const ajudaRespostas = {
         conteudo: `
             <p>Para adotar um animal pelo Programa ARCA, siga os passos abaixo:</p>
             <ul>
-                <li>Acesse a página de <a href="/html/navbar/servicos/adocao.html">Adoção</a> e veja os animais disponíveis.</li>
+                <li>Acesse a página de <a href="${R}html/navbar/servicos/adocao/adocao.html">Adoção</a> e veja os animais disponíveis.</li>
                 <li>Escolha um pet e clique em "Quero adotar".</li>
-                <li>Preencha o formulário di interesse — nossa equipe entrará em contato.</li>
+                <li>Preencha o formulário de interesse — nossa equipe entrará em contato.</li>
                 <li>Após análise, você será convidado para conhecer o animal pessoalmente.</li>
                 <li>Assine o Termo de Adoção Responsável e leve seu novo amigo para casa!</li>
             </ul>
             <p><strong>Requisitos:</strong> ser maior de 18 anos, apresentar documento de identidade e comprovante de residência.</p>
-            <p>Dúvidas? <a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a>.</p>
+            <p>Dúvidas? <a href="${R}html/navbar/suporte/faleconosco.html">Fale conosco</a>.</p>
         `
     },
     cadastrar: {
@@ -241,12 +257,12 @@ const ajudaRespostas = {
         conteudo: `
             <p>O cadastro no site do Programa ARCA é rápido e gratuito:</p>
             <ul>
-                <li>Clique em <a href="/html/account/cadastro.html">Cadastrar</a> no menu superior.</li>
+                <li>Clique em <a href="${R}html/account/cadastro.html">Cadastrar</a> no menu superior.</li>
                 <li>Preencha seu nome completo, e-mail e crie uma senha.</li>
                 <li>Confirme seu e-mail pelo link enviado para a sua caixa de entrada.</li>
                 <li>Pronto! Com o cadastro você pode acompanhar solicitações, favoritar pets e muito mais.</li>
             </ul>
-            <p>Já tem conta? <a href="/html/account/login.html">Faça login aqui</a>.</p>
+            <p>Já tem conta? <a href="${R}html/account/login.html">Faça login aqui</a>.</p>
         `
     },
     suporte: {
@@ -254,7 +270,7 @@ const ajudaRespostas = {
         conteudo: `
             <p>Nossa equipe está pronta para te ajudar! Escolha o canal de atendimento:</p>
             <ul>
-                <li><strong>Formulário online:</strong> <a href="/html/navbar/suporte/faleconosco.html">Fale conosco</a> — respondemos em até 2 dias úteis.</li>
+                <li><strong>Formulário online:</strong> <a href="${R}html/navbar/suporte/faleconosco.html">Fale conosco</a> — respondemos em até 2 dias úteis.</li>
                 <li><strong>Telefone:</strong> <a href="tel:+552732912005">(27) 3291-2005</a> — seg. a sex., das 8h às 17h.</li>
                 <li><strong>Instagram:</strong> <a href="https://www.instagram.com/prefeituraserra/" target="_blank">@prefeituraserra</a></li>
                 <li><strong>Presencial:</strong> Rua Maestro Antônio Cícero, 111 — Caçaroca, Serra/ES.</li>
