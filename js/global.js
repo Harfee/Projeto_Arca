@@ -26,7 +26,7 @@ function getRootPrefix() {
     return '../'.repeat(depth);
 }
 
-const R = getRootPrefix(); // ex: '../../' ou '../../../'
+const R = getRootPrefix(); 
 
 const navbar = `
 <nav class="arca-nav" id="arca-nav">

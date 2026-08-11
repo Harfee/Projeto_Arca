@@ -1,9 +1,5 @@
-/* =============================================
-   ARCA - Suporte / Fale Conosco
-   suporte.js
-   ============================================= */
-
-/* ---------- Envio do relatório ---------- */
+ /* ---------- Envio do relatório ---------- */
+ 
 function enviarRelatorio() {
     const nome      = document.getElementById('nome').value.trim();
     const email     = document.getElementById('email').value.trim();
