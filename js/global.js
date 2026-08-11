@@ -12,16 +12,12 @@ const instagram_link   = 'https://www.instagram.com/prefeituraserra/';
 const footer_tel       = 'tel:+552732912005';
 const site_prefeitura  = 'https://www.serra.es.gov.br';
 
-// ─── Calcula o prefixo relativo até a raiz do projeto ───────────────────────
-// Conta quantas pastas existem no caminho atual e sobe até a raiz.
-// Ex: html/navbar/servicos/ongs.html → 3 pastas → prefixo = '../../../'
 function getRootPrefix() {
     const path = window.location.pathname;
-    // Número de '/' após o repositório (Projeto_Arca/)
     const match = path.match(/\/Projeto_Arca\/(.*)/);
     if (!match || !match[1]) return './';
     const parts = match[1].split('/').filter(Boolean);
-    const depth = parts.length - 1; // descontar o próprio arquivo
+    const depth = parts.length - 1;
     if (depth <= 0) return './';
     return '../'.repeat(depth);
 }

@@ -1,11 +1,5 @@
-/* =============================================
-   SEJA_PARCEIRO.JS
-   Animações e interações da página
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ── 1. ANIMAÇÃO DE ENTRADA DOS CARDS (Intersection Observer) ──
     const cards = document.querySelectorAll('.forma-card');
 
     const observador = new IntersectionObserver((entries) => {
@@ -27,13 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => observador.observe(card));
 
-
-    // ── 2. EFEITO DE RIPPLE NO BOTÃO (sem bloquear a navegação) ──
     const btnDoar = document.getElementById('btn-doar');
 
     if (btnDoar) {
         btnDoar.addEventListener('click', (e) => {
-            // NÃO chama e.preventDefault() — deixa o link navegar normalmente
 
             const ripple = document.createElement('span');
 
@@ -62,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Injeta o keyframe do ripple dinamicamente
     const estiloRipple = document.createElement('style');
     estiloRipple.textContent = `
         @keyframes ripple-animar {
@@ -74,8 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(estiloRipple);
 
-
-    // ── 3. HOVER DOS ÍCONES ──
     cards.forEach(card => {
         const icone = card.querySelector('.icone-circulo i');
 

@@ -1,9 +1,3 @@
-/*  SEJA_PARCEIRO.CSS
-   Segue as variáveis definidas em layout.css
- */
-
-
-/* HERO */
 .parceiro-hero {
     text-align: center;
     padding: 5px 10px 12px;
@@ -60,7 +54,6 @@
     to { transform: scaleX(1); }
 }
 
-/* ── INTRO ── */
 .parceiro-intro {
     max-width: 1390px;
     margin: 24px auto 36px;
@@ -93,7 +86,7 @@
     font-weight: 700;
 }
 
-/* GRID DE CARDS */
+/* CARDS */
 .formas-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -163,7 +156,6 @@
     text-align: justify;
 }
 
-/* ── BOTÃO CTA ── */
 .parceiro-cta {
     text-align: center;
     margin-top: 30px;
@@ -197,7 +189,6 @@
     transform: rotate(15deg) scale(1.2);
 }
 
-/* RESPONSIVO */
 @media (max-width: 900px) {
     .formas-grid {
         grid-template-columns: repeat(2, 1fr);

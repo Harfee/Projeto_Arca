@@ -1,14 +1,5 @@
-/* =====================================================
-   sobre.js — Página "Informações sobre" | Projeto ARCA
-   ===================================================== */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --------------------------------------------------
-    // Marca o item "Informações sobre" como ativo no navbar
-    // O global.js renderiza o navbar via #navbar;
-    // aqui esperamos ele ser injetado e então aplicamos a classe.
-    // --------------------------------------------------
     function marcarNavAtivo() {
         var links = document.querySelectorAll('#navbar .dropdown-menu a, #navbar .nav-link');
         links.forEach(function (link) {
@@ -18,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Tenta marcar imediatamente; se o navbar ainda não carregou,
-    // usa MutationObserver para aguardar a renderização.
     if (document.querySelector('#navbar a')) {
         marcarNavAtivo();
     } else {
@@ -32,9 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(document.getElementById('navbar'), { childList: true, subtree: true });
     }
 
-    // --------------------------------------------------
-    // Animação de entrada nos cards ao rolar a página
-    // --------------------------------------------------
     var cards = document.querySelectorAll('.sobre-card');
 
     if ('IntersectionObserver' in window) {
@@ -55,17 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Classe que dispara a animação
     document.head.insertAdjacentHTML('beforeend',
         '<style>' +
         '.sobre-card--visible { opacity: 1 !important; transform: translateY(0) !important; }' +
         '</style>'
     );
 
-    // --------------------------------------------------
-    // Fallback: se a imagem dos cachorros não carregar,
-    // já tratado no onerror do HTML, mas reforçamos aqui.
-    // --------------------------------------------------
     var dogsImg = document.querySelector('.sobre-dogs-img');
     if (dogsImg) {
         dogsImg.addEventListener('error', function () {

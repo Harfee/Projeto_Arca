@@ -1,12 +1,5 @@
-/* =====================================================
-   resgate.js — Página "Solicitar Resgate" | Projeto ARCA
-   ===================================================== */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* --------------------------------------------------
-       1. Marca "Solicitar resgate" como ativo no navbar
-    -------------------------------------------------- */
     function marcarNavAtivo() {
         document.querySelectorAll('#navbar a').forEach(function (link) {
             if (link.textContent.trim().toLowerCase().includes('solicitar resgate')) {
@@ -29,9 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    /* --------------------------------------------------
-       2. Máscara de telefone: (XX) XXXXX-XXXX
-    -------------------------------------------------- */
     var telInput = document.getElementById('telefone');
     if (telInput) {
         telInput.addEventListener('input', function () {
@@ -47,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* --------------------------------------------------
-       3. Validação em tempo real de cada campo
-    -------------------------------------------------- */
     function validarCampo(campo, valido) {
         campo.classList.toggle('is-invalid', !valido);
         campo.classList.toggle('is-valid', valido);
@@ -83,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return nomeOk && telOk && emailOk && localOk && tipoOk && condicaoOk && descOk;
     }
 
-    // Validação ao sair do campo (blur)
     ['nomeCompleto', 'email', 'localEncontrado', 'descricao'].forEach(function (id) {
         var el = document.getElementById(id);
         if (!el) return;
@@ -116,9 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    /* --------------------------------------------------
-       4. Envio do formulário
-    -------------------------------------------------- */
     var formResgate = document.getElementById('formResgate');
     if (formResgate) {
         formResgate.addEventListener('submit', function (e) {
@@ -132,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     'Preencha todos os campos corretamente antes de enviar.',
                     true
                 );
-                // Rola até o primeiro inválido
+
                 var primeiro = formResgate.querySelector('.is-invalid');
                 if (primeiro) {
                     primeiro.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -153,10 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             console.log('Relatório de resgate:', dados);
 
-            // ↓ Substitua pelo seu fetch/axios para a API:
-            // fetch('/api/resgate', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(dados) })
-
-            // Mostra o overlay de sucesso
             document.getElementById('overlay-sucesso').classList.remove('d-none');
 
             formResgate.reset();
@@ -166,9 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* --------------------------------------------------
-       5. Botão de emergência
-    -------------------------------------------------- */
     var btnEmergencia = document.getElementById('btnEmergencia');
     if (btnEmergencia) {
         btnEmergencia.addEventListener('click', function () {
@@ -184,9 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             console.log('Emergência no endereço:', endereco);
 
-            // ↓ Substitua pelo seu fetch para buscar ONG mais próxima:
-            // fetch('/api/emergencia?local=' + encodeURIComponent(endereco))
-
             var btn = this;
             btn.disabled = true;
             btn.textContent = 'Localizando...';
@@ -198,10 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-    /* --------------------------------------------------
-       7. Animação de entrada no card do formulário
-    -------------------------------------------------- */
     var formCard = document.querySelector('.resgate-form-card');
     if (formCard && 'IntersectionObserver' in window) {
         formCard.style.opacity = '0';

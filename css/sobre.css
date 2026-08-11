@@ -1,8 +1,4 @@
-/* =====================================================
-   sobre.css — Página "Informações sobre" | Projeto ARCA
-   ===================================================== */
 
-/* ---------- BREADCRUMB ---------- */
 .sobre-breadcrumb {
     font-size: 13px;
     margin-bottom: 0;
@@ -50,7 +46,6 @@
     to { transform: scaleX(1); }
 }
 
-/* ---------- HERO ---------- */
 .sobre-hero {
     padding-top: 1rem;
     padding-bottom: 2rem;
@@ -138,7 +133,6 @@
     padding: 1.75rem;
 }
 
-/* ---------- SERVICE CARD ---------- */
 .sobre-card {
     background: #fff;
     border-radius: 14px;
@@ -186,7 +180,6 @@
     margin-bottom: 0;
 }
 
-/* ---------- BOTÃO SAIBA MAIS ---------- */
 .sobre-btn-saiba {
     margin-top: 16px;
     background-color: #E06B1A;
@@ -208,7 +201,6 @@
     transform: scale(1.04);
 }
 
-/* ---------- RESPONSIVO ---------- */
 @media (max-width: 991px) {
     .sobre-titulo {
         font-size: 34px;
