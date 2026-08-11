@@ -17,7 +17,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "../../../img/animais/thor.png",
+        foto: "img/animais/thor.png",
         data_cadastro: "2024-11-01"
     },
     {
@@ -38,7 +38,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/fred.png",
+        foto: "img/animais/fred.png",
         data_cadastro: "2024-11-05"
     },
     {
@@ -59,7 +59,7 @@ const animais_data = [
         ong: "Patas do Bem",
         contato_instagram: "@patasdob_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/luna.png",
+        foto: "img/animais/luna.png",
         data_cadastro: "2024-11-10"
     },
     {
@@ -80,7 +80,7 @@ const animais_data = [
         ong: "Resgate Serra",
         contato_instagram: "@resgateserra",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/max.png",
+        foto: "img/animais/max.png",
         data_cadastro: "2024-10-20"
     },
     {
@@ -101,7 +101,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/mia.png",
+        foto: "img/animais/mia.png",
         data_cadastro: "2024-11-15"
     },
     {
@@ -122,7 +122,7 @@ const animais_data = [
         ong: "Patas do Bem",
         contato_instagram: "@patasdob_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/simba.png",
+        foto: "img/animais/simba.png",
         data_cadastro: "2024-11-20"
     },
     {
@@ -143,7 +143,7 @@ const animais_data = [
         ong: "Resgate Serra",
         contato_instagram: "@resgateserra",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/nina.png",
+        foto: "img/animais/nina.png",
         data_cadastro: "2024-10-01"
     },
     {
@@ -164,12 +164,22 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/bob.png",
+        foto: "img/animais/bob.png",
         data_cadastro: "2024-09-15"
     }
 ];
 
 let animal_atual = null;
+
+// ─── Prefixo relativo até a raiz do projeto ───────────────────────────────────
+function getPrefix() {
+    const match = window.location.pathname.match(/\/Projeto_Arca\/(.*)/);
+    if (!match || !match[1]) return './';
+    const parts = match[1].split('/').filter(Boolean);
+    const depth = parts.length - 1;
+    if (depth <= 0) return './';
+    return '../'.repeat(depth);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
@@ -182,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div style="text-align:center; padding:80px 20px; color:#64748b;">
                 <i class="fa-solid fa-paw" style="font-size:52px; color:#cbd5e1; display:block; margin-bottom:16px;"></i>
                 <p style="font-size:16px;">Animal não encontrado.</p>
-                <a href="/html/navbar/servicos/adocao.html" style="color:var(--cor-primaria); font-weight:600; text-decoration:none;">← Voltar para adoção</a>
+                <a href="${getPrefix()}html/navbar/servicos/adocao/adocao.html" style="color:var(--cor-primaria); font-weight:600; text-decoration:none;">← Voltar para adoção</a>
             </div>
         `;
         return;
@@ -200,8 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Deixar aleatorio os detalhes dos animais
-
 function renderizar_detalhe(animal) {
     document.title = `${animal.nome} - Adoção - ARCA`;
 
@@ -209,7 +217,7 @@ function renderizar_detalhe(animal) {
     foto_wrapper.innerHTML = `
         <img
             class="detalhe_foto"
-            src="${animal.foto}"
+            src="${getPrefix()}${animal.foto}"
             alt="Foto de ${animal.nome}"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
@@ -293,7 +301,7 @@ function renderizar_mais_animais(id_atual) {
         card.innerHTML = `
             <img
                 class="mini_card_img"
-                src="${animal.foto}"
+                src="${getPrefix()}${animal.foto}"
                 alt="${animal.nome}"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
             >
@@ -311,14 +319,12 @@ function renderizar_mais_animais(id_atual) {
     });
 }
 
-// Navegar para outro animal
-
 function ir_para_detalhe(id) {
-    window.location.href = `/html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
+    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
 }
 
 
-// Termo de Comprometimento
+// ─── Termo de Comprometimento ─────────────────────────────────────────────────
 
 function abrir_termo() {
     document.getElementById("checkbox_termo").checked = false;
@@ -338,18 +344,16 @@ function atualizar_btn_continuar() {
 }
 
 
-// Confirmação de adoção
+// ─── Confirmação de adoção ────────────────────────────────────────────────────
 
 function confirmar_adocao() {
     fechar_termo();
-
     if (!animal_atual) return;
-
-    window.location.href = `/html/navbar/servicos/adocao/formulario_adocao.html?id=${animal_atual.id}`;
+    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/formulario_adocao.html?id=${animal_atual.id}`;
 }
 
 function fechar_confirmacao() {
     document.getElementById("confirmacao_overlay").classList.remove("ativo");
     document.body.style.overflow = "";
-    window.location.href = "/html/navbar/servicos/adocao/adocao.html";
+    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/adocao.html`;
 }

@@ -17,7 +17,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 99987-5432",
-        foto: "/img/animais/thor.png",
+        foto: "img/animais/thor.png",
         data_cadastro: "2024-11-01"
     },
     {
@@ -38,7 +38,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 99987-5432",
-        foto: "/img/animais/fred.png",
+        foto: "img/animais/fred.png",
         data_cadastro: "2024-11-05"
     },
     {
@@ -59,7 +59,7 @@ const animais_data = [
         ong: "Patas do Bem",
         contato_instagram: "@patasdob_",
         contato_tel: "+55 27 98765-4321",
-        foto: "/img/animais/luna.png",
+        foto: "img/animais/luna.png",
         data_cadastro: "2024-11-10"
     },
     {
@@ -80,7 +80,7 @@ const animais_data = [
         ong: "Resgate Serra",
         contato_instagram: "@resgateserra",
         contato_tel: "+55 27 91234-5678",
-        foto: "/img/animais/max.png",
+        foto: "img/animais/max.png",
         data_cadastro: "2024-10-20"
     },
     {
@@ -101,7 +101,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 99987-5432",
-        foto: "/img/animais/mia.png",
+        foto: "img/animais/mia.png",
         data_cadastro: "2024-11-15"
     },
     {
@@ -122,7 +122,7 @@ const animais_data = [
         ong: "Patas do Bem",
         contato_instagram: "@patasdob_",
         contato_tel: "+55 27 98765-4321",
-        foto: "/img/animais/simba.png",
+        foto: "img/animais/simba.png",
         data_cadastro: "2024-11-20"
     },
     {
@@ -143,7 +143,7 @@ const animais_data = [
         ong: "Resgate Serra",
         contato_instagram: "@resgateserra",
         contato_tel: "+55 27 91234-5678",
-        foto: "/img/animais/nina.png",
+        foto: "img/animais/nina.png",
         data_cadastro: "2024-10-01"
     },
     {
@@ -164,12 +164,22 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 99987-5432",
-        foto: "/img/animais/bob.png",
+        foto: "img/animais/bob.png",
         data_cadastro: "2024-09-15"
     }
 ];
 
 let visualizacao_atual = 'grid';
+
+// ─── Prefixo relativo até a raiz do projeto ───────────────────────────────────
+function getPrefix() {
+    const match = window.location.pathname.match(/\/Projeto_Arca\/(.*)/);
+    if (!match || !match[1]) return './';
+    const parts = match[1].split('/').filter(Boolean);
+    const depth = parts.length - 1;
+    if (depth <= 0) return './';
+    return '../'.repeat(depth);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     popular_racas();
@@ -253,7 +263,7 @@ function criar_card(animal) {
     const img_html = `
         <img
             class="animal_card_img"
-            src="${animal.foto}"
+            src="${getPrefix()}${animal.foto}"
             alt="Foto de ${animal.nome}"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
@@ -281,10 +291,8 @@ function criar_card(animal) {
     return card;
 }
 
-// Navegar para a página de detalhe
-
 function ir_para_detalhe(id) {
-    window.location.href = `/html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
+    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
 }
 
 function mudar_visualizacao(tipo) {
