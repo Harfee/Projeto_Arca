@@ -232,6 +232,16 @@ const bairros_serra = [
 
 let animal_atual = null;
 
+// ─── Prefixo relativo até a raiz do projeto ───────────────────────────────────
+function getPrefix() {
+    const match = window.location.pathname.match(/\/Projeto_Arca\/(.*)/);
+    if (!match || !match[1]) return './';
+    const parts = match[1].split('/').filter(Boolean);
+    const depth = parts.length - 1;
+    if (depth <= 0) return './';
+    return '../'.repeat(depth);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get("id"));
@@ -372,7 +382,7 @@ function renderizar_animal(a) {
 
     const wrap = document.getElementById("animal_foto_wrapper");
     const img  = document.createElement("img");
-    img.src = a.foto;
+    img.src = `${getPrefix()}${a.foto}`;
     img.alt = a.nome;
     img.onerror = () => { wrap.innerHTML = '<i class="fa-solid fa-paw placeholder_paw"></i>'; };
     wrap.innerHTML = "";
@@ -450,7 +460,7 @@ function enviar_solicitacao() {
 
     const placeholder = document.getElementById("confirmacao_foto_placeholder");
     const img         = document.getElementById("confirmacao_foto_img");
-    img.src           = a.foto;
+    img.src           = `${getPrefix()}${a.foto}`;
     img.alt           = a.nome;
     img.style.display = "block";
     placeholder.style.display = "none";
@@ -478,5 +488,5 @@ function enviar_solicitacao() {
 function fechar_confirmacao() {
     document.getElementById("confirmacao_overlay").classList.remove("ativo");
     document.body.style.overflow = "";
-    window.location.href = "/html/navbar/servicos/adocao/adocao.html";
+    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/adocao.html`;
 }
