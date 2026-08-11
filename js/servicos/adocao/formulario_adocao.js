@@ -17,7 +17,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/thor.png",
+        foto: "img/animais/thor.png",
         data_cadastro: "2024-11-01"
     },
     {
@@ -38,7 +38,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/fred.png",
+        foto: "img/animais/fred.png",
         data_cadastro: "2024-11-05"
     },
     {
@@ -59,7 +59,7 @@ const animais_data = [
         ong: "Patas do Bem",
         contato_instagram: "@patasdob_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/luna.png",
+        foto: "img/animais/luna.png",
         data_cadastro: "2024-11-10"
     },
     {
@@ -80,7 +80,7 @@ const animais_data = [
         ong: "Resgate Serra",
         contato_instagram: "@resgateserra",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/max.png",
+        foto: "img/animais/max.png",
         data_cadastro: "2024-10-20"
     },
     {
@@ -101,7 +101,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/mia.png",
+        foto: "img/animais/mia.png",
         data_cadastro: "2024-11-15"
     },
     {
@@ -122,7 +122,7 @@ const animais_data = [
         ong: "Patas do Bem",
         contato_instagram: "@patasdob_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/simba.png",
+        foto: "img/animais/simba.png",
         data_cadastro: "2024-11-20"
     },
     {
@@ -143,7 +143,7 @@ const animais_data = [
         ong: "Resgate Serra",
         contato_instagram: "@resgateserra",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/nina.png",
+        foto: "img/animais/nina.png",
         data_cadastro: "2024-10-01"
     },
     {
@@ -164,7 +164,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/bob.png",
+        foto: "img/animais/bob.png",
         data_cadastro: "2024-09-15"
     }
 ];
