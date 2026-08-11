@@ -33,4 +33,4 @@ Os usuários precisam de um sistema simples, acessível e eficiente, que conside
 *   **Bootstrap** (Componentes estruturados e responsividade fluida)
 *   JavaScript (Lógica de interação e manipulação do DOM)
 
-🔗 **[Clique aqui para ver o Projeto Arca rodando](https://projetoarca.online)**
+🔗 **[Clique aqui para ver o Projeto Arca rodando](https://munizmoises.github.io/Projeto_Arca/)**

@@ -17,7 +17,7 @@ const animais_data = [
         ong: "Animais Caridosos",
         contato_instagram: "@animaiscaridosos_",
         contato_tel: "+55 27 00000-0000",
-        foto: "/img/animais/thor.png",
+        foto: "../../../img/animais/thor.png",
         data_cadastro: "2024-11-01"
     },
     {
